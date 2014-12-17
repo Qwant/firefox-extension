@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#" dir="auto">
+	<head>
+		<title data-l10n-id='thanks_title'></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="Description" content="">
+		<meta name="Keywords" lang="fr" content="">
+		<link rel='stylesheet' type='text/css' href='css/common.css' />
+	</head>
+	<body margin="0">
+		<div class="wrapper">
+			<div class="separator"><hr/>
+			</div>
+			<div class="subwrapper">
+				<img class="imgs" src="./img/header-qwant-firefox.png" title="" alt="">
+			</div>
+		</div>
+		<div class="wrapper" style="background-color:#08B5FF;padding:24px 0px 24px 0px;">
+			<h1 style="font-family:Segoe UI, Arial, Helvetica, sans-serif;color:#FFF;font-weight:600;text-shadow:0px 2px 1px rgba(34,38,32, 0.2);" data-l10n-id='thanks_head'></h1>
+		</div>
+		<div class="wrapper">
+			<div class="subwrapper">
+				<div class="spacerXL"></div>
+				<div class="smart-search-container">
+					<div class="smart-search-subcontainer">
+						<h3><strong data-l10n-id="opt_explaination1"></strong></h3>
+						<h3 data-l10n-id="opt_explaination2"></h3>
+						<div class="spacerL"></div>
+						<div class="separator"><hr/></div>
+						<h4 style="width:95%;" data-l10n-id="opt_explaination3"></h4>
+					</div>
+				</div>
+				<div class="screenshots-large-container">
+					<img class="imgs" src="./img/step5.jpg" title="" alt="" class="image-w-border" align="left" />
+					</div>
+				<div style="clear:both;width:100%;">
+					<h1 data-l10n-id="opt_use1"></h1>
+					</div>
+				<div class="screenshots-mini-container">
+					<h4 style="margin-bottom:24px;margin-top:24px;width:398px;text-align:center;" data-l10n-id="opt_use2"></h4>
+					<img class="imgs" src="./img/step3-firefox.jpg" title="" alt="" />
+				</div>
+				<div class="screenshots-mini-container">
+					<h4 style="margin-bottom:24px;margin-top:24px;width:398px;text-align:center;" data-l10n-id="opt_use3"></h4>
+					<img class="imgs" src="./img/step4-firefox.jpg" title="" alt="" />
+				</div>
+				<div style="clear:both;width:100%;">
+					<h1 data-l10n-id="opt_uninstall1"></h1>
+				</div>
+				<div class="smart-search-subcontainer" style="width:100%;">
+					<div class="subtext-container">
+						<h4 data-l10n-id="opt_uninstall2"></h4>
+						<ul>
+							<li data-l10n-id="opt_uninstall3"></li>
+							<li data-l10n-id="opt_uninstall4"></li>
+							<li data-l10n-id="opt_uninstall5"></li>
+						</ul></div>
+				</div>
+			</div>
+			<div class="spacerXL" style="clear:both;"></div>
+			<div class="footer-container" style="opacity:0.92;">
+				<p class="footer-txt">&copy;&nbsp;Copyright 
+					<a href="https://www.qwant.com/">Qwant.com</a> 
+					2014<br>
+                    <span data-l10n-id="footer_reserved"></span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+					<img class="imgs" src="./img/top-mini.png" title="" alt="" />
+                    &nbsp;&nbsp;<a href="#top" data-l10n-id="footer_top"></a>
+				</p>
+				<p class="footer-txt" style="font-family:'source_sans_proregular', Arial, Helvetica, sans-serif; opacity:0.5;margin-top:2px;">
+					<em>Mozilla Firefox</em>, <span data-l10n-id="footer_reserved2"></span>
+				</p>
+				<div class="spacerS"></div>
+				<div align="center">
+					<img class="imgs" src="./img/footer-img.png" title="" alt=""></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var locale = window.navigator.language.substr(0, 2);
+		var imgs = document.getElementsByClassName('imgs');
+		for (var i = 0; i < imgs.length; ++i) {
+			var ext = imgs[i].src.split('.').pop();
+			imgs[i].src = imgs[i].src.substr(0, imgs[i].src.lastIndexOf('.')) + '-' + locale + '.' +  ext;
+		}
+	</script>
+</html>

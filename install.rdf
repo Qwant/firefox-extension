@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>qwantcomforfirefox@qwant.com</em:id>
+		<em:version>2.1.12</em:version>
+		<em:type>2</em:type>
+
+		<!-- Target Application this extension can install into, 
+		 with minimum and maximum supported versions. --> 
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+				<em:minVersion>1.5</em:minVersion>
+				<em:maxVersion>34.0.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+		<!-- Front End MetaData -->
+		<em:localized>
+			<Description>
+				<em:locale>en-US</em:locale>
+				<em:name>Qwant - Websearch Evolved</em:name>
+				<em:description>QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life.</em:description>
+				<em:creator>Qwant</em:creator>
+				<em:homepageURL>https://www.qwant.com/</em:homepageURL>
+			</Description>
+		</em:localized>
+		<em:localized>
+			<Description>
+				<em:locale>fr-FR</em:locale>
+				<em:name>Qwant - Websearch Evolved</em:name>
+				<em:description>QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.</em:description>
+				<em:creator>Qwant</em:creator>
+				<em:homepageURL>https://www.qwant.com/</em:homepageURL>
+			</Description>
+		</em:localized>
+	</Description>
+</RDF>

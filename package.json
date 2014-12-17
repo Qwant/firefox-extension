@@ -1,0 +1,61 @@
+{
+	"name": "qwant_websearch_evolved",
+	"title": "Qwant - Websearch Evolved",
+	"id": "qwantcomforfirefox",
+	"author": "https://www.qwant.com",
+	"description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
+	"license": "MPL 2.0",
+	"version": "2.1.12",
+
+	"preferences": [
+		{
+			"name": "embedded_google",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "embedded_yahoo",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "embedded_bing",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "embedded_yandex",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "embedded_mail",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "save_last",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "homepage",
+			"title": "",
+			"description": "",
+			"type": "bool",
+			"value": true
+		}
+	]
+}
