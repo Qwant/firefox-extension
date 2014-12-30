@@ -5,7 +5,7 @@
 	"author": "https://www.qwant.com",
 	"description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
 	"license": "MPL 2.0",
-	"version": "2.1.12",
+	"version": "2.1.13",
 
 	"preferences": [
 		{
@@ -45,13 +45,6 @@
 		},
 		{
 			"name": "save_last",
-			"title": "",
-			"description": "",
-			"type": "bool",
-			"value": true
-		},
-		{
-			"name": "homepage",
 			"title": "",
 			"description": "",
 			"type": "bool",

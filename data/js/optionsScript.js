@@ -9,8 +9,7 @@ self.port.on('getOptions', function(opt) {
 		yandex			= document.getElementById('embedded_yandex'),
 		mailru			= document.getElementById('embedded_mail'),
 		save			= document.getElementById('save_last'),
-		default_engine	= document.getElementById('default_engine'),
-		homepage	= document.getElementById('homepage');
+		default_engine	= document.getElementById('default_engine');
 
 	if (opt.prefs.embedded_google === true) {
 		google.checked = true;
@@ -53,12 +52,7 @@ self.port.on('getOptions', function(opt) {
 	} else {
 		default_engine.checked = false;
 	}
-	
-	if (opt.prefs.homepage === true) {
-		homepage.checked = true;
-	} else {
-		hpmepage.checked = false;
-	}
+
 
 	google.addEventListener('CheckboxStateChange', function() {
 		self.port.emit('google', google.checked);
@@ -86,9 +80,5 @@ self.port.on('getOptions', function(opt) {
 
 	default_engine.addEventListener('CheckboxStateChange', function() {
 		self.port.emit('default_engine', default_engine.checked);
-	}, false);
-	
-	homepage.addEventListener('CheckboxStateChange', function() {
-		self.port.emit('homepage', homepage.checked);
 	}, false);
 });
