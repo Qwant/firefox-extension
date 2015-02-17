@@ -5,7 +5,7 @@
 
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>qwantcomforfirefox@qwant.com</em:id>
-		<em:version>2.1.13</em:version>
+		<em:version>2.1.14</em:version>
 		<em:type>2</em:type>
 
 		<!-- Target Application this extension can install into, 
