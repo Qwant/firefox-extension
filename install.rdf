@@ -5,7 +5,7 @@
 
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>qwantcomforfirefox@qwant.com</em:id>
-		<em:version>2.1.15</em:version>
+		<em:version>2.1.16</em:version>
 		<em:type>2</em:type>
 
 		<!-- Target Application this extension can install into, 
@@ -19,7 +19,6 @@
 		</em:targetApplication>
 
 		<em:targetApplication>
-			<!-- SeaMonkey -->
 			<Description>
 				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id> <!-- SeaMonkey -->
 				<em:minVersion>2.0</em:minVersion>
