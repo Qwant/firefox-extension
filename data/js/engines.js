@@ -128,7 +128,6 @@ var show = function(text){
 			self.port.on('data', function(result) {
 				fillEmbed(qwtEmbed, qwtSpinner, result.items, data.query);
 			});
-			document.body.addEventListener('mousedown', exchange, false);
 		});
 
 	} else {
@@ -528,10 +527,3 @@ if (hostname === 'google') {
 		}, 700);
 	}
 }
-function exchange(e) {
-	e = e || window.event;
-	var target = e.target || e.srcElement;
-	if (target.className.match('qwt-link')) {
-		target.setAttribute('href', target.getAttribute('data-src'));
-	}
-};
