@@ -1,0 +1,16 @@
+{
+  "title": "Qwant.com For Firefox",
+  "name": "firefoxaddon",
+  "version": "0.0.1",
+  "description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
+  "main": "index.js",
+  "author": "Qwant",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
