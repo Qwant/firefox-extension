@@ -1,6 +1,6 @@
 var self = require("sdk/self");
 var buttons = require('sdk/ui/button/action');
-
+var _ = require("sdk/l10n").get;
 
 exports.main = function (options, callbacks) {
 
@@ -23,7 +23,7 @@ function prepareButtons() {
 
     var noteButton = buttons.ActionButton({
         id: "qwant-note",
-        label: "Qwant Note",
+        label:  _("boardnote.toolbarbutton.label"),
         icon: {
             "16": "./img/icon_note_16.png",
             "32": "./img/icon_note_32.png",
@@ -38,7 +38,7 @@ function prepareButtons() {
 
     var bookmarkButton = buttons.ActionButton({
         id: "qwant-bookmark",
-        label: "Qwant bookmark",
+        label: _("bookmark.toolbarbutton.label"),
         icon: {
             "16": "./img/icon_bookmark_16.png",
             "32": "./img/icon_bookmark_32.png",
