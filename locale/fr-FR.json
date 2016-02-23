@@ -5,6 +5,8 @@
 
     "boardnote.toolbarbutton.label": "Ajouter une note",
 
-    "bookmark.toolbarbutton.label": "Ajouter un favori"
+    "bookmark.toolbarbutton.label": "Ajouter un favori",
+
+    "searchplugin.description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.", 
 
 }

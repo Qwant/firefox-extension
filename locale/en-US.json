@@ -5,5 +5,8 @@
 
     "boardnote.toolbarbutton.label": "Add a note",
     
-    "bookmark.toolbarbutton.label": "Add a bookmark"
+    "bookmark.toolbarbutton.label": "Add a bookmark",
+
+    "searchplugin.description": "QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life.", 
+
 }

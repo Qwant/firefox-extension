@@ -1,17 +1,24 @@
+"use strict";
+
 var self = require("sdk/self");
 var buttons = require('sdk/ui/button/action');
 var _ = require("sdk/l10n").get;
 
 exports.main = function (options, callbacks) {
 
+    let isFirstEnabling = options.loadReason == 'install' ||
+                          options.loadReason == 'enable';
+                          // loadReason = install enable startup upgrade downgrade
     prepareButtons()
-    require('./lib/privacy').init(options.loadReason == 'install' ||
-                                  options.loadReason == 'enable');
+    require('./lib/privacy').init(isFirstEnabling);
+
+    if (isFirstEnabling) {
+        require('./lib/searchplugin').register();
+    }
 };
 
-
-
 exports.onUnload = function (reason) {
+    //reason = uninstall disable shutdown upgrade downgrade
     if (reason == 'uninstall' || reason == 'disable') {
         require('./lib/privacy').reset();
     }
