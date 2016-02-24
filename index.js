@@ -10,6 +10,7 @@ exports.main = function (options, callbacks) {
                           options.loadReason == 'enable';
                           // loadReason = install enable startup upgrade downgrade
     prepareButtons()
+
     require('./lib/privacy').init(isFirstEnabling);
 
     if (isFirstEnabling) {
@@ -41,6 +42,7 @@ function prepareButtons() {
     
     function handleNoteClick(state) {
         console.log("note click");
+        console.log('token', require('./lib/authentication').getToken());
     }
 
     var bookmarkButton = buttons.ActionButton({
