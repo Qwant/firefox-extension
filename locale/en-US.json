@@ -7,6 +7,11 @@
     
     "bookmark.toolbarbutton.label": "Add a bookmark",
 
-    "searchplugin.description": "QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life.", 
+    "auth.popup.title" : "Authentication",
+    "auth.popup.description" : "You must be authenticated on Qwant.com to use this feature",
+    "auth.popup.login.label" : "Log in",
+    "auth.popup.cancel.label" : "Cancel",
+
+    "searchplugin.description": "QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life."
 
 }
