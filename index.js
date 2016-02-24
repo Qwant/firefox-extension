@@ -3,6 +3,7 @@
 var self = require("sdk/self");
 var buttons = require('sdk/ui/button/action');
 var _ = require("sdk/l10n").get;
+var tabs = require("sdk/tabs");
 
 exports.main = function (options, callbacks) {
 
@@ -11,8 +12,27 @@ exports.main = function (options, callbacks) {
                           // loadReason = install enable startup upgrade downgrade
 
     require('./lib/privacy').init(isFirstEnabling);
-    require('./lib/boardnotes').init();
-    require('./lib/bookmarks').init();
+    let boardnotes = require('./lib/boardnotes')
+    let bookmarks = require('./lib/bookmarks')
+
+    boardnotes.init();
+    bookmarks.init();
+    
+    function checkGoodUrl() {
+        let url = tabs.activeTab.url;
+        if (/^https?:\/\//.test(url)) {
+            boardnotes.activate();
+            bookmarks.activate();
+        }
+        else {
+            boardnotes.deactivate();
+            bookmarks.deactivate();
+        }
+    }
+
+    tabs.on('activate', checkGoodUrl);
+    tabs.on('ready', checkGoodUrl);
+    checkGoodUrl();
 
     if (isFirstEnabling) {
         require('./lib/searchplugin').register();
