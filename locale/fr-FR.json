@@ -10,7 +10,9 @@
     "boardnote.popup.image.label" : "Image",
     "boardnote.popup.title.label" : "Titre",
     "boardnote.popup.content.label" : "Contenu",
-
+    "boardnote.popup.loading":"Chargement en cours, veuillez patienter",
+    "boardnote.popup.loaderror":"Erreur de chargement de vos carnets",
+    
     "bookmark.toolbarbutton.label": "Ajouter un favori",
 
     "auth.popup.title" : "Authentification",

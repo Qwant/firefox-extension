@@ -1,0 +1,34 @@
+body {
+    background-color: white;
+}
+
+
+body #err-panel {
+    display:none;
+}
+body #load-panel {
+    display:none;
+}
+
+body.error #err-panel {
+    display:block;
+}
+body.error #note-panel {
+    display:none;
+}
+
+body.load #note-panel {
+    display:none;
+}
+
+body.load #load-panel {
+    display:block;
+}
+
+#load-panel {
+    text-align: center;
+}
+
+#note-panel th {
+    text-align: right;
+}

@@ -10,6 +10,8 @@
     "boardnote.popup.image.label" : "Image",
     "boardnote.popup.title.label" : "Title",
     "boardnote.popup.content.label" : "Content",
+    "boardnote.popup.loading":"Loading... Please wait",
+    "boardnote.popup.loaderror":"Error during the loading of your board",
 
     "bookmark.toolbarbutton.label": "Add a bookmark",
 
