@@ -4,7 +4,13 @@
     "privacy.toolbarbutton.disable.label": "Disable tracking protection",
 
     "boardnote.toolbarbutton.label": "Add a note",
-    
+    "boardnote.popup.title" : "Add a note",
+    "boardnote.popup.board.label" : "Board",
+    "boardnote.popup.url.label" : "URL",
+    "boardnote.popup.image.label" : "Image",
+    "boardnote.popup.title.label" : "Title",
+    "boardnote.popup.content.label" : "Content",
+
     "bookmark.toolbarbutton.label": "Add a bookmark",
 
     "auth.popup.title" : "Authentication",

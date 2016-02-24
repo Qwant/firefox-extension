@@ -4,6 +4,12 @@
     "privacy.toolbarbutton.disable.label": "Désactiver Protection contre le pistage",
 
     "boardnote.toolbarbutton.label": "Ajouter une note",
+    "boardnote.popup.title" : "Ajouter une note",
+    "boardnote.popup.board.label" : "Carnet",
+    "boardnote.popup.url.label" : "URL",
+    "boardnote.popup.image.label" : "Image",
+    "boardnote.popup.title.label" : "Titre",
+    "boardnote.popup.content.label" : "Contenu",
 
     "bookmark.toolbarbutton.label": "Ajouter un favori",
 
