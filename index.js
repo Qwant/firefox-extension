@@ -11,7 +11,7 @@ exports.main = function (options, callbacks) {
                           options.loadReason == 'enable';
                           // loadReason = install enable startup upgrade downgrade
 
-    //require('./lib/privacy').init(isFirstEnabling);
+    require('./lib/privacy').init(isFirstEnabling);
     require('./lib/mainpanel').init(isFirstEnabling);
     let boardnotes = require('./lib/boardnotes')
     let bookmarks = require('./lib/bookmarks')

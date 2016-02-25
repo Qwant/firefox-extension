@@ -133,3 +133,69 @@ footer img {
     border: 0px transparent;
     background-color: transparent;
 }
+
+
+/* ------ switch --------- */
+
+
+input.switch:empty
+{
+    margin-left: -999px;
+    width:0;
+    margin-right:0;
+
+}
+
+input.switch:empty ~ label
+{
+    position: relative;
+    float: left;
+    line-height: 1.6em;
+    text-indent: 4em;
+    margin: 0.2em 0 0.2em -2em;
+    cursor: pointer;
+    -moz-user-select: none;
+}
+
+input.switch:empty ~ label:before
+{
+    position: absolute;
+    display: block;
+    top: 3px;
+    bottom: 3px;
+    right: -3.5em;
+    content: ' ';
+    width: 2.8em;
+    background-color: #F49AC1;
+    border-radius: 10px;
+    transition: all 100ms ease-in;
+}
+
+
+
+input.switch:empty ~ label:after
+{
+    position: absolute;
+    display: block;
+    width: 1.4em;
+    top: 0.1em;
+    bottom: 0.1em;
+    right: -3.5em;
+    content: ' ';
+    background-color: #228bea;
+    transition: all 100ms ease-in;
+    margin-left: 0.1em;
+    border-radius: 15px;
+    margin-right: 1.4em;
+}
+
+input.switch:checked ~ label:before
+{
+    background-color: #7EFCCC;
+}
+
+input.switch:checked ~ label:after
+{
+    margin-right: 0em;
+}
+

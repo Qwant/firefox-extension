@@ -35,6 +35,8 @@ self.port.on("show", function(options) {
     else {
         showMain();
     }
+
+    document.getElementById('privacy-check').checked = options.privacyEnabled;
 });
 
 document.getElementById('welcome-start')
@@ -45,4 +47,9 @@ document.getElementById('welcome-start')
 document.getElementById('welcome-register')
         .addEventListener('click', function(){
             self.port.emit("go-register");
+        });
+
+document.getElementById('privacy-check')
+        .addEventListener('click', function(){
+            self.port.emit("privacy-change", this.checked);
         });
