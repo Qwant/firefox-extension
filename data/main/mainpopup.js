@@ -36,6 +36,9 @@ self.port.on("show", function(options) {
         showMain();
     }
 
+    document.getElementById("login-panel").style.display =
+            (options.isAuthenticated ? 'none':'block');
+
     document.getElementById('privacy-check').checked = options.privacyEnabled;
 });
 
@@ -47,6 +50,18 @@ document.getElementById('welcome-start')
 document.getElementById('welcome-register')
         .addEventListener('click', function(){
             self.port.emit("go-register");
+        });
+document.getElementById('auth-connect')
+        .addEventListener('click', function(){
+            self.port.emit("go-connect");
+        });
+document.getElementById('auth-register')
+        .addEventListener('click', function(){
+            self.port.emit("go-register");
+        });
+document.getElementById('auth-lost-password')
+        .addEventListener('click', function(){
+            self.port.emit("go-lost-password");
         });
 
 document.getElementById('privacy-check')

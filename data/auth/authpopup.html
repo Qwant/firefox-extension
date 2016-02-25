@@ -4,15 +4,18 @@
         <title data-l10n-id="auth.popup.title"></title>
         <meta charset='utf-8'>
         <meta name='description' content='' />
+        <link rel="stylesheet" href='../common.css' />
         <link rel="stylesheet" href='authpopup.css' />
     </head>
     <body>
-        <div id="auth-panel">
-            <p data-l10n-id="auth.popup.description"></p>
+        <p data-l10n-id="auth.popup.description"></p>
+        <fieldset id="login-panel">
+            <legend data-l10n-id="auth.connect.fieldset">Connexion</legend>
+            <button id="auth-connect" class="bigbutton" data-l10n-id="auth.connect.button">Se connecter à Qwant</button> <br/>
             <div>
-                <button id="login-btn" data-l10n-id="auth.popup.login.label"></button>
-                <button id="cancel-btn" data-l10n-id="auth.popup.cancel.label"></button>
+                <button id="auth-register" class="fakelink" data-l10n-id="auth.register.button">S'inscrire</button>
+                <button id="auth-lost-password" class="fakelink" data-l10n-id="auth.lost-password.button">Mot de passe perdu ?</button>
             </div>
-        </div>
+        </fieldset>
     </body>
 </html>
