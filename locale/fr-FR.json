@@ -1,4 +1,18 @@
 {
+    "welcome.popup.title" : "Bienvenue sur l'extension Qwant",
+    "welcome.item.securedbrowsing" :"Navigation sécurisée",
+    "welcome.item.favorites": "Favoris",
+    "welcome.item.notes": "Carnets",
+    "welcome.start.button": "Commencer",
+    "welcome.register.button": "S'inscrire sur Qwant",
+
+    "main.popup.title": "Qwant",
+    "main.toolbarbutton.label": "Qwant",
+    "main.button.addfav.label":"Ajouter à mes favoris",
+    "main.button.addnote.label":"Ajouter à mes carnets",
+    "main.button.shownote.label":"voir mes carnets",
+    "main.privacy.checkbox.label": "Navigation sécurisée",
+
     "privacy.toolbarbutton.label": "Protection contre le pistage",
     "privacy.toolbarbutton.enable.label": "Activer la protection contre le pistage",
     "privacy.toolbarbutton.disable.label": "Désactiver Protection contre le pistage",
@@ -12,13 +26,18 @@
     "boardnote.popup.content.label" : "Contenu",
     "boardnote.popup.loading":"Chargement en cours, veuillez patienter",
     "boardnote.popup.loaderror":"Erreur de chargement de vos carnets",
-    
+
     "bookmark.toolbarbutton.label": "Ajouter un favori",
 
     "auth.popup.title" : "Authentification",
     "auth.popup.description" : "Vous devez être identifié sur Qwant.com pour utiliser cette fonctionnalité",
     "auth.popup.login.label" : "Connexion",
     "auth.popup.cancel.label" : "Annuler",
+
+    "auth.connect.fieldset": "Connexion",
+    "auth.connect.button" : "Se connecter à Qwant",
+    "auth.register.button": "S'inscrire",
+    "auth.lost-password.button": "Mot de passe perdu ?",
 
     "searchplugin.description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée."
 

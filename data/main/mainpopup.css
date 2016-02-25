@@ -1,0 +1,135 @@
+body {
+    display:flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    background-color: white;
+    margin:0;
+    font-family: "Segoe UI",Helvetica,"Droid Sans",Arial,sans-serif;
+    font-size:0.9em;
+}
+
+body > div {
+    padding:1em 1.5em;
+}
+
+p {
+    font-size:0.9em;
+}
+h1 {
+    margin-top:70px;
+    font-weight:normal;
+}
+h3 {
+    text-transform: uppercase ;
+    font-size: 0.9em;
+}
+
+.bigbutton {
+    border-radius: 20px;
+    border: 0px transparent;
+    background-color:#228bea;
+    color: white;
+    text-align:center;
+    padding: 0.5em 2em;
+    font-weight:bold;
+    margin:1em 1em;
+}
+
+.fakelink {
+    border: 0px transparent;
+    background-color:transparent;
+    text-align:center;
+}
+
+.fakelink::before {
+    content :"> ";
+    color: #aeafb0;
+}
+
+/* ------ welcome panel ------*/
+
+#welcome-panel {
+    background:transparent url(../img/decor_webpage.png) top right no-repeat;
+    flex: 1 1 auto;
+}
+
+
+#main-panel {
+    flex: 1 1 auto;
+}
+
+#welcome-panel ul {
+    list-style-type: none;
+}
+#welcome-panel li img {
+    vertical-align: middle;
+}
+#welcome-panel li {
+    font-size: 1.1em;
+}
+#welcome-footer {
+    text-align:center;
+}
+
+
+/* ------ main panel ------*/
+#login-panel {
+    border-radius: 15px;
+    border: 1px solid #EAEAEA;
+    text-align:center;
+    margin: 1em 0;
+}
+#login-panel legend {
+    color: #EAEAEA;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#login-panel .fakelink {
+    color: #59a9e5
+}
+#buttons-panel {
+    text-align:center;
+}
+#buttons-panel .fakelink {
+    font-weight: bold;
+    text-transform: uppercase ;
+    font-size:0.8em;
+}
+#buttons-panel .fakelink::before {
+    content :">> ";
+}
+#main-panel p {
+    font-size:0.8em;
+}
+#add-favorite, #add-note {
+    border-radius: 20px;
+    border: 1px solid #c9cbd2;
+    background-color:transparent;
+    text-align:center;
+    padding: 0.3em 2em;
+    background-position: 0.5em center;
+    background-repeat: no-repeat;
+    margin: 0.5em;
+}
+#add-favorite {
+    background-image: url(../img/etoile_mini.png);
+}
+#add-note {
+    background-image: url(../img/notes_mini.png);
+}
+
+footer {
+    padding:1em;
+    text-align:right;
+    background-color: #f8f8f8;
+    border-top: 1px solid #f1f2f2;
+}
+
+footer img {
+    float:left;
+}
+
+#options {
+    border: 0px transparent;
+    background-color: transparent;
+}

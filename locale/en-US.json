@@ -1,4 +1,18 @@
 {
+    "welcome.popup.title" : "Welcome in the Qwant addon",
+    "welcome.item.securedbrowsing" :"Secured browsing",
+    "welcome.item.favorites": "Favorites",
+    "welcome.item.notes": "Notes",
+    "welcome.start.button": "Start",
+    "welcome.register.button": "Register on Qwant",
+
+    "main.popup.title": "Qwant",
+    "main.toolbarbutton.label": "Qwant",
+    "main.button.addfav.label":"Add to my bookmarks",
+    "main.button.addnote.label":"Add to my notes",
+    "main.button.shownote.label":"See my notes",
+    "main.privacy.checkbox.label": "Tracking protection",
+
     "privacy.toolbarbutton.label": "Tracking protection",
     "privacy.toolbarbutton.enable.label": "Enable tracking protection",
     "privacy.toolbarbutton.disable.label": "Disable tracking protection",
@@ -19,6 +33,11 @@
     "auth.popup.description" : "You must be authenticated on Qwant.com to use this feature",
     "auth.popup.login.label" : "Log in",
     "auth.popup.cancel.label" : "Cancel",
+
+    "auth.connect.fieldset": "Connection",
+    "auth.connect.button" : "Log in to Qwant",
+    "auth.register.button": "Register",
+    "auth.lost-password.button": "Lost password?",
 
     "searchplugin.description": "QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life."
 
