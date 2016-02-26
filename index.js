@@ -18,21 +18,35 @@ exports.main = function (options, callbacks) {
 
     boardnotes.init();
     bookmarks.init();
-    
+
     function checkGoodUrl() {
         let url = tabs.activeTab.url;
         if (/^https?:\/\//.test(url)) {
             boardnotes.activate();
             bookmarks.activate();
+            return true;
         }
         else {
             boardnotes.deactivate();
             bookmarks.deactivate();
+            return false;
         }
     }
 
-    tabs.on('activate', checkGoodUrl);
-    tabs.on('ready', checkGoodUrl);
+    tabs.on('activate', function (tab) {
+        checkGoodUrl();
+    });
+    tabs.on('ready',  function (tab) {
+        if (checkGoodUrl()) {
+            tab.qwantInfo = null;
+            var worker = tab.attach({
+                contentScriptFile: './content-tab-info.js'
+            });
+            worker.port.on("tab-meta-info", function(info) {
+                tab.qwantInfo = info;
+            });
+        }
+    });
     checkGoodUrl();
 
     if (isFirstEnabling) {

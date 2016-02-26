@@ -16,6 +16,7 @@ self.port.on("initform", function(data) {
 
     document.getElementById('url-field').value = data.url;
     document.getElementById('title-field').value = data.title;
+    document.getElementById('content-field').textContent = data.description;
 });
 
 self.port.on("error", function(err) {
