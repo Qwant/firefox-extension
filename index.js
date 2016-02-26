@@ -38,7 +38,7 @@ exports.main = function (options, callbacks) {
     });
     tabs.on('ready',  function (tab) {
         if (checkGoodUrl()) {
-            tab.qwantInfo = null;
+            tab.qwantInfo = { description: '' };
             var worker = tab.attach({
                 contentScriptFile: './content-tab-info.js'
             });

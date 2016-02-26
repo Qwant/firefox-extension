@@ -22,26 +22,33 @@
                     <tr>
                         <th><label for="board-field" data-l10n-id="boardnote.popup.board.label"></label></th>
                         <td><select id="board-field" name="board">
-                        
                     </select></td>
                     </tr>
                     <tr>
                         <th><label for="url-field" data-l10n-id="boardnote.popup.url.label"></label></th>
                         <td><input id="url-field" name="url" disabled/></td>
                     </tr>
-                    <!--<tr>
-                        <th><label for="image-field" data-l10n-id="boardnote.popup.image.label"></label></th>
-                        <td></td>
-                    </tr>-->
+                    <tr>
+                        <th><label for="image-field" data-l10n-id="boardnote.popup.image.label"></label>
+                        <input type="hidden" name="note-image" />
+                        </th>
+                        <td id="img-container">
+                            <div class="aucune" data-l10n-id="boardnote.popup.noimage"></div>
+                        </td>
+                    </tr>
                     <tr>
                         <th><label for="title-field" data-l10n-id="boardnote.popup.title.label"></label></th>
                         <td><input id="title-field" name="title" /></td>
                     </tr>
                     <tr>
                         <th><label for="content-field" data-l10n-id="boardnote.popup.content.label"></label></th>
-                        <td><textarea id="content-field" name="content"></textarea></td>
+                        <td><textarea id="content-field" name="content" cols="50" rows="6"></textarea></td>
                     </tr>
                 </table>
+                <div>
+                    <button id="btn-cancel" class="button button-grey" data-l10n-id="label.cancel" type="button"></button>
+                    <button id="btn-submit" class="button button-blue" data-l10n-id="label.submit" type="button"></button>
+                </div>
             </form>
         </div>
     </body>

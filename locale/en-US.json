@@ -26,6 +26,7 @@
     "boardnote.popup.content.label" : "Content",
     "boardnote.popup.loading":"Loading... Please wait",
     "boardnote.popup.loaderror":"Error during the loading of your board",
+    "boardnote.popup.noimage": "No image",
 
     "bookmark.toolbarbutton.label": "Add a bookmark",
 
@@ -39,6 +40,10 @@
     "auth.register.button": "Register",
     "auth.lost-password.button": "Lost password?",
 
-    "searchplugin.description": "QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life."
+    "searchplugin.description": "QWANT is a french search engine showing you a different Internet universe. No filters, no tracking cookies. Be free to search while protecting your private life.",
+    
+    "label.submit": "Publish",
+    "label.cancel": "Cancel"
+
 
 }

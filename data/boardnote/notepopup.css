@@ -31,4 +31,33 @@ body.load #load-panel {
 
 #note-panel th {
     text-align: right;
+    vertical-align:top;
+}
+
+#img-container img {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid #8592a1;
+}
+
+#img-container div.aucune {
+    background-color: #ddd;
+    display: inline-block;
+    vertical-align: top;
+    /*padding-top: 31px;*/
+    text-align: center;
+    border: 1px dashed #888;
+    color: #666;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#img-container .selected {
+    border: 2px solid #0fbd2b !important;
 }

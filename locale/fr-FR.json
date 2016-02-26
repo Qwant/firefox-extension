@@ -26,6 +26,7 @@
     "boardnote.popup.content.label" : "Contenu",
     "boardnote.popup.loading":"Chargement en cours, veuillez patienter",
     "boardnote.popup.loaderror":"Erreur de chargement de vos carnets",
+    "boardnote.popup.noimage": "Aucune",
 
     "bookmark.toolbarbutton.label": "Ajouter un favori",
 
@@ -39,6 +40,8 @@
     "auth.register.button": "S'inscrire",
     "auth.lost-password.button": "Mot de passe perdu ?",
 
-    "searchplugin.description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée."
+    "searchplugin.description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
 
+    "label.submit": "Publier",
+    "label.cancel": "Annuler"
 }
