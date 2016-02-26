@@ -8,6 +8,7 @@ body #err-panel {
 }
 body #load-panel {
     display:none;
+    text-align:center;
 }
 
 body.error #err-panel {
@@ -17,16 +18,30 @@ body.error #note-panel {
     display:none;
 }
 
-body.load #note-panel {
+body.load #note-panel,
+body.save #note-panel {
     display:none;
 }
 
-body.load #load-panel {
+body.load #load-panel,
+body.save #load-panel {
     display:block;
 }
 
-#load-panel {
-    text-align: center;
+body.load #msg-load,
+body.save #msg-save {
+    display:block;
+}
+
+body.save #msg-load,
+body.load #msg-save {
+    display:none;
+}
+
+h1 {
+    margin: 5px 1em;
+    font-size:1.1em;
+    text-transform: uppercase;
 }
 
 #note-panel th {

@@ -21,7 +21,6 @@ body > div {
     background-color: rgba(128,130,132,.1);
     border-radius: 3px;
     transition: all .3s ease 0s;
-    box-shadow: 0 2px 4px rgba(0,0,0,.18);
     color: #fff;
     font-size: 14px;
     cursor: pointer;
@@ -29,11 +28,11 @@ body > div {
     white-space: nowrap;
     font-family: "Segoe UI",Helvetica,"Droid Sans",Arial,sans-serif;
     text-transform: none;
+    border: 0;
 }
 
 .button:hover  {
     background-color: rgba(128,130,132,.12);
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,.18),0 3px 8px 0 rgba(0,0,0,.12);
     transition: all ease 0s;
 }
 
@@ -51,11 +50,9 @@ body > div {
 
 .button-blue {
     background-color: #1f98f6;
-    box-shadow: none;
 }
 
 .button-blue:hover {
-    box-shadow: none;
     background-color: #1588e2;
     transition-duration: .12s;
 }
@@ -82,6 +79,15 @@ body > div {
     color: #aeafb0;
 }
 
+input[type="text"],
+textarea {
+    -moz-appearance: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #c8cacc;
+    box-shadow: inset 1px 3px 5px -3px rgba(110,112,114,.3);
+    margin: 6px 0;
+}
 
 /* ------ switch --------- */
 

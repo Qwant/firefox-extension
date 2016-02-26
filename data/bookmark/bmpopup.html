@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title data-l10n-id="bookmark.popup.title"></title>
+        <meta charset='utf-8'>
+        <meta name='description' content='' />
+        <link rel="stylesheet" href='../common.css' />
+        <link rel="stylesheet" href='bmpopup.css' />
+    </head>
+    <body>
+        <h1 data-l10n-id="bookmark.popup.title">Poster un favori</h1>
+        <div id="load-panel">
+            <p id="msg-load" data-l10n-id="bookmark.popup.loading"></p>
+            <p id="msg-save" data-l10n-id="bookmark.popup.saving"></p>
+            <div><img src="../img/loader-board.gif" alt="" /></div>
+        </div>
+        <div id="err-panel">
+            <p id="error"></p>
+        </div>
+        <div id="bookmark-panel">
+            <form id="bookmark-form">
+                <table>
+                    <tr>
+                        <th><label for="url-field" data-l10n-id="bookmark.popup.url.label"></label></th>
+                        <td><input id="url-field" name="url" type="text" disabled/></td>
+                    </tr>
+                    <tr>
+                        <th><label for="name-field" data-l10n-id="bookmark.popup.name.label"></label></th>
+                        <td><input id="name-field" type="text"name="name" /></td>
+                    </tr>
+                </table>
+                <div style="text-align: center;">
+                    <button id="btn-cancel" class="button button-grey" data-l10n-id="label.cancel" type="button"></button>
+                    <button id="btn-submit" class="button button-blue" data-l10n-id="label.submit" type="button"></button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

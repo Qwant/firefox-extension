@@ -8,9 +8,11 @@
         <link rel="stylesheet" href='notepopup.css' />
     </head>
     <body>
+        <h1 data-l10n-id="boardnote.popup.title"></h1>
         <div id="load-panel">
-            <div><img src="loader-board.gif" alt="" /></div>
-            <p data-l10n-id="boardnote.popup.loading"></p>
+            <p id="msg-load" data-l10n-id="boardnote.popup.loading"></p>
+            <p id="msg-save" data-l10n-id="boardnote.popup.saving"></p>
+            <div><img src="../img/loader-board.gif" alt="" /></div>
         </div>
         <div id="err-panel">
             <p data-l10n-id="boardnote.popup.loaderror"></p>
@@ -26,11 +28,10 @@
                     </tr>
                     <tr>
                         <th><label for="url-field" data-l10n-id="boardnote.popup.url.label"></label></th>
-                        <td><input id="url-field" name="url" disabled/></td>
+                        <td><input id="url-field" name="url" type="text" disabled/></td>
                     </tr>
                     <tr>
                         <th><label for="image-field" data-l10n-id="boardnote.popup.image.label"></label>
-                        <input type="hidden" name="note-image" />
                         </th>
                         <td id="img-container">
                             <div class="aucune" data-l10n-id="boardnote.popup.noimage"></div>
@@ -38,14 +39,14 @@
                     </tr>
                     <tr>
                         <th><label for="title-field" data-l10n-id="boardnote.popup.title.label"></label></th>
-                        <td><input id="title-field" name="title" /></td>
+                        <td><input id="title-field" type="text" name="title" /></td>
                     </tr>
                     <tr>
                         <th><label for="content-field" data-l10n-id="boardnote.popup.content.label"></label></th>
-                        <td><textarea id="content-field" name="content" cols="50" rows="6"></textarea></td>
+                        <td><textarea id="content-field" name="content" cols="35" rows="6"></textarea></td>
                     </tr>
                 </table>
-                <div>
+                <div style="text-align: center;">
                     <button id="btn-cancel" class="button button-grey" data-l10n-id="label.cancel" type="button"></button>
                     <button id="btn-submit" class="button button-blue" data-l10n-id="label.submit" type="button"></button>
                 </div>

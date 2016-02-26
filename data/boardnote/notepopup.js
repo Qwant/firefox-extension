@@ -2,14 +2,18 @@
 
 var imgContainer = document.getElementById('img-container');
 
-self.port.on("show", function() {
+self.port.on("load", function(type) {
     document.body.classList.remove('error');
-    document.body.classList.add('load');
+    document.body.classList.add(type);
 })
 
 self.port.on("initform", function(data) {
-    document.body.classList.remove('error', 'load');
+    document.body.classList.remove('error', 'load', 'save');
     let list = document.getElementById('board-field');
+    let previousItems = list.querySelectorAll('option');
+    for (let opt of previousItems) {
+        opt.parentNode.removeChild(opt);
+    }
     data.boards.forEach(function(board) {
         let opt = document.createElement('option');
         opt.setAttribute('value', board.board_id);
@@ -37,7 +41,7 @@ self.port.on("initform", function(data) {
 });
 
 self.port.on("error", function(err) {
-    document.body.classList.remove('load');
+    document.body.classList.remove('load', 'save');
     document.body.classList.add('error');
     document.getElementById('error').textContent = err;
 });

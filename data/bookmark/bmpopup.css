@@ -1,0 +1,51 @@
+body {
+    background-color: white;
+}
+
+body #err-panel {
+    display:none;
+}
+body #load-panel {
+    display:none;
+    text-align:center;
+}
+
+body.error #err-panel {
+    display:block;
+}
+body.error #bookmark-panel {
+    display:none;
+}
+
+body.load #bookmark-panel,
+body.save #bookmark-panel {
+    display:none;
+}
+
+body.load #load-panel,
+body.save #load-panel {
+    display:block;
+}
+
+body.load #msg-load,
+body.save #msg-save {
+    display:block;
+}
+
+body.save #msg-load,
+body.load #msg-save {
+    display:none;
+}
+
+h1 {
+    margin: 5px 1em;
+    font-size:1.1em;
+    text-transform: uppercase;
+}
+
+#bookmark-panel th {
+    text-align: right;
+    vertical-align:top;
+}
+
+
