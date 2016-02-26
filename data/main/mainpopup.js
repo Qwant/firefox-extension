@@ -40,6 +40,10 @@ self.port.on("show", function(options) {
             (options.isAuthenticated ? 'none':'block');
 
     document.getElementById('privacy-check').checked = options.privacyEnabled;
+
+    document.getElementById('add-note').disabled = !options.canAddNote;
+    document.getElementById('add-favorite').disabled = !options.canAddFavorite;
+    document.getElementById('show-notes').disabled = ! options.isAuthenticated;
 });
 
 document.getElementById('welcome-start')
@@ -68,3 +72,17 @@ document.getElementById('privacy-check')
         .addEventListener('click', function(){
             self.port.emit("privacy-change", this.checked);
         });
+
+document.getElementById('add-favorite')
+        .addEventListener('click', function(){
+            self.port.emit("show-add-favorite");
+        });
+document.getElementById('add-note')
+        .addEventListener('click', function(){
+            self.port.emit("show-add-note");
+        });
+document.getElementById('show-notes')
+        .addEventListener('click', function(){
+            self.port.emit("go-notes");
+        });
+

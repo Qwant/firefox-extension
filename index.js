@@ -12,12 +12,13 @@ exports.main = function (options, callbacks) {
                           // loadReason = install enable startup upgrade downgrade
 
     require('./lib/privacy').init(isFirstEnabling);
-    require('./lib/mainpanel').init(isFirstEnabling);
     let boardnotes = require('./lib/boardnotes')
     let bookmarks = require('./lib/bookmarks')
-
     boardnotes.init();
     bookmarks.init();
+
+    require('./lib/mainpanel').init(isFirstEnabling);
+
 
     function checkGoodUrl() {
         let url = tabs.activeTab.url;

@@ -73,6 +73,12 @@ h3 {
     background-image: url(../img/notes_mini.png);
 }
 
+#add-favorite:disabled,
+#add-note:disabled,
+#show-notes:disabled {
+    opacity: 0.5;
+}
+
 footer {
     padding:1em;
     text-align:right;
