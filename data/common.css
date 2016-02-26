@@ -21,7 +21,7 @@ body > div {
     background-color: rgba(128,130,132,.1);
     border-radius: 3px;
     transition: all .3s ease 0s;
-    color: #fff;
+    color: #6D6C6C;
     font-size: 14px;
     cursor: pointer;
     vertical-align: top;
@@ -49,6 +49,7 @@ body > div {
 }
 
 .button-blue {
+    color: #fff;
     background-color: #1f98f6;
 }
 
@@ -104,9 +105,8 @@ input.switch:empty ~ label
 {
     position: relative;
     float: left;
-    line-height: 1.6em;
     text-indent: 4em;
-    margin: 0.2em 0 0.2em -2em;
+    margin: 0em 0 0em -1em;
     cursor: pointer;
     -moz-user-select: none;
 }

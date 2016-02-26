@@ -38,6 +38,17 @@ body.load #msg-save {
     display:none;
 }
 
+#new-board-form {
+    display:none
+}
+
+#board-fields.newboard #select-board {
+    display:none;
+}
+#board-fields.newboard #new-board-form {
+    display: block;
+}
+
 h1 {
     margin: 5px 1em;
     font-size:1.1em;
@@ -46,9 +57,15 @@ h1 {
 
 #note-panel th {
     text-align: right;
+}
+
+#note-panel th.top {
     vertical-align:top;
 }
 
+#note-form > table {
+    width:100%;
+}
 #img-container img {
     cursor: pointer;
     width: 80px;
