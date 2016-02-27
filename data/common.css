@@ -81,6 +81,7 @@ body > div {
 }
 
 input[type="text"],
+input[type="password"],
 textarea {
     -moz-appearance: none;
     padding: 8px;

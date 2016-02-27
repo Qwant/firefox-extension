@@ -57,6 +57,11 @@
 
     "auth.connect.fieldset": "Connexion",
     "auth.connect.button" : "Se connecter à Qwant",
+    "auth.field.login.placeholder" : "Adresse mail",
+    "auth.field.password.placeholder" : "Mot de passe",
+    "auth.loading": "Verification en cours",
+    "auth.error.login": "Un problème est apparu durant la vérification de votre identifiant",
+    "auth.error.badlogin": "L'email et le mot de passe ne correspondent pas à un compte Qwant",
     "auth.register.button": "S'inscrire",
     "auth.lost-password.button": "Mot de passe perdu ?",
 

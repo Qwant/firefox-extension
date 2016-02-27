@@ -58,6 +58,11 @@
 
     "auth.connect.fieldset": "Connection",
     "auth.connect.button" : "Log in to Qwant",
+    "auth.field.login.placeholder" : "Your e-mail",
+    "auth.field.password.placeholder" : "Your password",
+    "auth.loading": "Checking your credentials",
+    "auth.error.login": "An issue occured during the checking",
+    "auth.error.badlogin": "The given email & password do not correspond to an account",
     "auth.register.button": "Register",
     "auth.lost-password.button": "Lost password?",
 

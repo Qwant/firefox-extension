@@ -95,3 +95,64 @@ footer img {
     background-color: transparent;
 }
 
+/*----------- login panel --------- */
+
+#login-panel.connected {
+    display:none;
+}
+
+#login-panel.hastoconnect #auth-connect {
+}
+
+#login-panel.hastoconnect #auth-form {
+    display:none;
+}
+
+#login-panel.hastoconnect #auth-wait {
+    display:none;
+}
+
+
+#login-panel.connectform #auth-connect {
+    display:none;
+}
+
+#login-panel.connectform #auth-form {
+    
+}
+
+#login-panel.connectform #auth-wait {
+    display:none;
+}
+
+
+#login-panel.wait #auth-connect {
+    display:none;
+}
+
+#login-panel.wait #auth-form {
+    display:none;
+}
+
+#login-panel.wait #msg-err {
+    display:none;
+}
+
+
+#login-panel.error #auth-connect {
+}
+
+#login-panel.error #auth-form {
+    display:none;
+}
+
+#login-panel.error #msg-load {
+    display:none;
+}
+
+#login-panel.error #auth-wait div {
+    display:none;
+}
+#msg-err {
+    color: red;
+}

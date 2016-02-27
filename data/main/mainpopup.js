@@ -36,15 +36,68 @@ self.port.on("show", function(options) {
         showMain();
     }
 
-    document.getElementById("login-panel").style.display =
-            (options.isAuthenticated ? 'none':'block');
+    authForm.show(options.isAuthenticated);
 
     document.getElementById('privacy-check').checked = options.privacyEnabled;
-
     document.getElementById('add-note').disabled = !options.canAddNote;
     document.getElementById('add-favorite').disabled = !options.canAddFavorite;
     document.getElementById('show-notes').disabled = ! options.isAuthenticated;
 });
+
+self.port.on("auth-state", function(options) {
+    authForm.show(options.isAuthenticated, options.error);
+});
+
+var authForm = {
+    divPanel: null,
+    divForm : null,
+    btnConnection : null,
+    btnLogin : null,
+    fieldLogin : null,
+    fieldPassword : null,
+
+    initButtons : function () {
+        this.divPanel = document.getElementById("login-panel");
+        this.divForm = document.getElementById("auth-form");
+        this.btnConnection = document.getElementById('auth-connect');
+        this.btnLogin = document.getElementById('auth-connection');
+        this.fieldLogin = document.getElementById("auth-login");
+        this.fieldPassword = document.getElementById("auth-password")
+
+        this.btnConnection.addEventListener('click', function(){
+            authForm.divPanel.setAttribute('class', 'connectform');
+            authForm.fieldLogin.focus();
+        });
+
+        this.btnLogin.addEventListener('click', function(){
+            authForm.divPanel.setAttribute('class', 'wait');
+            self.port.emit("auth-login", { email: authForm.fieldLogin.value,
+                                    password: authForm.fieldPassword.value
+            });
+        });
+
+        document.getElementById('auth-register')
+                .addEventListener('click', function(){
+                    self.port.emit("go-register");
+                });
+        document.getElementById('auth-lost-password')
+                .addEventListener('click', function(){
+                    self.port.emit("go-lost-password");
+                });
+    },
+    show : function(isAuthenticated, error) {
+        let status =  (isAuthenticated?'connected':'hastoconnect');
+        if ( !isAuthenticated && error) {
+            status = 'error';
+        }
+        this.divPanel.setAttribute('class', status);
+        this.fieldLogin.value = '';
+        this.fieldPassword.value = '';
+        document.getElementById('msg-err').textContent = (error?error:'');
+    },
+}
+
+authForm.initButtons();
 
 document.getElementById('welcome-start')
         .addEventListener('click', function(){
@@ -55,19 +108,6 @@ document.getElementById('welcome-register')
         .addEventListener('click', function(){
             self.port.emit("go-register");
         });
-document.getElementById('auth-connect')
-        .addEventListener('click', function(){
-            self.port.emit("go-connect");
-        });
-document.getElementById('auth-register')
-        .addEventListener('click', function(){
-            self.port.emit("go-register");
-        });
-document.getElementById('auth-lost-password')
-        .addEventListener('click', function(){
-            self.port.emit("go-lost-password");
-        });
-
 document.getElementById('privacy-check')
         .addEventListener('click', function(){
             self.port.emit("privacy-change", this.checked);

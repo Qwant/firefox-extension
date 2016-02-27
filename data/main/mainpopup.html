@@ -39,7 +39,17 @@
 
             <fieldset id="login-panel">
                 <legend data-l10n-id="auth.connect.fieldset">Connexion</legend>
-                <button id="auth-connect" class="bigbutton" data-l10n-id="auth.connect.button">Se connecter à Qwant</button> <br/>
+                <div id="auth-form">
+                    <input type="text" id="auth-login" placeholder="" data-l10n-id="auth.field.login" /><br/>
+                    <input type="password" id="auth-password" placeholder=""  data-l10n-id="auth.field.password"/><br/>
+                    <button id="auth-connection" class="bigbutton" data-l10n-id="auth.connection.button" type="button">Connexion</button>
+                </div>
+                <div id="auth-wait">
+                    <p id="msg-load" data-l10n-id="auth.loading"></p>
+                    <p id="msg-err"></p>
+                    <div><img src="../img/loader-board.gif" alt="" /></div>
+                </div>
+                <button id="auth-connect" class="bigbutton" data-l10n-id="auth.connect.button">Se connecter à Qwant</button>
                 <div>
                     <button id="auth-register" class="fakelink" data-l10n-id="auth.register.button">S'inscrire</button>
                     <button id="auth-lost-password" class="fakelink" data-l10n-id="auth.lost-password.button">Mot de passe perdu ?</button>
