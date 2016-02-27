@@ -126,3 +126,28 @@ document.getElementById('show-notes')
             self.port.emit("go-notes");
         });
 
+var menuOptions = document.getElementById('menu-options');
+var btnOptions = document.getElementById('options');
+
+btnOptions.addEventListener('click', function(){
+    menuOptions.style.bottom = (document.documentElement.offsetHeight  - btnOptions.offsetTop+10)+"px";
+    menuOptions.style.right = (document.documentElement.offsetWidth - btnOptions.offsetLeft -40)+"px";
+    menuOptions.style.display = 'block';
+});
+
+document.getElementById('option-logout')
+    .addEventListener('click', function(){
+        self.port.emit("auth-logout");
+    });
+
+document.getElementById('option-about')
+    .addEventListener('click', function(){
+        self.port.emit("about");
+    });
+
+document.addEventListener('click', function(event){
+    if (event.target != btnOptions) {
+        menuOptions.style.display = 'none';
+    }
+}, true);
+

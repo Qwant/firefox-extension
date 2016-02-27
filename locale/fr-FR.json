@@ -12,6 +12,8 @@
     "main.button.addnote.label":"Ajouter à mes carnets",
     "main.button.shownote.label":"voir mes carnets",
     "main.privacy.checkbox.label": "Navigation sécurisée",
+    "main.options.item.about": "À propos du module",
+    "main.options.item.logout": "Déconnexion",
 
     "privacy.toolbarbutton.label": "Protection contre le pistage",
     "privacy.toolbarbutton.enable.label": "Activer la protection contre le pistage",

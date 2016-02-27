@@ -12,6 +12,8 @@
     "main.button.addnote.label":"Add to my notes",
     "main.button.shownote.label":"See my notes",
     "main.privacy.checkbox.label": "Tracking protection",
+    "main.options.item.about": "About the addon",
+    "main.options.item.logout": "Logout",
 
     "privacy.toolbarbutton.label": "Tracking protection",
     "privacy.toolbarbutton.enable.label": "Enable tracking protection",
