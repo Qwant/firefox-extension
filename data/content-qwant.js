@@ -1,6 +1,6 @@
 
 /**
- * we expect to receive this message from qwant.com when the user login
+ * we expect to receive this message from qwant.com when the user login on the web site
  */
 window.addEventListener("addon-login", function(event) {
     if (event.detail &&
@@ -16,13 +16,16 @@ window.addEventListener("addon-login", function(event) {
 }, false);
 
 /**
- * we expect to receive this message from qwant.com when the user logout
+ * we expect to receive this message from qwant.com when the user logout on the web site
  */
 window.addEventListener("addon-logout", function(event) {
     self.port.emit('logout');
 }, false);
 
 
+/**
+ * when the user log in from the addon, let's send a message to qwant.com page
+ */
 self.port.on("login", function(message) {
     var event = new window.CustomEvent("from-addon-login", {
       detail: JSON.stringify(message)
@@ -30,6 +33,9 @@ self.port.on("login", function(message) {
     window.dispatchEvent(event);
 });
 
+/**
+ * when the user log out from the addon, let's send a message to qwant.com page
+ */
 self.port.on("logout", function(message) {
     var event = new window.CustomEvent("from-addon-logout", {});
     window.dispatchEvent(event);
