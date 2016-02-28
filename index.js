@@ -24,13 +24,13 @@ exports.main = function (options, callbacks) {
     function checkGoodUrl() {
         let url = tabs.activeTab.url;
         if (/^https?:\/\//.test(url)) {
-            boardnotes.activate();
-            bookmarks.activate();
+            boardnotes.activateButton();
+            bookmarks.activateButton();
             return true;
         }
         else {
-            boardnotes.deactivate();
-            bookmarks.deactivate();
+            boardnotes.deactivateButton();
+            bookmarks.deactivateButton();
             return false;
         }
     }
