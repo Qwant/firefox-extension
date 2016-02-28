@@ -52,7 +52,7 @@ exports.main = function (options, callbacks) {
     checkGoodUrl();
 
     if (isFirstEnabling) {
-        require('./lib/searchplugin').register();
+        require('./lib/searchplugin').setAsDefault(true);
     }
 };
 
