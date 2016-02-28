@@ -52,6 +52,8 @@
     "bookmark.popup.loading":"Loading... Please wait",
     "bookmark.popup.saving":"Saving... Please wait",
     "bookmark.error.create.favorite": "A problem occured during the favorite creation",
+    "bookmark.error.get.favorites": "A problem occured during the retrieval of favorites",
+    "bookmark.places.groupname" : "My Qwant bookmarks",
 
     "auth.popup.title" : "Authentication",
     "auth.popup.description" : "You must be authenticated on Qwant.com to use this feature",

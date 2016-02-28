@@ -51,7 +51,9 @@
     "bookmark.popup.loading":"Chargement en cours, veuillez patienter",
     "bookmark.popup.saving":"Enregistrement en cours, veuillez patienter",
     "bookmark.error.create.favorite": "Un problème est apparu lors de la création du favori",
-    
+    "bookmark.error.get.favorites": "Un problème est apparu lors de la récupération des favoris",
+    "bookmark.places.groupname" : "Mes favoris Qwant",
+
     "auth.popup.title" : "Authentification",
     "auth.popup.description" : "Vous devez être identifié sur Qwant.com pour utiliser cette fonctionnalité",
     "auth.popup.login.label" : "Connexion",

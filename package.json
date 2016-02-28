@@ -15,5 +15,14 @@
   ],
   "permissions": {
     "private-browsing": true
-  }
+  },
+  "preferences" : [
+    {
+      "name": "bookmarksGroupId",
+      "type": "integer",
+      "title" : "the Qwant group id in bookmarks",
+      "value": 0,
+      "hidden" : true
+    }
+  ]
 }
