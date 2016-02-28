@@ -1,17 +1,18 @@
 {
-  "title": "Qwant.com For Firefox",
-  "name": "qwantcomforfirefox2",
-  "version": "0.0.1",
+  "title": "My Qwant.com",
+  "name": "myqwant",
+  "id": "myqwant@qwant.com",
+  "version": "1.0.0-rc.1",
   "description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
   "main": "index.js",
   "author": "Qwant",
   "engines": {
-    "firefox": ">=38.0a1",
-    "fennec": ">=38.0a1"
+    "firefox": ">=39.0",
+    "fennec": ">=39.0"
   },
   "license": "MPL-2.0",
   "keywords": [
-    "jetpack"
+    "qwant", "search engine", "bookmarks", "site annotation"
   ],
   "permissions": {
     "private-browsing": true
