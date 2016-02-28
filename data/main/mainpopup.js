@@ -29,14 +29,15 @@ self.port.on("show", function(options) {
         }
     }
 
-    if (options.showWelcome) {
+    if (options.panelToShow == 'welcome') {
         showWelcome();
     }
     else {
         showMain();
     }
 
-    authForm.show(options.isAuthenticated);
+    authForm.show( (options.isAuthenticated?authForm.SHOW_CONNECTED:
+                    options.panelToShow == 'authform'? authForm.SHOW_FORM: authForm.SHOW_NOT_CONNECTED));
 
     document.getElementById('privacy-check').checked = options.privacyEnabled;
     document.getElementById('add-note').disabled = !options.canAddNote;
@@ -45,7 +46,8 @@ self.port.on("show", function(options) {
 });
 
 self.port.on("auth-state", function(options) {
-    authForm.show(options.isAuthenticated, options.error);
+    authForm.show((options.isAuthenticated?authForm.SHOW_CONNECTED: authForm.SHOW_NOT_CONNECTED)
+                  , options.error);
 });
 
 var authForm = {
@@ -85,14 +87,17 @@ var authForm = {
                     self.port.emit("go-lost-password");
                 });
     },
-    show : function(isAuthenticated, error) {
-        let status =  (isAuthenticated?'connected':'hastoconnect');
-        if ( !isAuthenticated && error) {
-            status = 'error';
-        }
+    SHOW_CONNECTED: 'connected',
+    SHOW_FORM: 'connectform',
+    SHOW_NOT_CONNECTED: 'hastoconnect',
+    SHOW_ERROR: 'error',
+    show : function(status, error) {
         this.divPanel.setAttribute('class', status);
         this.fieldLogin.value = '';
         this.fieldPassword.value = '';
+        if (status == this.SHOW_FORM) {
+            this.fieldLogin.focus();
+        }
         document.getElementById('msg-err').textContent = (error?error:'');
     },
 }
