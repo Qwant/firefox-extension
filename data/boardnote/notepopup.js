@@ -77,6 +77,10 @@ self.port.on("error", function(err) {
 
 document.getElementById('btn-submit').addEventListener('click', function(ev) {
     let form = document.getElementById('note-form');
+    if (!form.elements['title'].checkValidity() ||
+        !form.elements['content'].checkValidity()){
+        return;
+    }
     let formData = {
         title: form.elements['title'].value,
         description :form.elements['content'].value,
@@ -94,11 +98,16 @@ document.getElementById('btn-submit').addEventListener('click', function(ev) {
 
     let boardData = null;
     if (boardFields.classList.contains('newboard')) {
+        if (!form.elements['category'].checkValidity() ||
+            !form.elements['boardname'].checkValidity()) {
+            return;
+        }
+
         boardData = {
             board_category: form.elements['category'].value,
             board_description:'',
             board_name: form.elements['boardname'].value,
-            board_status: (form.elements['boardname'].checked?"1":"0")
+            board_status: (form.elements['visibility'].checked?"1":"0")
         };
     }
     else {

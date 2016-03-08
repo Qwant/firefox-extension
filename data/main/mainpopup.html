@@ -40,9 +40,13 @@
             <fieldset id="login-panel">
                 <legend data-l10n-id="auth.connect.fieldset">Connexion</legend>
                 <div id="auth-form">
-                    <input type="text" id="auth-login" placeholder="" data-l10n-id="auth.field.login" /><br/>
-                    <input type="password" id="auth-password" placeholder=""  data-l10n-id="auth.field.password"/><br/>
-                    <button id="auth-connection" class="bigbutton" data-l10n-id="auth.connection.button" type="button">Connexion</button>
+                    <input type="email" id="auth-login" minlength="5" maxlength="128"
+                           placeholder="" required="true" data-l10n-id="auth.field.login" /><br/>
+                    <input type="password" id="auth-password" minlength="1"
+                           maxlength="64" placeholder="" required="true"
+                           data-l10n-id="auth.field.password"/><br/>
+                    <button id="auth-connection" class="bigbutton"
+                            data-l10n-id="auth.connection.button" type="button">Connexion</button>
                 </div>
                 <div id="auth-wait">
                     <p id="msg-load" data-l10n-id="auth.loading"></p>

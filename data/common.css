@@ -85,6 +85,7 @@ body > div {
 }
 
 input[type="text"],
+input[type="email"],
 input[type="password"],
 textarea {
     -moz-appearance: none;
@@ -94,6 +95,16 @@ textarea {
     box-shadow: inset 1px 3px 5px -3px rgba(110,112,114,.3);
     margin: 6px 0;
 }
+
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid
+{
+  border-color: #FC8383;
+  color: #FC8383;
+}
+
 
 /* ------ switch --------- */
 

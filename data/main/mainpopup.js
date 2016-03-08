@@ -71,7 +71,11 @@ var authForm = {
             authForm.fieldLogin.focus();
         });
 
-        this.btnLogin.addEventListener('click', function(){
+        this.btnLogin.addEventListener('click', function() {
+            if (!authForm.fieldLogin.checkValidity() ||
+                !authForm.fieldPassword.checkValidity()) {
+                return;
+            }
             authForm.divPanel.setAttribute('class', 'wait');
             self.port.emit("auth-login", { email: authForm.fieldLogin.value,
                                     password: authForm.fieldPassword.value
@@ -92,6 +96,9 @@ var authForm = {
     SHOW_NOT_CONNECTED: 'hastoconnect',
     SHOW_ERROR: 'error',
     show : function(status, error) {
+        if (error) {
+            status = 'error';
+        }
         this.divPanel.setAttribute('class', status);
         this.fieldLogin.value = '';
         this.fieldPassword.value = '';

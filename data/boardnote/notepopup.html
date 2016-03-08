@@ -30,11 +30,11 @@
                                 <table>
                                 <tr>
                                     <th><label for="boardname-field" data-l10n-id="boardnote.popup.boardname.label"></label></th>
-                                    <td><input id="boardname-field" name="boardname" type="text"/></td>
+                                    <td><input id="boardname-field" name="boardname" type="text" required="true"/></td>
                                 </tr>
                                 <tr>
                                     <th><label for="category-field" data-l10n-id="boardnote.popup.category.label"></label></th>
-                                    <td><select id="category-field" name="category"></select></td>
+                                    <td><select id="category-field" name="category" required="true"></select></td>
                                 </tr>
                                 <tr>
                                     <th data-l10n-id="boardnote.popup.visibility.label"></th>
@@ -45,13 +45,14 @@
                                     </td>
                                 </tr>
                                 </table>
-                                <button id="btn-cancel-board" class="button" data-l10n-id="boardnote.popup.newboard.cancel" type="button"></button>
+                                <button id="btn-cancel-board" class="button" data-l10n-id="boardnote.popup.newboard.cancel"
+                                        type="button"></button>
                             </fieldset>
                         </td>
                     </tr>
                     <tr>
                         <th><label for="url-field" data-l10n-id="boardnote.popup.url.label"></label></th>
-                        <td><input id="url-field" name="url" type="text" disabled/></td>
+                        <td><input id="url-field" name="url" type="text" disabled required="true"/></td>
                     </tr>
                     <tr>
                         <th class="top"><label for="image-field" data-l10n-id="boardnote.popup.image.label"></label>
@@ -62,7 +63,7 @@
                     </tr>
                     <tr>
                         <th><label for="title-field" data-l10n-id="boardnote.popup.title.label"></label></th>
-                        <td><input id="title-field" type="text" name="title" /></td>
+                        <td><input id="title-field" type="text" name="title" required="true" /></td>
                     </tr>
                     <tr>
                         <th class="top"><label for="content-field" data-l10n-id="boardnote.popup.content.label"></label></th>

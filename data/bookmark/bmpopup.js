@@ -19,6 +19,9 @@ self.port.on("error", function(err) {
 
 document.getElementById('btn-submit').addEventListener('click', function(ev) {
     let form = document.getElementById('bookmark-form');
+    if (!form.elements['name'].checkValidity()) {
+        return;
+    }
     let formData = {
         name: form.elements['name'].value,
         url: form.elements['url'].value,
