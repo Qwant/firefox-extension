@@ -5,4 +5,3 @@ if (meta) {
         self.port.emit("tab-meta-info", { description: meta.getAttribute('content') });
     }
 }
-

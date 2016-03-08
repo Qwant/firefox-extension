@@ -21,8 +21,8 @@ exports.main = function (options, callbacks) {
     require('./lib/mainpanel').init(isFirstEnabling);
 
 
-    function checkGoodUrl() {
-        let url = tabs.activeTab.url;
+    function checkGoodUrl(tab) {
+        let url = tab.url;
         if (/^https?:\/\//.test(url)) {
             boardnotes.activateButton();
             bookmarks.activateButton();
@@ -35,21 +35,25 @@ exports.main = function (options, callbacks) {
         }
     }
 
-    tabs.on('activate', function (tab) {
-        checkGoodUrl();
-    });
-    tabs.on('ready',  function (tab) {
-        if (checkGoodUrl()) {
-            tab.qwantInfo = { description: '' };
-            var worker = tab.attach({
-                contentScriptFile: './content-tab-info.js'
-            });
-            worker.port.on("tab-meta-info", function(info) {
-                tab.qwantInfo = info;
-            });
-        }
-    });
-    checkGoodUrl();
+    function initOpenedTab(tab) {
+        tab.on("load", function(tab) {
+            if (checkGoodUrl(tab)) {
+                tab.qwantInfo = { description: '' };
+                var worker = tab.attach({
+                    contentScriptFile: './content-tab-info.js'
+                });
+                worker.port.on("tab-meta-info", function(info) {
+                    tab.qwantInfo = info;
+                });
+            }
+        });
+        tab.on("activate", checkGoodUrl);
+    }
+
+    tabs.on('open', initOpenedTab);
+
+    // init for the first tab existing at startup
+    initOpenedTab(tabs.activeTab);
 
     if (isFirstEnabling) {
         require('./lib/searchplugin').register();
