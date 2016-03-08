@@ -43,6 +43,9 @@
     "boardnote.error.create.board": "Un problème est apparu lors de la création du carnet",
     "boardnote.error.get.preview": "Impossible de récupérer des informations Qwant sur cette page",
     "boardnote.error.get.boards": "Impossible de récupérer votre liste de carnets",
+    "boardnote.error.board.not.found": "Carnet introuvable",
+    "boardnote.error.board.permission.denied": "Permission refusée pour accéder au carnet",
+    "boardnote.error.board.private": "Impossible d'accéder au carnet : il est privé",
 
     "bookmark.toolbarbutton.label": "Poster un favori",
     "bookmark.popup.title": "Poster un favori",
@@ -51,6 +54,7 @@
     "bookmark.popup.loading":"Chargement en cours, veuillez patienter",
     "bookmark.popup.saving":"Enregistrement en cours, veuillez patienter",
     "bookmark.error.create.favorite": "Un problème est apparu lors de la création du favori",
+    "bookmark.error.favorite.notcrawlable" : "Qwant ne peut accéder à l'adresse du favori",
     "bookmark.error.get.favorites": "Un problème est apparu lors de la récupération des favoris",
     "bookmark.places.groupname" : "Mes favoris Qwant",
 

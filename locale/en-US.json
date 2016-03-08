@@ -44,6 +44,9 @@
     "boardnote.error.create.board": "A problem occured during the board creation",
     "boardnote.error.get.preview": "Impossible to retrieve Qwant informations about this page",
     "boardnote.error.get.boards": "Impossible to retrieve your list of boards",
+    "boardnote.error.board.not.found": "Board not found",
+    "boardnote.error.board.permission.denied": "Permission denied to access to the board",
+    "boardnote.error.board.private": "Cannot access to this private board",
 
     "bookmark.toolbarbutton.label": "Post a bookmark",
     "bookmark.popup.title": "Post a bookmark",
@@ -52,6 +55,7 @@
     "bookmark.popup.loading":"Loading... Please wait",
     "bookmark.popup.saving":"Saving... Please wait",
     "bookmark.error.create.favorite": "A problem occured during the favorite creation",
+    "bookmark.error.favorite.notcrawlable" : "Qwant cannot access to the address of the favorite",
     "bookmark.error.get.favorites": "A problem occured during the retrieval of favorites",
     "bookmark.places.groupname" : "My Qwant bookmarks",
 
