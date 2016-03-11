@@ -50,14 +50,20 @@ self.port.on("initform", function(data) {
     for (let img of previousImg) {
         img.parentNode.removeChild(img);
     }
-    let div = imgContainer.firstElementChild;
-    data.images.forEach(function(image) {
-        let img = document.createElement('img');
-        img.setAttribute('src', 'https:'+image.thumbnailMini);
-        img.setAttribute('data-src', image.src);
-        img.setAttribute('data-key', image.key);
-        imgContainer.insertBefore(img, div);
-    });
+    if (data.images.length) {
+        let div = imgContainer.firstElementChild;
+        data.images.forEach(function(image) {
+            let img = document.createElement('img');
+            img.setAttribute('src', 'https:'+image.thumbnailMini);
+            img.setAttribute('data-src', image.src);
+            img.setAttribute('data-key', image.key);
+            imgContainer.insertBefore(img, div);
+        });
+        document.getElementById('image-row').style.display = "table-row";
+    }
+    else {
+        document.getElementById('image-row').style.display = "none";
+    }
     imgContainer.firstElementChild.classList.add('selected');
 
     // other fields
