@@ -78,7 +78,7 @@ self.port.on("initform", function(data) {
     document.getElementById('content-field').value = data.description;
     document.getElementById('boardname-field').value = "";
     document.getElementById('visibility-field').checked = true;
-
+    document.getElementById('note_type-field').value = data.type;
 });
 
 self.port.on("error", function(err) {
@@ -96,7 +96,7 @@ document.getElementById('btn-submit').addEventListener('click', function(ev) {
     let formData = {
         title: form.elements['title'].value,
         description :form.elements['content'].value,
-        type: 'url',
+        type: form.elements['note_type'].value,
         image_src: "",
         image_key: "",
         board_id: "",
