@@ -52,9 +52,15 @@ self.port.on("initform", function(data) {
     }
     if (data.images.length) {
         let div = imgContainer.firstElementChild;
-        data.images.forEach(function(image) {
+        data.images.forEach(image => {
             let img = document.createElement('img');
-            img.setAttribute('src', 'https:'+image.thumbnailMini);
+            if (/^http/.test(image.thumbnailMini)) {
+                img.setAttribute('src', image.thumbnailMini);
+            }
+            else {
+                img.setAttribute('src', 'https:'+image.thumbnailMini);
+            }
+            console.log("Qwant - thumbnailMini: "+image.thumbnailMini);
             img.setAttribute('data-src', image.src);
             img.setAttribute('data-key', image.key);
             imgContainer.insertBefore(img, div);
