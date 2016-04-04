@@ -10,7 +10,7 @@ self.port.on("load", function(type) {
 })
 
 self.port.on("initform", function(data) {
-    document.body.classList.remove('error', 'load', 'save');
+    document.body.classList.remove('error', 'load', 'save','ok');
 
     // boards list
     let list = document.getElementById('board-field');
@@ -82,10 +82,17 @@ self.port.on("initform", function(data) {
 });
 
 self.port.on("error", function(err) {
-    document.body.classList.remove('load', 'save');
+    document.body.classList.remove('load', 'save', 'ok');
     document.body.classList.add('error');
     document.getElementById('error').textContent = err;
 });
+
+
+self.port.on("submitok", function(err) {
+    document.body.classList.remove('load', 'save', 'error');
+    document.body.classList.add('ok');
+});
+
 
 document.getElementById('btn-submit').addEventListener('click', function(ev) {
     let form = document.getElementById('note-form');

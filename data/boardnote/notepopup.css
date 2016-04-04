@@ -2,10 +2,22 @@ body {
     background-color: white;
 }
 
-
-body #err-panel {
+body #err-panel,
+body #submitok-panel
+{
     display:none;
+    background-position: left 2em;
+    background-repeat: no-repeat;
+    padding-left:30px;
+    margin:0 1em;
 }
+#err-panel {
+    background-image: url('../img/notok.png')
+}
+#submitok-panel {
+    background-image: url('../img/ok.png')
+}
+
 body #load-panel {
     display:none;
     text-align:center;
@@ -37,6 +49,14 @@ body.save #msg-load,
 body.load #msg-save {
     display:none;
 }
+
+body.ok #submitok-panel {
+    display:block;
+}
+body.ok #note-panel {
+    display:none;
+}
+
 
 #new-board-form {
     display:none
@@ -93,3 +113,4 @@ h1 {
 #img-container .selected {
     border: 2px solid #0fbd2b !important;
 }
+
