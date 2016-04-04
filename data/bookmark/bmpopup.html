@@ -19,19 +19,17 @@
         </div>
         <div id="bookmark-panel">
             <form id="bookmark-form">
-                <table>
-                    <tr>
-                        <th><label for="url-field" data-l10n-id="bookmark.popup.url.label"></label></th>
-                        <td><input id="url-field" name="url" type="text" disabled required="true"/></td>
-                    </tr>
-                    <tr>
-                        <th><label for="name-field" data-l10n-id="bookmark.popup.name.label"></label></th>
-                        <td><input id="name-field" type="text"name="name" required="true" /></td>
-                    </tr>
-                </table>
-                <div style="text-align: center;">
-                    <button id="btn-cancel" class="button button-grey" data-l10n-id="label.cancel" type="button"></button>
-                    <button id="btn-submit" class="button button-blue" data-l10n-id="label.submit" type="button"></button>
+                <div>
+                    <label for="url-field" data-l10n-id="bookmark.popup.url.label">URL du favori</label><br/>
+                    <input id="url-field" name="url" type="text" required="true"/>
+                </div>
+                <div>
+                    <label for="name-field" data-l10n-id="bookmark.popup.name.label">Nom du favori</label><br/>
+                    <input id="name-field" type="text"name="name" required="true" />
+                </div>
+                <div class="buttons-footer">
+                    <button id="btn-cancel" class="button button-grey" data-l10n-id="label.cancel" type="button">Annuler</button>
+                    <button id="btn-submit" class="button button-blue" data-l10n-id="label.submit" type="button">Publier</button>
                 </div>
             </form>
         </div>

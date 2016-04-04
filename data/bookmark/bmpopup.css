@@ -43,8 +43,17 @@ h1 {
     text-transform: uppercase;
 }
 
-#bookmark-panel th {
-    text-align: right;
+#bookmark-form > div {
+    display:flex;
+    flex-direction:column;
 }
 
-
+#bookmark-form > div.buttons-footer {
+    display:block;
+    text-align:center;
+}
+ 
+#url-field,
+#name-field {
+    flex: 1 1 auto;
+}

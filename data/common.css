@@ -19,14 +19,14 @@ body > div {
 .button {
     -moz-appearance: none;
     display: inline-block;
-    line-height: 28px;
-    padding: 4px 12px 5px;
+    /*line-height: 28px;*/
+    padding: 3px 20px;
     margin: 5px;
     background-color: rgba(128,130,132,.1);
-    border-radius: 3px;
+    border-radius: 20px;
     transition: all .3s ease 0s;
     color: #6D6C6C;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     vertical-align: top;
     white-space: nowrap;
@@ -68,15 +68,17 @@ body > div {
     background-color:#228bea;
     color: white;
     text-align:center;
-    padding: 0.5em 2em;
+    padding: 3px 20px;
     font-weight:bold;
     margin:1em 1em;
+    cursor: pointer;
 }
 
 .fakelink {
     border: 0px transparent;
     background-color:transparent;
     text-align:center;
+    cursor: pointer;
 }
 
 .fakelink::before {

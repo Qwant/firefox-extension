@@ -43,6 +43,7 @@ self.port.on("show", function(options) {
     document.getElementById('add-note').disabled = !options.canAddNote;
     document.getElementById('add-favorite').disabled = !options.canAddFavorite;
     document.getElementById('show-notes').disabled = ! options.isAuthenticated;
+    console.log(options)
 });
 
 self.port.on("auth-state", function(options) {
@@ -100,7 +101,7 @@ var authForm = {
             status = 'error';
         }
         this.divPanel.setAttribute('class', status);
-        this.fieldLogin.value = '';
+        //this.fieldLogin.value = '';
         this.fieldPassword.value = '';
         if (status == this.SHOW_FORM) {
             this.fieldLogin.focus();
