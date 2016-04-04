@@ -43,7 +43,6 @@ self.port.on("show", function(options) {
     document.getElementById('add-note').disabled = !options.canAddNote;
     document.getElementById('add-favorite').disabled = !options.canAddFavorite;
     document.getElementById('show-notes').disabled = ! options.isAuthenticated;
-    console.log(options)
 });
 
 self.port.on("auth-state", function(options) {

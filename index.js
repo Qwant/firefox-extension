@@ -54,6 +54,7 @@ exports.main = function (options, callbacks) {
 
     // init for the first tab existing at startup
     initOpenedTab(tabs.activeTab);
+    checkGoodUrl(tabs.activeTab);
 
     if (isFirstEnabling) {
         require('./lib/searchplugin').register();
