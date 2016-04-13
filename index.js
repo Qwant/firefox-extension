@@ -58,6 +58,7 @@ exports.main = function (options, callbacks) {
 
     if (isFirstEnabling) {
         require('./lib/searchplugin').register();
+        tabs.open('http://www.qwant.com/firefox/extension/first-run');
     }
 };
 
