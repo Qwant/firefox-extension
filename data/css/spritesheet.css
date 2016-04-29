@@ -1,0 +1,144 @@
+.icon {
+	display: inline-block;
+	background: url('../img/spritesheet.png') no-repeat;
+}
+
+/**
+ * Login
+ */
+
+.icon__login {
+	background-position: -5px -332px;
+	width: 10px;
+	height: 8px;
+}
+
+.icon__logout {
+	background-position: -24px -331px;
+	width: 10px;
+	height: 10px;
+}
+
+.icon__previous {
+	background-position: -45px -332px;
+	width: 10px;
+	height: 9px;
+}
+
+.icon__register {
+	background-position: -54px -226px;
+	width: 4px;
+	height: 9px;
+}
+
+.icon__lost__password {
+	background-position: -66px -224px;
+	width: 12px;
+	height: 12px;
+}
+
+/**
+ * Action buttons
+ */
+
+.icon__board {
+	background-position: -2px -284px;
+	width: 18px;
+	height: 18px;
+}
+
+.icon__board__white {
+	background-position: -24px -288px;
+	width: 12px;
+	height: 18px;
+}
+
+.icon__bookmark {
+	background-position: -2px -308px;
+	width: 18px;
+	height: 16px;
+}
+
+.icon__bookmark__white {
+	background-position: -22px -308px;
+	width: 16px;
+	height: 17px;
+}
+
+/**
+ * Tracking protection
+ */
+
+.icon__tracking-protection--enabled {
+	background-position: -48px -113px;
+	width: 36px;
+	height: 40px;
+}
+
+.icon__tracking-protection--disabled {
+	background-position: -92px -113px;
+	width: 36px;
+	height: 40px;
+}
+
+/**
+ * Footer
+ */
+
+.icon__powered-by-qwant {
+	background-position: -6px -202px;
+	width: 117px;
+	height: 17px;
+}
+
+.icon__about {
+	background-position: -1px -247px;
+	width: 18px;
+	height: 18px;
+}
+
+/**
+ * Alerts
+ */
+
+.icon__error {
+	background-position: -4px -227px;
+	width: 16px;
+	height: 15px;
+}
+
+.icon__success {
+	background-position: -25px -227px;
+	width: 22px;
+	height: 15px;
+}
+
+.icon__info {
+	background-position: -21px -247px;
+	width: 18px;
+	height: 18px;
+}
+
+.icon__close__small {
+	background-position: -24px -270px;
+	width: 12px;
+	height: 12px;
+}
+
+/**
+ * Side Panels
+ */
+
+.icon__add-board {
+	background-position: -2px -113px;
+	width: 40px;
+	height: 40px;
+}
+
+.icon__close {
+	background-position: -3px -269px;
+	width: 14px;
+	height: 14px;
+}
+
+

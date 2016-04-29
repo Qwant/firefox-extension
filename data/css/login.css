@@ -1,0 +1,65 @@
+.login {
+	margin: 0;
+}
+.login__title {
+	font-family: "source_sans_prolight";
+	font-weight: 200;
+	font-size: 1.7rem;
+}
+.login__text {
+	margin: 22px 0 0;
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+}
+
+.login__input__login, .login__input__password {
+	background: none;
+	border: none;
+	font-size: 1.24rem;
+	border-bottom: 2px solid;
+	padding: 8px 0;
+	margin: 8px 0;
+	color: rgba(42, 44, 48, 0.48);
+}
+.login__input__login:focus , .login__input__password:focus {
+	border-bottom-color: rgb(69, 139, 248);
+}
+.login__input__login:invalid, .login__input__password:invalid {
+	box-shadow: none;
+}
+
+.login__input__loader {
+	display: none;
+	margin: 32px auto;
+}
+
+.login__input__submit {
+	display: block;
+	width: 200px;
+	border: none;
+	border-radius: 18px;
+	margin: 18px auto;
+	padding: 0 0 0 5px;
+	color: white;
+	line-height: 36px;
+	font-size: 1.06rem;
+	text-align: center;
+	background: rgb(34, 139, 234);
+
+}
+.login__input__submit:active {
+	color: white;
+}
+.login__input__submit:hover {
+	cursor: pointer;
+}
+
+.login__input__lost-password, .login__input__register {
+	font-size: 0.86rem;
+	display: inline-block;
+	width:49%;
+}
+
+.login__input__lost-password {
+	text-align: right;
+}

@@ -1,0 +1,42 @@
+.account {
+	margin: 0 0 29px;
+}
+.account__title {
+	font-family: "source_sans_prolight";
+	font-weight: 200;
+	font-size: 1.7rem;
+}
+
+.account__avatar {
+	height: 64px;
+	width: 64px;
+	display: inline-block;
+	border-radius: 32px;
+}
+
+.account__informations {
+	display: inline-block;
+	padding: 0 0 0 13px;
+	vertical-align: top;
+}
+
+.account__username, .account__boards, .account__bookmarks,
+.account__username:active, .account__boards:active, .account__bookmarks:active,
+.account__username:visited, .account__boards:visited, .account__bookmarks:visited {
+	color: rgb(74, 76, 78);
+}
+
+.account__username {
+	display: block;
+	font-family: 'source_sans_prosemibold';
+	font-size: 1.24rem;
+}
+.account__boards, .account__bookmarks {
+	display: block;
+	color: rgb(74, 76, 78);
+}
+
+.account__boards__icon, .account__bookmarks_icon  {}
+.account__boards_text, .account__bookmarks_text {
+	font-size: 0.84rem;
+}

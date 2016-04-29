@@ -1,0 +1,228 @@
+/**
+ * Reset
+ */
+
+body {
+	margin: 0;
+	border-radius: 5px;
+	background: white;
+	color: rgb(74, 76, 78);
+	font-family: 'source_sans_proregular';
+}
+a, a:active, a:visited {
+	color: rgb(50, 149, 223);
+	text-decoration: none;
+	outline:none;
+}
+p {
+	margin: 0;
+}
+span {}
+.content {
+	padding: 8px 53px;
+	background: white url('../img/background.png') no-repeat 216px -30px;
+}
+
+/**
+ * Login/out buttons
+ */
+
+.button__login, .button__previous, .button__logout {
+	display: block;
+}
+.button__login__icon, .button__previous__icon, .button__logout__icon {}
+.button__login__text, .button__previous__text, .button__logout__text {
+	display: inline-block;
+	margin: 10px 0 0;
+	color: rgba(42, 44, 48, 0.32);
+	font-size: 0.88rem;
+}
+
+/**
+ * Main buttons
+ */
+
+.buttons__boards, .buttons__bookmarks {
+	display: block;
+	border-radius: 18px;
+	margin: 18px 0;
+	padding: 0 0 0 5px;
+	color: white;
+	line-height: 36px;
+	font-size: 1.06rem;
+	text-align: center;
+}
+.buttons__boards:active, .buttons__bookmarks:active {
+	color: white;
+}
+.buttons__boards__icon, .buttons__bookmarks__icon {
+	float: left;
+	margin: 9px 18px 0 9px;
+}
+.buttons__boards__text, .buttons__bookmarks__text {
+	margin-left: -30px;
+}
+.buttons__boards {
+	background: rgb(34, 187, 234);
+}
+.buttons__boards:hover {
+	background: rgb(27, 172, 206);
+}
+.buttons__bookmarks {
+	background: rgb(255, 172, 6);
+}
+.buttons__bookmarks:hover {
+	background: rgb(244, 158, 6);
+}
+
+/**
+ * Tracking Protection
+ */
+
+.tracking-protection {
+	border-top: 1px solid rgb(234, 235, 236);
+	margin-top: 22px;
+	padding-top: 14px;
+}
+.tracking-protection__title {
+	font-family: 'source_sans_prosemibold';
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+.tracking-protection__content {
+	display: table;
+	padding-top: 4px;
+}
+.tracking-protection__content__element {
+	display: table-cell;
+	vertical-align: middle;
+}
+.tracking-protection__content__icon {}
+.tracking-protection__content__text {
+	padding: 0 14px;
+	font-size: 0.9rem;
+}
+.tracking-protection__content__button {
+	display: none;
+}
+
+/**
+ * Checkbox
+ */
+
+label {
+	display: inline-block;
+	background: #fff;
+	cursor: pointer;
+}
+label > input {
+	display: none;
+}
+label i {
+	 display: inline-block;
+	 float: right;
+	 padding: 2px;
+	 width: 40px;
+	 height: 20px;
+	 border-radius: 13px;
+	 vertical-align: middle;
+	 transition: .25s .09s;
+	 position: relative;
+	 background: rgb(240, 83, 80);
+	 box-sizing: initial;
+ }
+label i:after {
+	 content: " ";
+	 display: block;
+	 width: 30px;
+	 height: 30px;
+	 border-radius: 50%;
+	 background: #fff;
+	 position: absolute;
+	 top: -4px;
+	 left: -2px;
+	 transition: .25s;
+	 box-shadow: 2px 2px 5px rgba(16, 20, 28, 0.2);
+}
+label > input:checked + i {
+	background: rgb(140, 225, 150);
+}
+label > input:checked + i:after {
+	transform: translateX(20px);
+}
+label > input:checked + i:after:hover {
+	cursor: pointer;
+}
+
+/**
+ * Footer
+ */
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 54px;
+	background: rgb(248, 248, 248);
+	border-top: 1px rgb(234, 235, 236) solid;
+}
+.footer__powered {
+	display: inline-block;
+	margin: 18px 0 0 26px;
+}
+.footer__informations {
+	float: right;
+	width: 18px;
+	height: 18px;
+	margin: 20px 28px 0 0;
+}
+.footer__informations__icon {}
+
+
+/**
+ * Tooltip
+ */
+
+
+.tooltip__informations {
+	position: absolute;
+	border-radius: 5px;
+	width: 150px;
+	height: 50px;
+	bottom: 50px;
+	right: 8px;
+	background: white;
+	padding: 8px 16px;
+	box-shadow: 2px 2px 7px rgba(16, 20, 28, 0.2);
+}
+.tooltip__informations:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 64px;
+	left: 143px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: white transparent transparent transparent;
+}
+
+.tooltip__informations__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.tooltip__informations__list__element {
+	padding: 4px 0;
+}
+
+.tooltip__informations__list__element a, .tooltip__informations__list__element a:active, .tooltip__informations__list__element a:visited {
+	color: rgba(42, 44, 48, 0.48);
+	font-size: 0.88rem;
+}
+
+.tooltip__informations__list__element:not(:last-child) {
+	border-bottom: 1px solid rgba(42, 44, 48, 0.48);
+}
