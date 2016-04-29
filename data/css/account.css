@@ -36,7 +36,18 @@
 	color: rgb(74, 76, 78);
 }
 
-.account__boards__icon, .account__bookmarks_icon  {}
+.account__boards__icon {
+	vertical-align: top;
+	margin: -1px 4px 0 0;
+}
+.account__bookmarks__icon {
+	margin: 0 4px 0 0;
+}
+.account__bookmarks__icon  {
+	vertical-align: top;
+	margin: 1px 4px 0 0;
+}
 .account__boards_text, .account__bookmarks_text {
 	font-size: 0.84rem;
+	line-height: 21px;
 }

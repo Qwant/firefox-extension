@@ -3,6 +3,7 @@
 }
 .login__title {
 	font-family: "source_sans_prolight";
+	padding: 0 50px 0 0;
 	font-weight: 200;
 	font-size: 1.7rem;
 }
@@ -38,8 +39,7 @@
 	width: 200px;
 	border: none;
 	border-radius: 18px;
-	margin: 18px auto;
-	padding: 0 0 0 5px;
+	margin: 20px auto;
 	color: white;
 	line-height: 36px;
 	font-size: 1.06rem;
@@ -58,6 +58,10 @@
 	font-size: 0.86rem;
 	display: inline-block;
 	width:49%;
+}
+
+.login__input__lost-password__text, .login__input__register__text {
+	vertical-align: middle;
 }
 
 .login__input__lost-password {

@@ -63,13 +63,13 @@ body .qwant-panel .qwant-panel__content__select {
 }
 
 body .qwant-panel .qwant-panel__content__select option {
-	padding: 6px;
+	padding: 16px;
 }
 
 body .qwant-panel .qwant-panel__button {
 	display: inline-block;
 	padding: 12px 0;
-	margin: 32px 5% 0;
+	margin: 32px 7% 0;
 	width: 40%;
 	border-radius: 32px;
 	cursor: pointer;
@@ -80,10 +80,12 @@ body .qwant-panel .qwant-panel__button {
 
 body .qwant-panel .qwant-panel__button--cancel {
 	background: rgb(206, 206, 206);
+	margin-right: 3%;
 }
 
 body .qwant-panel .qwant-panel__button--submit {
 	background: rgb(34, 139, 234);
+	margin-left: 3%;
 }
 
 body .qwant-panel .qwant-panel__powered-by {

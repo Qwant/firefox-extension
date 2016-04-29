@@ -30,7 +30,9 @@ span {}
 .button__login, .button__previous, .button__logout {
 	display: block;
 }
-.button__login__icon, .button__previous__icon, .button__logout__icon {}
+.button__login__icon, .button__previous__icon, .button__logout__icon {
+	margin: 0 4px 0 0;
+}
 .button__login__text, .button__previous__text, .button__logout__text {
 	display: inline-block;
 	margin: 10px 0 0;
@@ -41,7 +43,9 @@ span {}
 /**
  * Main buttons
  */
-
+.buttons {
+	margin: 0 0 26px;
+}
 .buttons__boards, .buttons__bookmarks {
 	display: block;
 	border-radius: 18px;
@@ -57,7 +61,7 @@ span {}
 }
 .buttons__boards__icon, .buttons__bookmarks__icon {
 	float: left;
-	margin: 9px 18px 0 9px;
+	margin: 9px 10px 0 16px;
 }
 .buttons__boards__text, .buttons__bookmarks__text {
 	margin-left: -30px;
@@ -189,7 +193,7 @@ label > input:checked + i:after:hover {
 .tooltip__informations {
 	position: absolute;
 	border-radius: 5px;
-	width: 150px;
+	width: 130px;
 	height: 50px;
 	bottom: 50px;
 	right: 8px;
@@ -203,7 +207,7 @@ label > input:checked + i:after:hover {
 	width: 0;
 	height: 0;
 	top: 64px;
-	left: 143px;
+	left: 123px;
 	border-width: 10px;
 	border-style: solid;
 	border-color: white transparent transparent transparent;
@@ -221,8 +225,4 @@ label > input:checked + i:after:hover {
 .tooltip__informations__list__element a, .tooltip__informations__list__element a:active, .tooltip__informations__list__element a:visited {
 	color: rgba(42, 44, 48, 0.48);
 	font-size: 0.88rem;
-}
-
-.tooltip__informations__list__element:not(:last-child) {
-	border-bottom: 1px solid rgba(42, 44, 48, 0.48);
 }
