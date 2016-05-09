@@ -1,0 +1,186 @@
+
+
+p {
+    font-size:0.9em;
+}
+h1 {
+    margin-top:70px;
+    font-weight:normal;
+}
+h3 {
+    text-transform: uppercase ;
+    font-size: 0.9em;
+}
+
+
+
+/* ------ welcome panel ------*/
+
+#welcome-panel {
+    background:transparent url(../../../data/img/decor_webpage.png) top right no-repeat;
+    flex: 1 1 auto;
+}
+
+
+#main-panel {
+    flex: 1 1 auto;
+}
+
+#welcome-panel ul {
+    list-style-type: none;
+}
+#welcome-panel li img {
+    vertical-align: middle;
+}
+#welcome-panel li {
+    font-size: 1.1em;
+}
+#welcome-footer {
+    text-align:center;
+}
+
+
+/* ------ main panel ------*/
+
+#buttons-panel {
+    text-align:center;
+}
+#buttons-panel .fakelink {
+    font-weight: bold;
+    text-transform: uppercase ;
+    font-size:0.8em;
+}
+#buttons-panel .fakelink::before {
+    content :">> ";
+}
+#main-panel p {
+    font-size:0.8em;
+}
+#add-favorite, #add-note {
+    border-radius: 20px;
+    border: 1px solid #c9cbd2;
+    background-color:transparent;
+    text-align:center;
+    padding: 0.3em 2em;
+    background-position: 0.5em center;
+    background-repeat: no-repeat;
+    margin: 0.5em;
+    cursor: pointer;
+}
+#add-favorite {
+    background-image: url(../img/etoile_mini.png);
+}
+#add-note {
+    background-image: url(../img/notes_mini.png);
+}
+
+#add-favorite:disabled,
+#add-note:disabled,
+#show-notes:disabled {
+    opacity: 0.5;
+}
+
+footer {
+    padding:1em;
+    text-align:right;
+    background-color: #f8f8f8;
+    border-top: 1px solid #f1f2f2;
+}
+
+footer img {
+    float:left;
+}
+
+#options {
+    border: 0px transparent;
+    background-color: transparent;
+}
+
+#menu-options {
+    display:none;
+    position:absolute;
+    bottom:100px;
+    right:100px;
+    border:1px solid black;
+    background-color: white;
+    text-align: left;
+    color: #5B5B5B;
+}
+
+#menu-options ul {
+    list-style-type: none;
+    margin:0;
+    padding:1em;
+    font-size: 0.8em;
+}
+#menu-options li {
+    border-top: 1px solid #AAAAAA;
+    padding: 5px 0 ;
+    cursor: pointer;
+}
+
+#menu-options li:first-child {
+    border: 0px transparent;
+}
+
+/*----------- login panel --------- */
+
+#login-panel.connected {
+    display:none;
+}
+
+#login-panel.hastoconnect #auth-connect {
+}
+
+#login-panel.hastoconnect #auth-form {
+    display:none;
+}
+
+#login-panel.hastoconnect #auth-wait {
+    display:none;
+}
+
+
+#login-panel.connectform #auth-connect {
+    display:none;
+}
+
+#login-panel.connectform #auth-form {
+    
+}
+
+#login-panel.connectform #auth-wait {
+    display:none;
+}
+
+
+#login-panel.wait #auth-connect {
+    display:none;
+}
+
+#login-panel.wait #auth-form {
+    display:none;
+}
+
+#login-panel.wait #msg-err {
+    display:none;
+}
+
+
+#login-panel.error #auth-connect {
+}
+
+#login-panel.error #auth-form {
+    display:none;
+}
+
+#login-panel.error #msg-load {
+    display:none;
+}
+
+#login-panel.error #auth-wait div {
+    display:none;
+}
+#msg-err {
+    color: red;
+}

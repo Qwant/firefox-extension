@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title data-l10n-id="main.popup.title"></title>
+        <meta charset='utf-8'>
+        <meta name='description' content='' />
+        <link rel="stylesheet" href='../common.css' />
+        <link rel="stylesheet" href='mainpopup.css' />
+        <link rel="stylesheet" href='../auth/authpopup.css' />
+    </head>
+    <body>
+        <div id="welcome-panel">
+            <h1 data-l10n-id="welcome.popup.title">Bienvenue sur l'extension Qwant</h1>
+            <p data-l10n-lang="fr">Prolongez l'expérience Qwant avec le module
+            <strong>Qwant pour Firefox</strong>.</p>
+            <p data-l10n-lang="fr">Naviguez en toute <strong>confidentialité</strong>,
+            organisez vos <strong>sites web favoris</strong> et annotez
+            vos contenus préférés grâce aux <strong>carnets</strong>.
+            </p>
+
+            <p data-l10n-lang="en">Extend the Qwant experience with the addon
+            <strong>Qwant pour Firefox</strong>.</p>
+            <p data-l10n-lang="en">Browse the web with <strong>confidentiality</strong>,
+            organize your <strong>favorites web sites</strong> and annotate
+            your prefered content with <strong>notes</strong>.</p>
+
+            <ul>
+                <li><img src="../img/privacy_logo.png" alt=""/> <span data-l10n-id="welcome.item.securedbrowsing">Navigation sécurisée</span></li>
+                <li><img src="../img/etoile.png" alt=""/> <span data-l10n-id="welcome.item.favorites">Favoris</span></li>
+                <li><img src="../img/notes.png" alt=""/> <span data-l10n-id="welcome.item.notes">Carnets</span></li>
+            </ul>
+
+            <div id="welcome-footer">
+                <button id="welcome-start" class="bigbutton" data-l10n-id="welcome.start.button">Commencer</button> <br/>
+                <button id="welcome-register" class="fakelink" data-l10n-id="welcome.register.button">S'inscrire sur Qwant</button> 
+            </div>
+        </div>
+        <div id="main-panel">
+
+            <fieldset id="login-panel">
+                <legend data-l10n-id="auth.connect.fieldset">Connexion</legend>
+                <div id="auth-form">
+                    <input type="email" id="auth-login" minlength="5" maxlength="128"
+                           placeholder="" required="true" data-l10n-id="auth.field.login" /><br/>
+                    <input type="password" id="auth-password" minlength="1"
+                           maxlength="64" placeholder="" required="true"
+                           data-l10n-id="auth.field.password"/><br/>
+                    <button id="auth-connection" class="bigbutton"
+                            data-l10n-id="auth.connection.button" type="button">Connexion</button>
+                </div>
+                <div id="auth-wait">
+                    <p id="msg-load" data-l10n-id="auth.loading"></p>
+                    <p id="msg-err"></p>
+                    <div><img src="../img/loader-board.gif" alt="" /></div>
+                </div>
+                <button id="auth-connect" class="bigbutton" data-l10n-id="auth.connect.button">Se connecter à Qwant</button>
+                <div>
+                    <button id="auth-register" class="fakelink" data-l10n-id="auth.register.button">S'inscrire</button>
+                    <button id="auth-lost-password" class="fakelink" data-l10n-id="auth.lost-password.button">Mot de passe perdu ?</button>
+                </div>
+            </fieldset>
+
+            <div id="buttons-panel">
+                <button id="add-favorite" data-l10n-id="main.button.addfav.label">Ajouter un favori</button> <br/>
+                <button id="add-note" data-l10n-id="main.button.addnote.label">Ajouter une note</button> <br/>
+                <button id="show-notes" class="fakelink" data-l10n-id="main.button.shownote.label">Voir mes carnets</button>
+            </div>
+            <h3 id="privacy-panel">
+                <input id="privacy-check" class="switch" type="checkbox" />
+                <label for="privacy-check" data-l10n-id="main.privacy.checkbox.label">Navigation sécurisée</label>
+            </h3>
+            <div data-l10n-lang="fr">
+                <p><img src="../img/privacy_grey.png" alt="" align="left"/> Par défaut, le module Qwant vous protège
+                du pistage. Désactiver cette option permettra aux sites web
+                d'installer des informations de pistages dans votre navigateur.</p>
+
+                <h3>Filtrage par sites</h3>
+                
+                <p>Vous pouvez également activer ou désactiver le pistage sur
+                les sites de votre choix en cliquant sur l'icône de sécurité
+                situé dans la barre d'adresse.</p>
+            </div>
+
+            <div data-l10n-lang="en">
+
+                <p> <img src="../img/privacy_grey.png" alt="" align="left"/> By default, the Qwant addon protect you agains tracking.
+                Deactivating this option allow web site to install tracking data
+                in your browser.</p>
+
+                <h3>Filtering tracking protection</h3>
+
+                <p>You can also activate or deactivate tracking protection
+                on web sites of your choice, by clicking on the security icon
+                that is in the address bar.</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="../img/privacy_address_bar.png" alt="" />
+            </div>
+        </div>
+        <footer>
+            <img src="../img/poweredby.png"/>
+            <button id="options"><img src="../img/options.png" /></button>
+            <div id="menu-options">
+                <ul>
+                    <li id="option-about" data-l10n-id="main.options.item.about">À propos du module</li>
+                    <li id="option-logout" data-l10n-id="main.options.item.logout">Déconnexion</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

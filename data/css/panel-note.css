@@ -1,6 +1,6 @@
 body .qwant-panel .qwant-panel__content__subtitle {
 	margin: -32px 0 16px;
-	font-size: 1.05rem;
+	font-size: 16px;
 }
 
 body .qwant-panel .qwant-panel__boards-container {
@@ -25,8 +25,9 @@ body .qwant-panel .qwant-panel__boards-container__element__thumb-container {
 	margin: 5px;
 }
 body .qwant-panel .qwant-panel__boards-container__element__thumb-container__img {
-	object-fit: cover;
-	height: 100%;
+	position: relative;
+	height: 30px;
+	width: 30px;
 	border-radius: 5px;
 }
 body .qwant-panel .qwant-panel__boards-container__element__thumb-container__private {

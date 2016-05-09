@@ -68,8 +68,8 @@ body .qwant-panel table, body .qwant-alert table {
  * Injected HTML common style
  */
 
-body .qwant-panel h2, body .qwant-panel h3, body .qwant-panel label, body .qwant-panel input[type="text"], body .qwant-panel p, body .qwant-panel a, .qwant-panel a:active, .qwant-panel a:visited, .qwant-panel a:hover, body .qwant-panel span,
-body .qwant-alert h2, body .qwant-alert h3, body .qwant-alert label, body .qwant-alert input[type="text"], body .qwant-alert p, body .qwant-alert a, .qwant-alert a:active, .qwant-alert a:visited, .qwant-alert a:hover, body .qwant-alert span {
+body .qwant-panel h2, body .qwant-panel h3, body .qwant-panel label, body .qwant-panel input[type="text"], body .qwant-panel p, body .qwant-panel a, body .qwant-panel a:active, body .qwant-panel a:visited, body .qwant-panel a:hover, body .qwant-panel span,
+body .qwant-alert h2, body .qwant-alert h3, body .qwant-alert label, body .qwant-alert input[type="text"], body .qwant-alert p, body .qwant-alert a, body .qwant-alert a:active, body .qwant-alert a:visited, body .qwant-alert a:hover, body .qwant-alert span {
 	font-family: Helvetica, "Droid Sans", Arial, sans-serif;
 	background: none;
 	color: rgb(77, 84, 92);

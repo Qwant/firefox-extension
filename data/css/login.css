@@ -5,18 +5,18 @@
 	font-family: "source_sans_prolight";
 	padding: 0 50px 0 0;
 	font-weight: 200;
-	font-size: 1.7rem;
+	font-size: 27px;
 }
 .login__text {
 	margin: 22px 0 0;
-	font-size: 0.9rem;
+	font-size: 14px;
 	line-height: 1.2rem;
 }
 
 .login__input__login, .login__input__password {
 	background: none;
 	border: none;
-	font-size: 1.24rem;
+	font-size: 19px;
 	border-bottom: 2px solid;
 	padding: 8px 0;
 	margin: 8px 0;
@@ -42,7 +42,7 @@
 	margin: 20px auto;
 	color: white;
 	line-height: 36px;
-	font-size: 1.06rem;
+	font-size: 16px;
 	text-align: center;
 	background: rgb(34, 139, 234);
 
@@ -55,7 +55,7 @@
 }
 
 .login__input__lost-password, .login__input__register {
-	font-size: 0.86rem;
+	font-size: 14px;
 	display: inline-block;
 	width:49%;
 }

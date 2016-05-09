@@ -1,0 +1,2 @@
+Addon for Firefox
+
