@@ -13,7 +13,7 @@ panelContent.classList.add("qwant-panel__content");
 
 var panelTitle = document.createElement("h2");
 panelTitle.classList.add("qwant-panel__content__title");
-panelTitle.innerHTML = self.options.title;
+panelTitle.innerText = self.options.title;
 
 var panelCloseButton = document.createElement("span");
 panelCloseButton.classList.add("qwant-panel__content__close--button");
@@ -21,7 +21,7 @@ panelCloseButton.classList.add("icon");
 panelCloseButton.classList.add("icon-close");
 
 var panelURLLabel = document.createElement("p");
-panelURLLabel.innerHTML = self.options.urlLabel;
+panelURLLabel.innerText = self.options.urlLabel;
 panelURLLabel.classList.add("qwant-panel__content__label");
 panelURLLabel.classList.add("qwant-panel__content__label--url");
 
@@ -33,7 +33,7 @@ panelURLInput.classList.add("qwant-panel__content__input");
 panelURLInput.classList.add("qwant-panel__content__input--url");
 
 var panelNameLabel = document.createElement("p");
-panelNameLabel.innerHTML = self.options.nameLabel;
+panelNameLabel.innerText = self.options.nameLabel;
 panelNameLabel.classList.add("qwant-panel__content__label");
 panelNameLabel.classList.add("qwant-panel__content__label--name");
 
@@ -47,13 +47,13 @@ var cancelButton = document.createElement("a");
 cancelButton.href = "javascript:;";
 cancelButton.classList.add("qwant-panel__button");
 cancelButton.classList.add("qwant-panel__button--cancel");
-cancelButton.innerHTML = self.options.cancel;
+cancelButton.innerText = self.options.cancel;
 
 var submitButton = document.createElement("a");
 submitButton.href = "javascript:;";
 submitButton.classList.add("qwant-panel__button");
 submitButton.classList.add("qwant-panel__button--submit");
-submitButton.innerHTML = self.options.submit;
+submitButton.innerText = self.options.submit;
 
 var poweredBy = document.createElement("a");
 poweredBy.href = "https://www.qwant.com";

@@ -1,7 +1,6 @@
 "use strict";
 
 var self      = require("sdk/self")
-	, buttons = require('sdk/ui/button/action')
 	, _       = require("sdk/l10n").get
 	, tabs    = require("sdk/tabs");
 
@@ -22,7 +21,7 @@ exports.main = function (options) {
 
 	
 	require('./lib/privacy').main(firstLoad);
-	require('./lib/panel').main();
+	require('./lib/panel').main(firstLoad);
 };
 
 exports.onUnload = function (reason) {

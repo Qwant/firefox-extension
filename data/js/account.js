@@ -24,6 +24,6 @@ document.querySelectorAll(".buttons__bookmarks")[0]
 
 self.port.on("popup_data", function(user) {
 	avatar.src = PROTOCOLE + user.avatar;
-	username.innerHTML = user.username;
+	username.innerText = user.username;
 	boardsLink.href = PROTOCOLE + BOARDS_URL + "/user/" + user.username;
 });

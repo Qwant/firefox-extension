@@ -20,6 +20,9 @@ var generator       = {
 	"board-panel"     : boardPanelGenerator
 };
 
+var currentBoard    = self.options.userBoards[0].board_name || null;
+var advancedNoteData= null;
+
 panel.classList.add("qwant-panel");
 panelContent.classList.add("qwant-panel__content");
 panel.appendChild(panelContent);
@@ -37,7 +40,7 @@ function changeState(newState) {
 		generator[newState]()
 			.then(function(resolveContent) {
 				panel.appendChild(resolveContent);
-				currentPanel = panelType;
+				currentPanel = newState;
 			});
 	}
 }
@@ -85,6 +88,17 @@ function selectBoard(event) {
 	document.querySelectorAll(".qwant-panel__boards-container__element--active")[0]
 		.classList.remove("qwant-panel__boards-container__element--active");
 	event.target.classList.add("qwant-panel__boards-container__element--active");
+	currentBoard = event.target.innerText;
+}
+
+/**
+ * On ADVANCED_PANEL, selects the clicked image and unselects the previous one.
+ * @param event
+ */
+function selectAdvancedImage(event) {
+	document.querySelectorAll(".qwant-panel__content__img-container__element--active")[0]
+		.classList.remove("qwant-panel__content__img-container__element--active");
+	event.target.classList.add("qwant-panel__content__img-container__element--active");
 }
 
 /**
@@ -98,7 +112,7 @@ function commonElementsGenerator(panelType) {
 
 		var panelTitle = document.createElement("h2");
 		panelTitle.classList.add("qwant-panel__content__title");
-		panelTitle.innerHTML = self.options.noteTitle;
+		panelTitle.innerText = self.options.noteTitle;
 
 		var panelCloseButton = document.createElement("span");
 		panelCloseButton.classList.add("qwant-panel__content__close--button");
@@ -112,19 +126,19 @@ function commonElementsGenerator(panelType) {
 		cancelButton.href = "javascript:;";
 		cancelButton.classList.add("qwant-panel__button");
 		cancelButton.classList.add("qwant-panel__button--cancel");
-		cancelButton.innerHTML = self.options.cancel;
+		cancelButton.innerText = self.options.cancel;
 
 		var submitButton = document.createElement("a");
 		submitButton.href = "javascript:;";
 		submitButton.classList.add("qwant-panel__button");
 		submitButton.classList.add("qwant-panel__button--submit");
-		submitButton.innerHTML = self.options.submit;
+		submitButton.innerText = self.options.submit;
 
 		var advancedButton = document.createElement("a");
 		advancedButton.href = "javascript:;";
 		advancedButton.classList.add("qwant-panel__button");
 		advancedButton.classList.add("qwant-panel__button--advanced");
-		advancedButton.innerHTML = self.options.advanced;
+		advancedButton.innerText = self.options.advanced;
 
 		var loader = document.createElement("span");
 		loader.classList.add("icon");
@@ -162,7 +176,7 @@ function notePanelGenerator() {
 				var commonElements = resolveCommon;
 				var panelSubtitle = document.createElement("h3");
 				panelSubtitle.classList.add("qwant-panel__content__subtitle");
-				panelSubtitle.innerHTML = self.options.noteSubtitle;
+				panelSubtitle.innerText = self.options.noteSubtitle;
 
 				var panelBoardsContainer = document.createElement("div");
 				panelBoardsContainer.classList.add("qwant-panel__boards-container");
@@ -191,7 +205,7 @@ function notePanelGenerator() {
 
 					var panelBoardsElementName = document.createElement("p");
 					panelBoardsElementName.classList.add("qwant-panel__boards-container__element__name");
-					panelBoardsElementName.innerHTML = board.board_name;
+					panelBoardsElementName.innerText = board.board_name;
 
 					panelBoardsElementThumbContainer.appendChild(panelBoardsElementThumb);
 					panelBoardsElement.appendChild(panelBoardsElementThumbContainer);
@@ -229,7 +243,7 @@ function notePanelGenerator() {
 
 				var panelCreateBoardText = document.createElement("span");
 				panelCreateBoardText.classList.add("qwant-panel__boards-container__board-creator__text");
-				panelCreateBoardText.innerHTML = self.options.noteCreateBoard;
+				panelCreateBoardText.innerText = self.options.noteCreateBoard;
 
 				commonElements.cancelButton
 					.addEventListener("click", function() {
@@ -251,6 +265,15 @@ function notePanelGenerator() {
 
 				commonElements.advancedButton
 					.addEventListener("click", function() {
+						var cancel = document.querySelectorAll(".qwant-panel__button--cancel")[0];
+						var submit = document.querySelectorAll(".qwant-panel__button--submit")[0];
+						var advanced = document.querySelectorAll(".qwant-panel__button--advanced")[0];
+						var loader = document.querySelectorAll(".icon-loading")[0];
+
+						if (cancel) cancel.style.display = "none";
+						if (submit)	submit.style.display = "none";
+						if (advanced) advanced.style.display = "none";
+						if (loader)	loader.style.display = "block";
 						self.port.emit("panel-advanced");
 					});
 
@@ -265,7 +288,7 @@ function notePanelGenerator() {
 				panelContent.appendChild(commonElements.loader);
 				panelContent.appendChild(commonElements.cancelButton);
 				panelContent.appendChild(commonElements.submitButton);
-				// panelContent.appendChild(commonElements.advancedButton);
+				panelContent.appendChild(commonElements.advancedButton);
 				panelContent.appendChild(commonElements.poweredBy);
 
 				resolve(panelContent);
@@ -275,11 +298,163 @@ function notePanelGenerator() {
 
 function advancedPanelGenerator() {
 	return new Promise(function(resolve, reject) {
-		commonElementsGenerator(BOARD_PANEL)
+		commonElementsGenerator(ADVANCED_PANEL)
 			.then(function (resolveCommon) {
 				var commonElements = resolveCommon;
 
-				// Let's add some stuff here
+				var panelSubtitle = document.createElement("h3");
+				panelSubtitle.classList.add("qwant-panel__content__subtitle");
+				panelSubtitle.innerText = self.options.advancedSubtitle;
+
+				var panelBoardLabel = document.createElement("p");
+				panelBoardLabel.innerText = self.options.advancedBoard;
+				panelBoardLabel.classList.add("qwant-panel__content__label");
+				panelBoardLabel.classList.add("qwant-panel__content__label--board");
+
+				var panelBoardInput = document.createElement("input");
+				panelBoardInput.type = "text";
+				panelBoardInput.required = true;
+				panelBoardInput.disabled = true;
+				panelBoardInput.value = currentBoard;
+				panelBoardInput.classList.add("qwant-panel__content__input");
+				panelBoardInput.classList.add("qwant-panel__content__input--board");
+
+				var panelURLLabel = document.createElement("p");
+				panelURLLabel.innerText = "URL:";
+				panelURLLabel.classList.add("qwant-panel__content__label");
+				panelURLLabel.classList.add("qwant-panel__content__label--url");
+
+				var panelURLInput = document.createElement("input");
+				panelURLInput.type = "text";
+				panelURLInput.required = true;
+				panelURLInput.disabled = true;
+				panelURLInput.value = document.URL;
+				panelURLInput.classList.add("qwant-panel__content__input");
+				panelURLInput.classList.add("qwant-panel__content__input--url");
+
+				var panelImgLabel = document.createElement("p");
+				panelImgLabel.innerText = self.options.advancedImage;
+				panelImgLabel.classList.add("qwant-panel__content__label");
+				panelImgLabel.classList.add("qwant-panel__content__label--image");
+
+				var panelImgContainer = document.createElement("div");
+				panelImgContainer.classList.add("qwant-panel__content__img-container");
+
+				var panelEmptyImg = document.createElement("span");
+				panelEmptyImg.classList.add("qwant-panel__content__img-container__empty-img");
+				panelEmptyImg.classList.add("qwant-panel__content__img-container__element");
+				panelEmptyImg.classList.add("qwant-panel__content__img-container__element--active");
+				panelEmptyImg.innerText = self.options.advancedEmptyImage;
+				panelEmptyImg.addEventListener("click", function(event) {
+					selectAdvancedImage(event);
+				});
+
+				panelImgContainer.appendChild(panelEmptyImg);
+				
+				if (advancedNoteData.images && advancedNoteData.images.length > 0) {
+					advancedNoteData.images.forEach(function(image, idx) {
+						var panelImg = document.createElement("span");
+						panelImg.classList.add("qwant-panel__content__img-container__element");
+
+						var panelImgContent = document.createElement("img");
+						panelImgContent.src = image.thumbnailMini;
+						panelImgContent.classList.add("qwant-panel__content__img-container__element__content")
+
+						panelImg.addEventListener("click", function(event) {
+							selectAdvancedImage(event);
+						});
+
+						panelImg.appendChild(panelImgContent);
+						panelImgContainer.appendChild(panelImg);
+					});
+				}
+
+				var panelTitleLabel = document.createElement("p");
+				panelTitleLabel.innerText = self.options.advancedTitle;
+				panelTitleLabel.classList.add("qwant-panel__content__label");
+				panelTitleLabel.classList.add("qwant-panel__content__label--title");
+
+				var panelTitleInput = document.createElement("input");
+				panelTitleInput.type = "text";
+				panelTitleInput.value = advancedNoteData.title;
+				panelTitleInput.classList.add("qwant-panel__content__input");
+				panelTitleInput.classList.add("qwant-panel__content__input--title");
+
+				var panelContentLabel = document.createElement("p");
+				panelContentLabel.innerText = self.options.advancedContent;
+				panelContentLabel.classList.add("qwant-panel__content__label");
+				panelContentLabel.classList.add("qwant-panel__content__label--content");
+
+				var panelContentInput = document.createElement("textarea");
+				panelContentInput.value = advancedNoteData.description;
+				panelContentInput.classList.add("qwant-panel__content__input");
+				panelContentInput.classList.add("qwant-panel__content__input--content");
+
+				commonElements.cancelButton
+					.addEventListener("click", function(){
+						changeState(NOTE_PANEL);
+					});
+				commonElements.submitButton
+					.addEventListener("click", function(){
+						// Hide the buttons and display the loader
+						var cancel = document.querySelectorAll(".qwant-panel__button--cancel")[0];
+						var submit = document.querySelectorAll(".qwant-panel__button--submit")[0];
+						var loader = document.querySelectorAll(".icon-loading")[0];
+
+						if (cancel) cancel.style.display = "none";
+						if (submit)	submit.style.display = "none";
+						if (loader)	loader.style.display = "block";
+
+						// Let's create the data object, as it may not contain all the params
+						var data = {
+							title: document.querySelectorAll(".qwant-panel__content__input--title")[0].value,
+							description: document.querySelectorAll(".qwant-panel__content__input--content")[0].value,
+							type: advancedNoteData.type,
+							url: document.URL
+						};
+
+						// Get the board ID
+						var chosenBoard = document.querySelectorAll(".qwant-panel__content__input--board")[0];
+						self.options.userBoards.forEach(function (board) {
+							if (board.board_name === chosenBoard.value) {
+								data.board_id = board.board_id;
+							}
+						});
+
+						// Get the chosen picture if there is one
+						var chosenImg = document.querySelectorAll(".qwant-panel__content__img-container__element--active img")[0] || null;
+						if (chosenImg !== null) {
+							advancedNoteData.images.forEach(function(image) {
+								if (image.src === chosenImg.src) {
+									data.image_src = image.src;
+									data.image_key = image.key;
+								}
+							});
+						}
+
+						// Let's send the data to the
+						self.port.emit("panel-advanced-submit", data);
+					});
+
+				panelContent.appendChild(commonElements.panelTitle);
+				panelContent.appendChild(commonElements.panelCloseButton);
+				panelContent.appendChild(panelSubtitle);
+				panelContent.appendChild(panelBoardLabel);
+				panelContent.appendChild(panelBoardInput);
+				panelContent.appendChild(panelURLLabel);
+				panelContent.appendChild(panelURLInput);
+				panelContent.appendChild(panelImgLabel);
+				panelContent.appendChild(panelImgContainer);
+				panelContent.appendChild(panelTitleLabel);
+				panelContent.appendChild(panelTitleInput);
+				panelContent.appendChild(panelContentLabel);
+				panelContent.appendChild(panelContentInput);
+				panelContent.appendChild(commonElements.loader);
+				panelContent.appendChild(commonElements.cancelButton);
+				panelContent.appendChild(commonElements.submitButton);
+				panelContent.appendChild(commonElements.poweredBy);
+
+				resolve(panelContent);
 			});
 	});
 }
@@ -292,10 +467,10 @@ function boardPanelGenerator() {
 
 				var panelSubtitle = document.createElement("h3");
 				panelSubtitle.classList.add("qwant-panel__content__subtitle");
-				panelSubtitle.innerHTML = self.options.boardSubtitle;
+				panelSubtitle.innerText = self.options.boardSubtitle;
 
 				var panelNameLabel = document.createElement("p");
-				panelNameLabel.innerHTML = self.options.boardName;
+				panelNameLabel.innerText = self.options.boardName;
 				panelNameLabel.classList.add("qwant-panel__content__label");
 				panelNameLabel.classList.add("qwant-panel__content__label--name");
 
@@ -306,7 +481,7 @@ function boardPanelGenerator() {
 				panelNameInput.classList.add("qwant-panel__content__input--name");
 
 				var panelCategoryLabel = document.createElement("p");
-				panelCategoryLabel.innerHTML = self.options.boardCategory;
+				panelCategoryLabel.innerText = self.options.boardCategory;
 				panelCategoryLabel.classList.add("qwant-panel__content__label");
 				panelCategoryLabel.classList.add("qwant-panel__content__label--name");
 
@@ -317,14 +492,14 @@ function boardPanelGenerator() {
 
 				self.options.categories.forEach(function(category) {
 					var panelCategoryOption = document.createElement("option");
-					panelCategoryOption.innerHTML = category.i18n;
+					panelCategoryOption.innerText = category.i18n;
 					panelCategoryOption.value = category.id;
 
 					panelCategorySelect.appendChild(panelCategoryOption);
 				});
 
 				var panelVisibilityLabel = document.createElement("p");
-				panelVisibilityLabel.innerHTML = self.options.boardVisibility;
+				panelVisibilityLabel.innerText = self.options.boardVisibility;
 				panelVisibilityLabel.classList.add("qwant-panel__content__label");
 				panelVisibilityLabel.classList.add("qwant-panel__content__label--visibility");
 
@@ -332,7 +507,7 @@ function boardPanelGenerator() {
 				panelVisibility.classList.add("qwant-panel__content__visibility");
 
 				var panelVisibilityPrivate = document.createElement("span");
-				panelVisibilityPrivate.innerHTML = self.options.boardPrivate;
+				panelVisibilityPrivate.innerText = self.options.boardPrivate;
 				panelVisibilityPrivate.classList.add("qwant-panel__content__visibility__label");
 				panelVisibilityPrivate.classList.add("qwant-panel__content__visibility__label--private");
 
@@ -350,7 +525,7 @@ function boardPanelGenerator() {
 				panelVisibilityCheckbox.appendChild(panelVisibilityCheckboxI);
 
 				var panelVisibilityPublic = document.createElement("span");
-				panelVisibilityPublic.innerHTML = self.options.boardPublic;
+				panelVisibilityPublic.innerText = self.options.boardPublic;
 				panelVisibilityPublic.classList.add("qwant-panel__content__visibility__label");
 				panelVisibilityPublic.classList.add("qwant-panel__content__visibility__label--public");
 
@@ -411,6 +586,11 @@ self.port.on("panel-enable", function() {
 self.port.on("panel-display-note", function(data) {
 	self.options.userBoards = data;
 	changeState(NOTE_PANEL);
+});
+
+self.port.on("panel-advanced", function(data) {
+	advancedNoteData = data;
+	changeState(ADVANCED_PANEL);
 });
 
 /**

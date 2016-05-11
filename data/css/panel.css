@@ -37,6 +37,7 @@ body .qwant-panel .qwant-panel__content__close--button {
 body .qwant-panel .qwant-panel__content__label {
 	margin-top: 8px;
 	font-size: 15px;
+	text-transform: uppercase;
 }
 
 body .qwant-panel .qwant-panel__content__input {
@@ -48,6 +49,10 @@ body .qwant-panel .qwant-panel__content__input {
 	box-shadow: 0 0 3px rgba(122, 124, 128, 0.48) inset;
 	background: white;
 	font-size: 13px;
+	color: rgb(77, 84, 92);
+}
+body .qwant-panel .qwant-panel__content__input:disabled {
+	background: rgb(222, 222, 222);
 }
 
 body .qwant-panel .qwant-panel__content__select {
@@ -61,9 +66,14 @@ body .qwant-panel .qwant-panel__content__select {
 	background: white;
 	font-size: 13px;
 }
-
 body .qwant-panel .qwant-panel__content__select option {
 	padding: 16px;
+}
+
+body .qwant-panel .qwant-panel__content__input--content {
+	width: 100%;
+	resize: vertical;
+	color: rgb(77, 84, 92);
 }
 
 body .qwant-panel .qwant-panel__button {
@@ -81,9 +91,8 @@ body .qwant-panel .qwant-panel__button {
 body .qwant-panel .qwant-panel__button--cancel {
 	background: rgb(206, 206, 206);
 	margin-right: 3%;
-	transition: background 300ms ease;
-}
 
+}
 body .qwant-panel .qwant-panel__button--cancel:hover {
 	background: rgb(173, 173, 173);
 	color: white;
@@ -95,7 +104,6 @@ body .qwant-panel .qwant-panel__button--submit {
 	margin-left: 3%;
 	transition: background 300ms ease;
 }
-
 body .qwant-panel .qwant-panel__button--submit:hover {
 	background: rgb(31, 121, 204);
 	color: white;
