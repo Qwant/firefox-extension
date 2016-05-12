@@ -2,7 +2,7 @@ body .qwant-alert {
 	width: 100%;
 	position: fixed;
 	top: -100px;
-	z-index: 9999;
+	z-index: 10000;
 	transition: top 600ms ease;
 }
 

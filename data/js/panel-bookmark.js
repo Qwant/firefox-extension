@@ -5,8 +5,14 @@ var SHOW_CLASS= "qwant-panel--visible";
 
 var body = document.body;
 
+var overlay = document.createElement("div");
+overlay.classList.add("qwant-overlay");
+
 var panel = document.createElement("div");
 panel.classList.add("qwant-panel");
+panel.addEventListener("click", function(e) {
+	e.stopPropagation();
+});
 
 var panelContent = document.createElement("div");
 panelContent.classList.add("qwant-panel__content");
@@ -80,10 +86,12 @@ panelContent.appendChild(poweredBy);
 
 panel.appendChild(panelContent);
 
-body.insertBefore(panel, body.firstChild);
+overlay.appendChild(panel);
 
 var show = function() {
 	if (!visible) {
+		body.insertBefore(overlay, body.firstChild);
+		body.style.overflow = "hidden";
 		panel.style.display = "block";
 		setTimeout(function() {
 			panel.classList.add(SHOW_CLASS);
@@ -98,12 +106,13 @@ var hide = function() {
 		panel.classList.remove(SHOW_CLASS);
 		setTimeout(function() {
 			panel.style.display = "none";
-		}, 300);
-
-		visible = false;
-		self.port.emit("panel-hidden");
-		setTimeout(function(){
-			document.querySelectorAll("body")[0].removeChild(alert)
+			visible = false;
+			self.port.emit("panel-hidden");
+			body.removeChild(overlay);
+			body.style.overflow = "auto";
+			while (overlay.hasChildNodes()) {
+				overlay.removeChild(overlay.lastChild);
+			}
 		}, 300);
 	}
 };

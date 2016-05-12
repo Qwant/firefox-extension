@@ -11,6 +11,7 @@ var currentPanel    = NO_PANEL;
 var visible         = false;
 
 var body            = document.body;
+var overlay         = document.createElement("div");
 var panel           = document.createElement("div");
 var panelContent    = document.createElement("div");
 
@@ -23,9 +24,19 @@ var generator       = {
 var currentBoard    = self.options.userBoards[0].board_name || null;
 var advancedNoteData= null;
 
+overlay.classList.add("qwant-overlay");
 panel.classList.add("qwant-panel");
 panelContent.classList.add("qwant-panel__content");
+
+overlay.appendChild(panel);
 panel.appendChild(panelContent);
+panel.addEventListener("click", function(e) {
+	e.stopPropagation();
+});
+
+overlay.addEventListener("click", function(){
+	hide();
+});
 
 /**
  * Changes the content of the panel and links the events
@@ -51,7 +62,8 @@ function changeState(newState) {
  */
 function show() {
 	if (!visible) {
-		body.insertBefore(panel, body.firstChild);
+		body.insertBefore(overlay, body.firstChild);
+		body.style.overflow = "hidden";
 		panel.style.display = "block";
 		setTimeout(function() {
 			panel.classList.add(SHOW_CLASS);
@@ -75,7 +87,11 @@ function hide() {
 		visible = false;
 		self.port.emit("panel-hidden");
 		setTimeout(function(){
-			body.removeChild(panel)
+			body.removeChild(overlay);
+			body.style.overflow = "auto";
+			while (overlay.hasChildNodes()) {
+				overlay.removeChild(overlay.lastChild);
+			}
 		}, 300);
 	}
 }
