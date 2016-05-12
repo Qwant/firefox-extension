@@ -103,7 +103,7 @@ var hide = function() {
 		visible = false;
 		self.port.emit("panel-hidden");
 		setTimeout(function(){
-			body.removeChild(alert)
+			document.querySelectorAll("body")[0].removeChild(alert)
 		}, 300);
 	}
 };
@@ -138,6 +138,6 @@ self.port.on("panel-destroy", function() {
 
 self.port.on("panel-enable", function() {
 	loader.style.display = "none";
-	cancelButton.style.display = "block";
-	submitButton.style.display = "block";
+	cancelButton.style.display = "inline-block";
+	submitButton.style.display = "inline-block";
 });
