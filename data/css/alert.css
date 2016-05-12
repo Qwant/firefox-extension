@@ -53,7 +53,9 @@ body .qwant-alert .qwant-alert__content__message {
 body .qwant-alert .qwant-alert__content__message a, body .qwant-alert .qwant-alert__content__message a:active, body .qwant-alert .qwant-alert__content__message a:visited {
 	color: rgba(69,139,248,.92);
 	text-decoration: none;
+	margin: 0 0 0 8px;
 }
 body .qwant-alert .qwant-alert__content__message a:hover {
 	color: rgba(69,139,248,.72);
+	margin: 0 0 0 8px;
 }

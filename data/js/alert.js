@@ -22,16 +22,15 @@ icon.classList.add("qwant-alert__content__icon--" + self.options.type);
 
 var message = document.createElement("span");
 message.classList.add("qwant-alert__content__message");
+message.innerText = self.options.message;
+
 if (self.options.hasLink) {
 	var link = document.createElement("a");
 	link.href = self.options.url;
 	link.target = "_blank";
-	link.innerText = self.options.message;
+	link.innerText = self.options.linkText;
 	message.appendChild(link);
-} else {
-	message.innerText = self.options.message;
 }
-
 
 /**
  * Functions to show and hide the alert
