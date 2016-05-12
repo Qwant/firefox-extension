@@ -43,6 +43,11 @@ panelNameInput.required = true;
 panelNameInput.classList.add("qwant-panel__content__input");
 panelNameInput.classList.add("qwant-panel__content__input--name");
 
+var loader = document.createElement("span");
+loader.classList.add("icon");
+loader.classList.add("icon-loading");
+loader.style.display = "none";
+
 var cancelButton = document.createElement("a");
 cancelButton.href = "javascript:;";
 cancelButton.classList.add("qwant-panel__button");
@@ -68,6 +73,7 @@ panelContent.appendChild(panelURLLabel);
 panelContent.appendChild(panelURLInput);
 panelContent.appendChild(panelNameLabel);
 panelContent.appendChild(panelNameInput);
+panelContent.appendChild(loader);
 panelContent.appendChild(cancelButton);
 panelContent.appendChild(submitButton);
 panelContent.appendChild(poweredBy);
@@ -113,13 +119,25 @@ cancelButton.addEventListener("click", function() {
 });
 
 submitButton.addEventListener("click", function() {
-	if (panelNameInput.value != "")
-	self.port.emit("panel-submit", {
-		name : panelNameInput.value,
-		url : panelURLInput.value
-	});
+	loader.style.display = "block";
+	cancelButton.style.display = "none";
+	submitButton.style.display = "none";
+
+	if (panelNameInput.value !== "") {
+		self.port.emit("panel-submit", {
+			name : panelNameInput.value,
+			url : panelURLInput.value
+		});
+	}
+
 });
 
 self.port.on("panel-destroy", function() {
 	hide();
+});
+
+self.port.on("panel-enable", function() {
+	loader.style.display = "none";
+	cancelButton.style.display = "block";
+	submitButton.style.display = "block";
 });

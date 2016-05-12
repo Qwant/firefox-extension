@@ -57,13 +57,14 @@
 .login__input__lost-password, .login__input__register {
 	font-size: 14px;
 	display: inline-block;
-	width:49%;
 }
 
 .login__input__lost-password__text, .login__input__register__text {
+	width:30%;
 	vertical-align: middle;
 }
 
 .login__input__lost-password {
+	width:69%;
 	text-align: right;
 }

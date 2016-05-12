@@ -193,7 +193,7 @@ label > input:checked + i:after:hover {
 .tooltip__informations {
 	position: absolute;
 	border-radius: 5px;
-	width: 130px;
+	width: 160px;
 	height: 50px;
 	bottom: 50px;
 	right: 8px;
@@ -207,7 +207,7 @@ label > input:checked + i:after:hover {
 	width: 0;
 	height: 0;
 	top: 64px;
-	left: 123px;
+	left: 153px;
 	border-width: 10px;
 	border-style: solid;
 	border-color: white transparent transparent transparent;
