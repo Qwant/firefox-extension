@@ -1,3 +1,13 @@
+body .qwant-panel.qwant-panel--note-panel .qwant-panel__content {
+	min-height:700px;
+}
+body .qwant-panel.qwant-panel--advanced-panel .qwant-panel__content {
+	min-height:850px;
+}
+body .qwant-panel.qwant-panel--board-panel .qwant-panel__content {
+	min-height:550px;
+}
+
 body .qwant-panel .qwant-panel__content__subtitle {
 	margin: -32px 0 16px;
 	font-size: 16px;
@@ -50,6 +60,12 @@ body .qwant-panel .qwant-panel__boards-container__board-creator__text {
 	vertical-align: top;
 	line-height: 40px;
 	margin: 0 0 0 16px;
+}
+body .qwant-panel .qwant-panel__boards-container__board-creator__text:hover {
+	vertical-align: top;
+	line-height: 40px;
+	margin: 0 0 0 16px;
+	text-decoration: underline;
 }
 
 body .qwant-panel .qwant-panel__content__img-container {

@@ -7,7 +7,6 @@ var self      = require("sdk/self")
 exports.main = function (options) {
 	// loadReason = install enable startup upgrade downgrade
 	let firstLoad = options.loadReason == 'install' ||
-		options.loadReason == 'enable' ||
 		options.loadReason == 'upgrade';
 
 	if (firstLoad) {

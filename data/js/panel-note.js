@@ -44,6 +44,7 @@ overlay.addEventListener("click", function(){
  */
 function changeState(newState) {
 	if (currentPanel !== newState) {
+		panel.classList.remove("qwant-panel--" + currentPanel);
 		panel.removeChild(panelContent);
 		while (panelContent.hasChildNodes()) {
 			panelContent.removeChild(panelContent.lastChild);

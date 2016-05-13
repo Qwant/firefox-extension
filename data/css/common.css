@@ -30,6 +30,7 @@ span {}
 .button__login, .button__previous, .button__logout {
 	display: block;
 }
+
 .button__login__icon, .button__previous__icon, .button__logout__icon {
 	margin: 0 4px 0 0;
 }
@@ -68,15 +69,19 @@ span {}
 }
 .buttons__boards {
 	background: rgb(34, 187, 234);
+	transition: background 300ms ease;
 }
 .buttons__boards:hover {
 	background: rgb(27, 172, 206);
+	transition: background 300ms ease;
 }
 .buttons__bookmarks {
 	background: rgb(255, 172, 6);
+	transition: background 300ms ease;
 }
 .buttons__bookmarks:hover {
 	background: rgb(244, 158, 6);
+	transition: background 300ms ease;
 }
 
 /**
@@ -184,11 +189,9 @@ label > input:checked + i:after:hover {
 }
 .footer__informations__icon {}
 
-
 /**
  * Tooltip
  */
-
 
 .tooltip__informations {
 	position: absolute;

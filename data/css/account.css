@@ -1,10 +1,24 @@
 .account {
-	margin: 0 0 29px;
+	margin:16px 0;
 }
 .account__title {
 	font-family: "source_sans_prolight";
 	font-weight: 200;
 	font-size: 27px;
+	color: rgb(77, 84, 92);
+	margin: 0 0 8px;
+}
+
+.account__profile, .account__settings, .account__profile:visited, .account__settings:visited, .account__profile:active, .account__settings:active {
+	color: rgb(77, 84, 92);
+}
+
+.account__profile:hover, .account__settings:hover {
+	text-decoration: underline;
+}
+
+.account__settings {
+	font-size: 14px;
 }
 
 .account__avatar {
@@ -34,6 +48,12 @@
 .account__boards, .account__bookmarks {
 	display: block;
 	color: rgb(74, 76, 78);
+	text-align: center;
+	transition: text-decoration ease 300ms;
+}
+.account__boards:hover, .account__bookmarks:hover {
+	text-decoration: underline;
+	 transition: text-decoration ease 300ms;
 }
 
 .account__boards__icon {
@@ -50,4 +70,9 @@
 .account__boards_text, .account__bookmarks_text {
 	font-size: 13px;
 	line-height: 21px;
+}
+
+
+.buttons {
+	margin: auto;
 }
