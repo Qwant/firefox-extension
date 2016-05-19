@@ -17,7 +17,6 @@ exports.main = function (options) {
 			url: self.data.url('https://www.qwant.com/extension/firefox/first-run')
 		});
 	}
-
 	
 	require('./lib/privacy').main(firstLoad);
 	require('./lib/panel').main(firstLoad);

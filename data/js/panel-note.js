@@ -439,7 +439,7 @@ function advancedPanelGenerator() {
 						});
 
 						// Get the chosen picture if there is one
-						var chosenImg = document.querySelectorAll(".qwant-panel__content__img-container__element--active img")[0] || null;
+						var chosenImg = document.querySelectorAll(".qwant-panel__content__img-container__element--active")[0] || null;
 						if (chosenImg !== null) {
 							advancedNoteData.images.forEach(function(image) {
 								if (image.src === chosenImg.src) {

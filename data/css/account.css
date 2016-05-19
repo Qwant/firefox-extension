@@ -7,6 +7,10 @@
 	font-size: 27px;
 	color: rgb(77, 84, 92);
 	margin: 0 0 8px;
+	text-overflow: ellipsis;
+	width: 160px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .account__profile, .account__settings, .account__profile:visited, .account__settings:visited, .account__profile:active, .account__settings:active {
