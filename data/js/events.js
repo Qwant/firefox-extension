@@ -11,6 +11,21 @@ document.addEventListener("qwant_website_logout", function() {
 document.addEventListener("qwant_website_bookmark_created", function() {
 	self.port.emit("qwant_website_bookmark_created");
 });
+
 document.addEventListener("qwant_website_bookmark_deleted", function() {
 	self.port.emit("qwant_website_bookmark_deleted");
+});
+
+document.addEventListener("qwant_website_open_extension", function() {
+	self.port.emit("qwant_website_open_extension");
+});
+
+self.port.on("qwant_extension_login", function() {
+	document.dispatchEvent(new CustomEvent("qwant_extension_login"));
+	console.log("login");
+});
+
+self.port.on("qwant_extension_logout", function() {
+	document.dispatchEvent(new CustomEvent("qwant_extension_logout"));
+	console.log("logout");
 });
