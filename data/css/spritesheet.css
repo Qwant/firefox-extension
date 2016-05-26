@@ -7,6 +7,10 @@
  * Login
  */
 
+.icon__settings, .icon__logout {
+	margin-right: 4px;
+}
+
 .icon__settings {
 	background-position: -12px -236px;
 	width: 12px;
@@ -23,13 +27,14 @@
 	background-position: -28px -237px;
 	width: 4px;
 	height: 9px;
-	margin: 2px 4px 1px;
+	margin: 2px 8px 1px;
 }
 
 .icon__lost__password {
-	background-position: -36px -236px;
+	background-position: -36px -235px;
 	width: 12px;
 	height: 12px;
+	margin-right: 4px;
 }
 
 /**

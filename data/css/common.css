@@ -87,6 +87,13 @@ span {}
 	text-decoration: underline;
 }
 
+.buttons .icon {
+	margin-right: 4px;
+}
+.icon.icon__board {
+	margin-right: 8px;
+}
+
 .button__action__text, .button__link__text {
 	vertical-align: top;
 }
