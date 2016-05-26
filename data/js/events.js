@@ -22,10 +22,8 @@ document.addEventListener("qwant_website_open_extension", function() {
 
 self.port.on("qwant_extension_login", function() {
 	document.dispatchEvent(new CustomEvent("qwant_extension_login"));
-	console.log("login");
 });
 
 self.port.on("qwant_extension_logout", function() {
 	document.dispatchEvent(new CustomEvent("qwant_extension_logout"));
-	console.log("logout");
 });

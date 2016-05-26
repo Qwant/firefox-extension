@@ -1,15 +1,26 @@
 "use strict";
 
-document.querySelectorAll(".button__login")[0]
+document.querySelectorAll(".login__input__submit")[0]
 	.addEventListener("click", function() {
 		self.port.emit("popup_login", {action : "login"});
 	});
 
-document.querySelectorAll(".buttons__boards")[0]
+document.querySelectorAll(".button__action--board")[0]
 	.addEventListener("click", function(){
 		self.port.emit("popup_login", {action : "boards"});
 	});
-document.querySelectorAll(".buttons__bookmarks")[0]
+
+document.querySelectorAll(".button__action--bookmark")[0]
 	.addEventListener("click", function(){
 		self.port.emit("popup_login", {action : "bookmarks"});
+	});
+
+document.querySelectorAll(".button__link--board")[0]
+	.addEventListener("click", function(){
+		self.port.emit("popup_login");
+	});
+
+document.querySelectorAll(".button__link--bookmark")[0]
+	.addEventListener("click", function(){
+		self.port.emit("popup_login");
 	});

@@ -7,38 +7,29 @@
  * Login
  */
 
-.icon__login {
-	background-position: -5px -332px;
-	width: 10px;
-	height: 8px;
+.icon__settings {
+	background-position: -12px -236px;
+	width: 12px;
+	height: 12px;
 }
 
 .icon__logout {
-	background-position: -24px -331px;
-	width: 10px;
-	height: 10px;
-}
-
-.icon__previous {
-	background-position: -45px -332px;
-	width: 10px;
-	height: 9px;
+	background-position: 0 -236px;
+	width: 12px;
+	height: 12px;
 }
 
 .icon__register {
-	background-position: -54px -226px;
+	background-position: -28px -237px;
 	width: 4px;
 	height: 9px;
-	vertical-align: middle;
-	margin-right: 4px;
+	margin: 2px 4px 1px;
 }
 
 .icon__lost__password {
-	background-position: -66px -224px;
+	background-position: -36px -236px;
 	width: 12px;
 	height: 12px;
-	vertical-align: middle;
-	margin-right: 4px;
 }
 
 /**
@@ -46,27 +37,29 @@
  */
 
 .icon__board {
-	background-position: -2px -284px;
-	width: 18px;
-	height: 18px;
+	background-position: -5px -199px;
+	width: 10px;
+	height: 13px;
+	margin: 1px 3px 1px 2px;
 }
 
-.icon__board__white {
-	background-position: -24px -288px;
-	width: 12px;
+.icon__board__add {
+	background-position: -21px -197px;
+	width: 18px;
 	height: 18px;
 }
 
 .icon__bookmark {
-	background-position: -2px -308px;
-	width: 18px;
-	height: 16px;
+	background-position: -2px -218px;
+	width: 16px;
+	height: 15px;
+	margin-bottom: 1px;
 }
 
-.icon__bookmark__white {
-	background-position: -22px -308px;
-	width: 16px;
-	height: 17px;
+.icon__bookmark__add {
+	background-position: -21px -217px;
+	width: 18px;
+	height: 18px;
 }
 
 /**
@@ -74,15 +67,17 @@
  */
 
 .icon__tracking-protection--enabled {
-	background-position: -48px -113px;
+	background-position: -48px -90px;
 	width: 36px;
 	height: 40px;
+	margin: 0 2px;
 }
 
 .icon__tracking-protection--disabled {
-	background-position: -92px -113px;
+	background-position: -92px -90px;
 	width: 36px;
 	height: 40px;
+	margin: 0 2px;
 }
 
 /**
@@ -90,59 +85,13 @@
  */
 
 .icon__powered-by-qwant {
-	background-position: -6px -202px;
-	width: 117px;
-	height: 17px;
+	background-position: -2px -249px;
+	width: 60px;
+	height: 16px;
 }
 
 .icon__about {
-	background-position: -1px -247px;
+	background-position: -1px -157px;
 	width: 18px;
 	height: 18px;
 }
-
-/**
- * Alerts
- */
-
-.icon__error {
-	background-position: -4px -227px;
-	width: 16px;
-	height: 15px;
-}
-
-.icon__success {
-	background-position: -25px -227px;
-	width: 22px;
-	height: 15px;
-}
-
-.icon__info {
-	background-position: -21px -247px;
-	width: 18px;
-	height: 18px;
-}
-
-.icon__close__small {
-	background-position: -24px -270px;
-	width: 12px;
-	height: 12px;
-}
-
-/**
- * Side Panels
- */
-
-.icon__add-board {
-	background-position: -2px -113px;
-	width: 40px;
-	height: 40px;
-}
-
-.icon__close {
-	background-position: -3px -269px;
-	width: 14px;
-	height: 14px;
-}
-
-

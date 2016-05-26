@@ -10,23 +10,45 @@
 	</head>
 	<body>
 		<div class="content">
-			<a class="button__login" href="javascript:;">
-				<span class="button__login__icon icon icon__login"></span>
-				<span class="button__login__text" data-l10n-id="buttons.login">Log in</span>
-			</a>
 			<div class="welcome">
 				<h1 class="welcome__title" data-l10n-id="welcome.title">Welcome to the Qwant addon</h1>
 				<p class="welcome__text" data-l10n-id="welcome.content">Browse the web confidentially, organize your favorites websites and annotate your preferred content with the Boards.</p>
 			</div>
+
+			<div class="login__access">
+				<a class="login__input__submit" href="javascript:;">
+					<span class="login__input__submit__label" data-l10n-id="login.input.submit">Connexion</span>
+				</a>
+				<a class="login__input__register" href="https://www.qwant.com/register" target="_blank">
+					<span class="login__input__register__icon icon icon__register"></span>
+					<span class="login__input__register__text" data-l10n-id="login.input.register">Register</span>
+				</a>
+				<a class="login__input__lost-password" href="https://www.qwant.com/password_lost" target="_blank">
+					<span class="login__input__lost-password__icon icon icon__lost__password "></span>
+					<span class="login__input__lost-password__text" data-l10n-id="login.input.lost-password">Lost password?</span>
+				</a>
+			</div>
 			<div class="buttons">
-				<a class="buttons__boards" href="javascript:;">
-					<span class="buttons__boards__icon icon icon__board__white"></span>
-					<span class="buttons__boards__text" data-l10n-id="buttons.boards">Add to my Boards</span>
-				</a>
-				<a class="buttons__bookmarks" href="javascript:;">
-					<span class="buttons__bookmarks__icon icon icon__bookmark__white"></span>
-					<span class="buttons__bookmarks__text" data-l10n-id="buttons.bookmarks">Add to my Bookmarks</span>
-				</a>
+				<div class="buttons__actions">
+					<a class="button__action button__action--board" href="javascript:;">
+						<span class="button__action__icon button__action__icon--board icon icon__board__add"></span>
+						<span class="button__action__text button__action__text--board" data-l10n-id="buttons.new.note">New note</span>
+					</a>
+					<a class="button__action button__action--bookmark" href="javascript:;">
+						<span class="button__action__icon button__action__icon--bookmark icon icon__bookmark__add"></span>
+						<span class="button__action__text button__action__text--bookmark" data-l10n-id="buttons.new.bookmark">New bookmark</span>
+					</a>
+				</div>
+				<div class="buttons__links">
+					<a class="button__link button__link--board" href="javascript:;">
+						<span class="button__link__icon button__link__icon--board icon icon__board"></span>
+						<span class="button__link__text button__link__text--board" data-l10n-id="buttons.link.boards">My boards</span>
+					</a>
+					<a class="button__link button__link--bookmark" href="javascript:;">
+						<span class="button__link__icon button__link__icon--bookmarks icon icon__bookmark"></span>
+						<span class="button__link__text button__link__text--bookmarks" data-l10n-id="buttons.link.bookmark">My bookmarks</span>
+					</a>
+				</div>
 			</div>
 			<div class="tracking-protection">
 				<h2 class="tracking-protection__title" data-l10n-id="tracking-protection.title">Tracking Protection</h2>
@@ -35,7 +57,9 @@
 						<span class="tracking-protection__content__icon icon icon__tracking-protection--enabled"></span>
 					</div>
 					<div class="tracking-protection__content__element">
-						<p class="tracking-protection__content__text" data-l10n-id="tracking-protection.content">Enable all the privacy protection settings</p>
+						<a href="https://www.qwant.com/extension/tracking-protection" target="_blank" class="tracking-protection__content__text">
+							Enable all the privacy protection settings
+						</a>
 					</div>
 					<div class="tracking-protection__content__element">
 						<label class="tracking-protection__content__button">

@@ -7,7 +7,7 @@ body {
 	border-radius: 5px;
 	background: white;
 	color: rgb(74, 76, 78);
-	font-family: 'source_sans_proregular';
+	font-family: 'source_sans_proregular', Helvetica, "Droid Sans", Arial, sans-serif;
 }
 a, a:active, a:visited {
 	color: rgb(50, 149, 223);
@@ -19,7 +19,7 @@ p {
 }
 span {}
 .content {
-	padding: 8px 53px;
+	padding: 8px 32px;
 	background: white url('../img/background.png') no-repeat 216px -30px;
 }
 
@@ -27,61 +27,68 @@ span {}
  * Login/out buttons
  */
 
-.button__login, .button__previous, .button__logout {
-	display: block;
+.login__access {
+	margin: 0 0 16px;
+	border-bottom: 1px solid rgb(234, 235, 236);
+	padding: 0 0 16px;
 }
 
-.button__login__icon, .button__previous__icon, .button__logout__icon {
-	margin: 0 4px 0 0;
+.login__input__submit {
+	display: block;
+	width: 200px;
+	border: none;
+	border-radius: 18px;
+	margin: 20px auto;
+	color: white;
+	line-height: 36px;
+	font-size: 16px;
+	text-align: center;
+	background: rgb(34, 139, 234);
+
 }
-.button__login__text, .button__previous__text, .button__logout__text {
+.login__input__submit:active {
+	color: white;
+}
+.login__input__submit:hover {
+	cursor: pointer;
+}
+
+.login__input__lost-password, .login__input__register {
+	font-size: 13px;
 	display: inline-block;
-	margin: 10px 0 0;
-	color: rgba(42, 44, 48, 0.32);
-	font-size: 14px;
 }
 
 /**
  * Main buttons
  */
 .buttons {
-	margin: 0 0 26px;
+	margin: 0 0 18px;
 }
-.buttons__boards, .buttons__bookmarks {
+.buttons__actions,
+.buttons__links,
+.login__input__lost-password,
+.login__input__register{
+	width: calc(50% - 2px);
+	display: inline-block;
+	vertical-align: top;
+}
+.button__action, .button__action:visited, .button__action:active,
+.button__link,   .button__link:visited,   .button__link:active {
 	display: block;
-	border-radius: 18px;
-	margin: 18px 0;
-	padding: 0 0 0 5px;
-	color: white;
-	line-height: 36px;
-	font-size: 16px;
-	text-align: center;
+	margin: 8px 0;
+	height: 20px;
+	line-height: 20px;
+	font-size: 15px;
+	color: rgb(77, 84, 92);
 }
-.buttons__boards:active, .buttons__bookmarks:active {
-	color: white;
+
+.button__action:hover,
+.button__link:hover {
+	text-decoration: underline;
 }
-.buttons__boards__icon, .buttons__bookmarks__icon {
-	float: left;
-	margin: 9px 10px 0 16px;
-}
-.buttons__boards__text, .buttons__bookmarks__text {
-	margin-left: -30px;
-}
-.buttons__boards {
-	background: rgb(34, 187, 234);
-	transition: background 300ms ease;
-}
-.buttons__boards:hover {
-	background: rgb(27, 172, 206);
-	transition: background 300ms ease;
-}
-.buttons__bookmarks {
-	background: rgb(255, 172, 6);
-	transition: background 300ms ease;
-}
-.buttons__bookmarks:hover {
-	background: rgb(244, 158, 6);
-	transition: background 300ms ease;
+
+.button__action__text, .button__link__text {
+	vertical-align: top;
 }
 
 /**
@@ -90,11 +97,10 @@ span {}
 
 .tracking-protection {
 	border-top: 1px solid rgb(234, 235, 236);
-	margin-top: 22px;
-	padding-top: 14px;
+	padding-top: 16px;
 }
 .tracking-protection__title {
-	font-family: 'source_sans_prosemibold';
+	font-family: 'source_sans_prosemibold', Helvetica, "Droid Sans", Arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 13px;
 }
@@ -109,6 +115,7 @@ span {}
 }
 .tracking-protection__content__icon {}
 .tracking-protection__content__text {
+	display: block;
 	padding: 0 14px;
 	font-size: 14px;
 }

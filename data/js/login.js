@@ -1,10 +1,5 @@
 "use strict";
 
-document.querySelectorAll(".button__previous")[0]
-	.addEventListener("click", function() {
-		self.port.emit("popup_previous");
-	});
-
 var hideSubmit = function() {
 	var loginDiv = document.querySelectorAll(".login")[0];
 	var submitButton = document.querySelectorAll(".login__input__submit")[0];

@@ -1,82 +1,49 @@
+.content {
+	background: none;
+}
+
 .account {
 	margin:16px 0;
 }
-.account__title {
-	font-family: "source_sans_prolight";
-	font-weight: 200;
-	font-size: 27px;
-	color: rgb(77, 84, 92);
-	margin: 0 0 8px;
-	text-overflow: ellipsis;
-	width: 160px;
-	white-space: nowrap;
-	overflow: hidden;
-}
 
-.account__profile, .account__settings, .account__profile:visited, .account__settings:visited, .account__profile:active, .account__settings:active {
-	color: rgb(77, 84, 92);
-}
-
-.account__profile:hover, .account__settings:hover {
-	text-decoration: underline;
-}
-
-.account__settings {
-	font-size: 14px;
+.account__avatar__container,
+.account__informations  {
+	width: calc(50% - 2px);
+	display: inline-block;
+	vertical-align: top;
 }
 
 .account__avatar {
-	height: 64px;
-	width: 64px;
-	display: inline-block;
-	border-radius: 32px;
-}
-
-.account__informations {
-	display: inline-block;
-	padding: 0 0 0 13px;
-	vertical-align: top;
-}
-
-.account__username, .account__boards, .account__bookmarks,
-.account__username:active, .account__boards:active, .account__bookmarks:active,
-.account__username:visited, .account__boards:visited, .account__bookmarks:visited {
-	color: rgb(74, 76, 78);
-}
-
-.account__username {
+	height: 90px;
+	width: 90px;
 	display: block;
-	font-family: 'source_sans_prosemibold';
-	font-size: 19px;
+	border-radius: 50%;
 }
-.account__boards, .account__bookmarks {
-	display: block;
-	color: rgb(74, 76, 78);
-	text-align: center;
-	transition: text-decoration ease 300ms;
+
+.account__username, .account__username:visited, .account__username:active {
+	width: 100%;
+	margin: 0 0 8px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-family: "source_sans_prolight", Helvetica, "Droid Sans", Arial, sans-serif;
+	font-weight: 200;
+	font-size: 21px;
+	color: rgb(77, 84, 92);
 }
-.account__boards:hover, .account__bookmarks:hover {
+.account__username:hover {
 	text-decoration: underline;
-	 transition: text-decoration ease 300ms;
 }
 
-.account__boards__icon {
-	vertical-align: top;
-	margin: -1px 4px 0 0;
-}
-.account__bookmarks__icon {
-	margin: 0 4px 0 0;
-}
-.account__bookmarks__icon  {
-	vertical-align: top;
-	margin: 1px 4px 0 0;
-}
-.account__boards_text, .account__bookmarks_text {
-	font-size: 13px;
-	line-height: 21px;
+.account__settings, .account__settings:visited, .account__settings:active,
+.account__logout,   .account__logout:visited,   .account__logout:active {
+	display: block;
+	margin: 7px 0;
+	font-size: 15px;
+	color: rgb(77, 84, 92);
 }
 
-
-.buttons {
-	margin: auto;
+.account__settings:hover,
+.account__logout:hover {
+	text-decoration: underline;
 }

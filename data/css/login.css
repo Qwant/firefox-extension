@@ -1,5 +1,5 @@
 .login {
-	margin: 0;
+	margin: 0 0 26px;
 }
 .login__title {
 	font-family: "source_sans_prolight";
@@ -16,6 +16,7 @@
 .login__input__login, .login__input__password {
 	background: none;
 	border: none;
+	width:100%;
 	font-size: 19px;
 	border-bottom: 2px solid;
 	padding: 8px 0;
@@ -32,39 +33,4 @@
 .login__input__loader {
 	display: none;
 	margin: 32px auto;
-}
-
-.login__input__submit {
-	display: block;
-	width: 200px;
-	border: none;
-	border-radius: 18px;
-	margin: 20px auto;
-	color: white;
-	line-height: 36px;
-	font-size: 16px;
-	text-align: center;
-	background: rgb(34, 139, 234);
-
-}
-.login__input__submit:active {
-	color: white;
-}
-.login__input__submit:hover {
-	cursor: pointer;
-}
-
-.login__input__lost-password, .login__input__register {
-	font-size: 14px;
-	display: inline-block;
-}
-
-.login__input__lost-password__text, .login__input__register__text {
-	width:30%;
-	vertical-align: middle;
-}
-
-.login__input__lost-password {
-	width:69%;
-	text-align: right;
 }
