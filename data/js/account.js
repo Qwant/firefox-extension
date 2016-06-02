@@ -31,6 +31,16 @@ document.querySelectorAll(".button__link--bookmark")[0]
 		self.port.emit("close-popup");
 	});
 
+document.querySelectorAll(".account__settings")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
+
+document.querySelectorAll(".account__logout")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
+
 self.port.on("popup_data", function(user) {
 	avatar.src = PROTOCOLE + user.avatar;
 	username.innerText = user.username;
