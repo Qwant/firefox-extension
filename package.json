@@ -3,12 +3,16 @@
 	"name": "qwant_for_firefox",
 	"id": "qwant_for_firefox@qwant.com",
 	"version": "3.0.0",
-	"description": "",
+	"description": "Use Qwant as Firefox search engine, block privacy trackers, archive and organize your favorite Web content.",
 	"main": "index.js",
 	"author": "Qwant",
 	"engines": {
 		"firefox": ">=39.0",
 		"fennec": ">=39.0"
+	},
+	"description": "",
+	"icons": {
+		"96": "icon.png"
 	},
 	"license": "MPL-2.0",
 	"keywords": [
