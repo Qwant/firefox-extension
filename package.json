@@ -10,7 +10,6 @@
 		"firefox": ">=39.0",
 		"fennec": ">=39.0"
 	},
-	"description": "",
 	"icons": {
 		"96": "icon.png"
 	},

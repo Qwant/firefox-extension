@@ -9,17 +9,14 @@ exports.main = function (options) {
 	let firstLoad = options.loadReason == 'install' ||
 		options.loadReason == 'upgrade';
 
-	if (firstLoad) {
-		var searchPlugin = require('./lib/searchplugin');
-
-		searchPlugin.addQwant(searchPlugin.setAsDefault);
-		tabs.open({
-			url: self.data.url('https://www.qwant.com/extension/firefox/first-run')
-		});
-	}
-	
 	require('./lib/privacy').main(firstLoad);
 	require('./lib/panel').main(firstLoad);
+
+	if (firstLoad) {
+		var searchPlugin = require('./lib/searchplugin');
+		searchPlugin.addQwant(searchPlugin.setAsDefault);
+		tabs.open("https://www.qwant.com/extension/firefox/first-run");
+	}
 };
 
 exports.onUnload = function (reason) {
