@@ -1,9 +1,9 @@
 {
-	"title": "MyQwant",
-	"name": "my_qwant",
-	"id": "myqwant@qwant.com",
-	"version": "3.0.0-beta",
-	"description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différement. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
+	"title": "Qwant for Firefox",
+	"name": "qwant_for_firefox",
+	"id": "qwant_for_firefox@qwant.com",
+	"version": "3.0.0",
+	"description": "",
 	"main": "index.js",
 	"author": "Qwant",
 	"engines": {
