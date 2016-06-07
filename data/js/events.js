@@ -21,9 +21,11 @@ document.addEventListener("qwant_website_open_extension", function() {
 });
 
 self.port.on("qwant_extension_login", function() {
+	console.log('login');
 	document.dispatchEvent(new CustomEvent("qwant_extension_login"));
 });
 
 self.port.on("qwant_extension_logout", function() {
+	console.log('logout');
 	document.dispatchEvent(new CustomEvent("qwant_extension_logout"));
 });

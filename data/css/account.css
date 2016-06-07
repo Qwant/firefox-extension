@@ -30,6 +30,7 @@
 	font-weight: 200;
 	font-size: 21px;
 	color: rgb(77, 84, 92);
+
 }
 .account__username:hover {
 	text-decoration: underline;
