@@ -25,6 +25,11 @@ body .qwant-alert .qwant-alert__content {
 	background: white;
 }
 
+body .qwant-alert .qwant-alert__content--question {
+	height: 66px;
+	padding: 8px;
+}
+
 body .qwant-alert .qwant-alert__content__icon {
 	display: inline-block;
 	width: 46px;
@@ -39,6 +44,9 @@ body .qwant-alert .qwant-alert__content__icon--info {
 body .qwant-alert .qwant-alert__content__icon--error {
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALBJREFUeNpi+BAcsJ8BBoCcNwABBGM4QQggAAgguBRcAFkGJAEQQAzIgBFJxgkHAwgAAogRpllg7QYRDC3IAMVqZJXYnAEQQNiNgIjvZ8KmAOoGRwxjMXyGpABFggmJvQqIw7C59g02lzOiBwCyAwECjBHKABsJVLSPAQ9AVsuITRDdAGxyjPhMRfYgumGMBJzEgMsLTLjCFhQosIDBlgAYCfkPpz9BCQFXIsFlAEgPAMJxhUn4YPgAAAAAAElFTkSuQmCC') no-repeat center center;
 }
+body .qwant-alert .qwant-alert__content--question .qwant-alert__content__icon {
+	vertical-align: top;
+}
 body .qwant-alert .qwant-alert__content__icon--close {
 	cursor: pointer;
 	float: right;
@@ -50,6 +58,9 @@ body .qwant-alert .qwant-alert__content__message {
 	color: rgb(77, 84, 92);
 	font-size: 14px;
 }
+body .qwant-alert .qwant-alert__content--question .qwant-alert__content__message {
+	vertical-align: inherit;
+}
 body .qwant-alert .qwant-alert__content__message a, body .qwant-alert .qwant-alert__content__message a:active, body .qwant-alert .qwant-alert__content__message a:visited {
 	color: rgba(69,139,248,.92);
 	text-decoration: none;
@@ -58,4 +69,37 @@ body .qwant-alert .qwant-alert__content__message a, body .qwant-alert .qwant-ale
 body .qwant-alert .qwant-alert__content__message a:hover {
 	color: rgba(69,139,248,.72);
 	margin: 0 0 0 8px;
+}
+
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons {
+	display: inline-block;
+	text-align: center;
+	margin-top: -24px;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button {
+	color: white;
+	margin: 0 8px;
+	padding: 0 18px;
+	display: inline-block;
+	border-radius: 25px;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes {
+	background: rgb(34, 139, 234);
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes:hover {
+	background: rgb(31, 121, 204);
+	transition: background 300ms ease;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no {
+	background: rgb(206, 206, 206);
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes:hover {
+	background: rgb(173, 173, 173);
+	transition: background 300ms ease;
 }
