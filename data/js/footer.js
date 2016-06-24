@@ -21,3 +21,8 @@ document.querySelectorAll(".tooltip__informations__list__element")[0]
 	.addEventListener("click", function() {
 		self.port.emit("close-popup");
 	});
+
+document.querySelectorAll(".tooltip__informations__list__element")[1]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
