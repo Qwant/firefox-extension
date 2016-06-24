@@ -39,3 +39,13 @@ document.querySelectorAll(".login__input__password")[0]
 self.port.on("popup_display_submit", function() {
 	displaySubmit();
 });
+
+document.querySelectorAll(".login__input__register")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
+
+document.querySelectorAll(".login__input__lost-password")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});

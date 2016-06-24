@@ -31,6 +31,16 @@ document.querySelectorAll(".button__link--bookmark")[0]
 		self.port.emit("close-popup");
 	});
 
+document.querySelectorAll(".account__avatar__container")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
+
+document.querySelectorAll(".account__username")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
+
 document.querySelectorAll(".account__settings")[0]
 	.addEventListener("click", function() {
 		self.port.emit("close-popup");

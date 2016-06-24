@@ -11,3 +11,13 @@ document.querySelectorAll(".content")[0]
 	.addEventListener("click", function() {
 		tooltip.style.display = 'none';
 	});
+
+document.querySelectorAll(".footer__powered")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
+
+document.querySelectorAll(".tooltip__informations__list__element")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});

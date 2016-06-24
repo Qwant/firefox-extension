@@ -46,3 +46,9 @@ self.port.on("tracking_protection_status", function(data){
 	changeTPIcon(data.status);
 	changeText(data.status);
 });
+
+
+document.querySelectorAll(".tracking-protection__content__text")[0]
+	.addEventListener("click", function() {
+		self.port.emit("close-popup");
+	});
