@@ -1,7 +1,7 @@
 "use strict";
 
 var visible = false;
-var SHOW_CLASS= "qwant-panel--visible";
+var SHOW_CLASS = "qwant-panel--visible";
 
 var body = document.body;
 
@@ -10,7 +10,7 @@ overlay.classList.add("qwant-overlay");
 
 var panel = document.createElement("div");
 panel.classList.add("qwant-panel");
-panel.addEventListener("click", function(e) {
+panel.addEventListener("click", function (e) {
 	e.stopPropagation();
 });
 
@@ -88,12 +88,12 @@ panel.appendChild(panelContent);
 
 overlay.appendChild(panel);
 
-var show = function() {
-	if (!visible) {
+var show = function () {
+	if (!visible && body !== undefined) {
 		body.insertBefore(overlay, body.firstChild);
 		body.style.overflow = "hidden";
 		panel.style.display = "block";
-		setTimeout(function() {
+		setTimeout(function () {
 			panel.classList.add(SHOW_CLASS);
 		}, 10);
 		visible = true;
@@ -101,17 +101,19 @@ var show = function() {
 	}
 };
 
-var hide = function() {
+var hide = function () {
 	if (visible) {
 		panel.classList.remove(SHOW_CLASS);
-		setTimeout(function() {
-			panel.style.display = "none";
-			visible = false;
-			self.port.emit("panel-hidden");
-			body.removeChild(overlay);
-			body.style.overflow = "auto";
-			while (overlay.hasChildNodes()) {
-				overlay.removeChild(overlay.lastChild);
+		setTimeout(function () {
+			if (body !== undefined) {
+				panel.style.display = "none";
+				visible = false;
+				self.port.emit("panel-hidden");
+				body.removeChild(overlay);
+				body.style.overflow = "auto";
+				while (overlay.hasChildNodes()) {
+					overlay.removeChild(overlay.lastChild);
+				}
 			}
 		}, 300);
 	}
@@ -119,33 +121,33 @@ var hide = function() {
 
 setTimeout(show, 1);
 
-panelCloseButton.addEventListener("click", function() {
+panelCloseButton.addEventListener("click", function () {
 	hide();
 });
 
-cancelButton.addEventListener("click", function() {
+cancelButton.addEventListener("click", function () {
 	hide();
 });
 
-submitButton.addEventListener("click", function() {
+submitButton.addEventListener("click", function () {
 	loader.style.display = "block";
 	cancelButton.style.display = "none";
 	submitButton.style.display = "none";
 
 	if (panelNameInput.value !== "") {
 		self.port.emit("panel-submit", {
-			name : panelNameInput.value,
-			url : panelURLInput.value
+			name: panelNameInput.value,
+			url: panelURLInput.value
 		});
 	}
 
 });
 
-self.port.on("panel-destroy", function() {
+self.port.on("panel-destroy", function () {
 	hide();
 });
 
-self.port.on("panel-enable", function() {
+self.port.on("panel-enable", function () {
 	loader.style.display = "none";
 	cancelButton.style.display = "inline-block";
 	submitButton.style.display = "inline-block";

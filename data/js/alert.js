@@ -52,7 +52,9 @@ var hide = function() {
 		visible = false;
 		self.port.emit("alert-hidden");
 		setTimeout(function(){
-			body.removeChild(alert)
+			if (body !== undefined) {
+				body.removeChild(alert);
+			}
 		}, 600);
 	}
 };
@@ -116,6 +118,9 @@ if (self.options.type === "question") {
 	alertContent.appendChild(buttonsContainer);
 }
 
-body.insertBefore(alert, body.firstChild);
+if (body !== undefined) {
+	body.insertBefore(alert, body.firstChild);
+}
+
 
 setTimeout(show, 1);

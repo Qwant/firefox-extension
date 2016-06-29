@@ -62,7 +62,7 @@ function changeState(newState) {
  * @param panelType
  */
 function show() {
-	if (!visible) {
+	if (!visible && body !== undefined) {
 		body.insertBefore(overlay, body.firstChild);
 		body.style.overflow = "hidden";
 		panel.style.display = "block";
@@ -88,10 +88,12 @@ function hide() {
 		visible = false;
 		self.port.emit("panel-hidden");
 		setTimeout(function(){
-			body.removeChild(overlay);
-			body.style.overflow = "auto";
-			while (overlay.hasChildNodes()) {
-				overlay.removeChild(overlay.lastChild);
+			if (body !== undefined) {
+				body.removeChild(overlay);
+				body.style.overflow = "auto";
+				while (overlay.hasChildNodes()) {
+					overlay.removeChild(overlay.lastChild);
+				}
 			}
 		}, 300);
 	}

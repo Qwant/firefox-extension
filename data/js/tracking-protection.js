@@ -32,6 +32,7 @@ document.querySelectorAll(".tracking-protection__content__button")[0]
 			changeTPIcon(false);
 			changeText(false);
 		}
+		self.port.emit("close-popup");
 	});
 
 self.port.on("tracking_protection_status", function(data){
