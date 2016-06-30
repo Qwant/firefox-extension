@@ -21,7 +21,11 @@ var generator       = {
 	"board-panel"     : boardPanelGenerator
 };
 
-var currentBoard    = self.options.userBoards[0].board_name || null;
+var currentBoard    = null;
+if (self.options.userBoards.length > 0) {
+	currentBoard = self.options.userBoards[0].board_name;
+}
+
 var advancedNoteData= null;
 
 overlay.classList.add("qwant-overlay");
