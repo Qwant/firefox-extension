@@ -1,5 +1,9 @@
 "use strict";
 
+var extensionInstalled = true;
+
+unsafeWindow.extensionInstalled = cloneInto(extensionInstalled, unsafeWindow);
+
 document.addEventListener("qwant_website_login", function() {
 	self.port.emit("qwant_website_login");
 });
