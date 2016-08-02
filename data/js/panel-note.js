@@ -111,7 +111,7 @@ function selectBoard(event) {
 	document.querySelectorAll(".qwant-panel__boards-container__element--active")[0]
 		.classList.remove("qwant-panel__boards-container__element--active");
 	event.target.classList.add("qwant-panel__boards-container__element--active");
-	currentBoard = event.target.innerText;
+	currentBoard = event.target.textContent;
 }
 
 /**
@@ -135,7 +135,7 @@ function commonElementsGenerator(panelType) {
 
 		var panelTitle = document.createElement("h2");
 		panelTitle.classList.add("qwant-panel__content__title");
-		panelTitle.innerText = self.options.noteTitle;
+		panelTitle.textContent = self.options.noteTitle;
 
 		var panelCloseButton = document.createElement("span");
 		panelCloseButton.classList.add("qwant-panel__content__close--button");
@@ -149,19 +149,19 @@ function commonElementsGenerator(panelType) {
 		cancelButton.href = "javascript:;";
 		cancelButton.classList.add("qwant-panel__button");
 		cancelButton.classList.add("qwant-panel__button--cancel");
-		cancelButton.innerText = self.options.cancel;
+		cancelButton.textContent = self.options.cancel;
 
 		var submitButton = document.createElement("a");
 		submitButton.href = "javascript:;";
 		submitButton.classList.add("qwant-panel__button");
 		submitButton.classList.add("qwant-panel__button--submit");
-		submitButton.innerText = self.options.submit;
+		submitButton.textContent = self.options.submit;
 
 		var advancedButton = document.createElement("a");
 		advancedButton.href = "javascript:;";
 		advancedButton.classList.add("qwant-panel__button");
 		advancedButton.classList.add("qwant-panel__button--advanced");
-		advancedButton.innerText = self.options.advanced;
+		advancedButton.textContent = self.options.advanced;
 
 		var loader = document.createElement("span");
 		loader.classList.add("icon");
@@ -199,7 +199,7 @@ function notePanelGenerator() {
 				var commonElements = resolveCommon;
 				var panelSubtitle = document.createElement("h3");
 				panelSubtitle.classList.add("qwant-panel__content__subtitle");
-				panelSubtitle.innerText = self.options.noteSubtitle;
+				panelSubtitle.textContent = self.options.noteSubtitle;
 
 				var panelBoardsContainer = document.createElement("div");
 				panelBoardsContainer.classList.add("qwant-panel__boards-container");
@@ -228,7 +228,7 @@ function notePanelGenerator() {
 
 					var panelBoardsElementName = document.createElement("p");
 					panelBoardsElementName.classList.add("qwant-panel__boards-container__element__name");
-					panelBoardsElementName.innerText = board.board_name;
+					panelBoardsElementName.textContent = board.board_name;
 
 					panelBoardsElementThumbContainer.appendChild(panelBoardsElementThumb);
 					panelBoardsElement.appendChild(panelBoardsElementThumbContainer);
@@ -266,7 +266,7 @@ function notePanelGenerator() {
 
 				var panelCreateBoardText = document.createElement("span");
 				panelCreateBoardText.classList.add("qwant-panel__boards-container__board-creator__text");
-				panelCreateBoardText.innerText = self.options.noteCreateBoard;
+				panelCreateBoardText.textContent = self.options.noteCreateBoard;
 
 				commonElements.cancelButton
 					.addEventListener("click", function() {
@@ -327,10 +327,10 @@ function advancedPanelGenerator() {
 
 				var panelSubtitle = document.createElement("h3");
 				panelSubtitle.classList.add("qwant-panel__content__subtitle");
-				panelSubtitle.innerText = self.options.advancedSubtitle;
+				panelSubtitle.textContent = self.options.advancedSubtitle;
 
 				var panelBoardLabel = document.createElement("p");
-				panelBoardLabel.innerText = self.options.advancedBoard;
+				panelBoardLabel.textContent = self.options.advancedBoard;
 				panelBoardLabel.classList.add("qwant-panel__content__label");
 				panelBoardLabel.classList.add("qwant-panel__content__label--board");
 
@@ -343,7 +343,7 @@ function advancedPanelGenerator() {
 				panelBoardInput.classList.add("qwant-panel__content__input--board");
 
 				var panelURLLabel = document.createElement("p");
-				panelURLLabel.innerText = "URL:";
+				panelURLLabel.textContent = "URL:";
 				panelURLLabel.classList.add("qwant-panel__content__label");
 				panelURLLabel.classList.add("qwant-panel__content__label--url");
 
@@ -356,7 +356,7 @@ function advancedPanelGenerator() {
 				panelURLInput.classList.add("qwant-panel__content__input--url");
 
 				var panelImgLabel = document.createElement("p");
-				panelImgLabel.innerText = self.options.advancedImage;
+				panelImgLabel.textContent = self.options.advancedImage;
 				panelImgLabel.classList.add("qwant-panel__content__label");
 				panelImgLabel.classList.add("qwant-panel__content__label--image");
 
@@ -367,7 +367,7 @@ function advancedPanelGenerator() {
 				panelEmptyImg.classList.add("qwant-panel__content__img-container__empty-img");
 				panelEmptyImg.classList.add("qwant-panel__content__img-container__element");
 				panelEmptyImg.classList.add("qwant-panel__content__img-container__element--active");
-				panelEmptyImg.innerText = self.options.advancedEmptyImage;
+				panelEmptyImg.textContent = self.options.advancedEmptyImage;
 				panelEmptyImg.addEventListener("click", function(event) {
 					selectAdvancedImage(event);
 				});
@@ -393,7 +393,7 @@ function advancedPanelGenerator() {
 				}
 
 				var panelTitleLabel = document.createElement("p");
-				panelTitleLabel.innerText = self.options.advancedTitle;
+				panelTitleLabel.textContent = self.options.advancedTitle;
 				panelTitleLabel.classList.add("qwant-panel__content__label");
 				panelTitleLabel.classList.add("qwant-panel__content__label--title");
 
@@ -404,7 +404,7 @@ function advancedPanelGenerator() {
 				panelTitleInput.classList.add("qwant-panel__content__input--title");
 
 				var panelContentLabel = document.createElement("p");
-				panelContentLabel.innerText = self.options.advancedContent;
+				panelContentLabel.textContent = self.options.advancedContent;
 				panelContentLabel.classList.add("qwant-panel__content__label");
 				panelContentLabel.classList.add("qwant-panel__content__label--content");
 
@@ -490,10 +490,10 @@ function boardPanelGenerator() {
 
 				var panelSubtitle = document.createElement("h3");
 				panelSubtitle.classList.add("qwant-panel__content__subtitle");
-				panelSubtitle.innerText = self.options.boardSubtitle;
+				panelSubtitle.textContent = self.options.boardSubtitle;
 
 				var panelNameLabel = document.createElement("p");
-				panelNameLabel.innerText = self.options.boardName;
+				panelNameLabel.textContent = self.options.boardName;
 				panelNameLabel.classList.add("qwant-panel__content__label");
 				panelNameLabel.classList.add("qwant-panel__content__label--name");
 
@@ -504,7 +504,7 @@ function boardPanelGenerator() {
 				panelNameInput.classList.add("qwant-panel__content__input--name");
 
 				var panelCategoryLabel = document.createElement("p");
-				panelCategoryLabel.innerText = self.options.boardCategory;
+				panelCategoryLabel.textContent = self.options.boardCategory;
 				panelCategoryLabel.classList.add("qwant-panel__content__label");
 				panelCategoryLabel.classList.add("qwant-panel__content__label--name");
 
@@ -515,14 +515,14 @@ function boardPanelGenerator() {
 
 				self.options.categories.forEach(function(category) {
 					var panelCategoryOption = document.createElement("option");
-					panelCategoryOption.innerText = category.i18n;
+					panelCategoryOption.textContent = category.i18n;
 					panelCategoryOption.value = category.id;
 
 					panelCategorySelect.appendChild(panelCategoryOption);
 				});
 
 				var panelVisibilityLabel = document.createElement("p");
-				panelVisibilityLabel.innerText = self.options.boardVisibility;
+				panelVisibilityLabel.textContent = self.options.boardVisibility;
 				panelVisibilityLabel.classList.add("qwant-panel__content__label");
 				panelVisibilityLabel.classList.add("qwant-panel__content__label--visibility");
 
@@ -530,7 +530,7 @@ function boardPanelGenerator() {
 				panelVisibility.classList.add("qwant-panel__content__visibility");
 
 				var panelVisibilityPrivate = document.createElement("span");
-				panelVisibilityPrivate.innerText = self.options.boardPrivate;
+				panelVisibilityPrivate.textContent = self.options.boardPrivate;
 				panelVisibilityPrivate.classList.add("qwant-panel__content__visibility__label");
 				panelVisibilityPrivate.classList.add("qwant-panel__content__visibility__label--private");
 
@@ -548,7 +548,7 @@ function boardPanelGenerator() {
 				panelVisibilityCheckbox.appendChild(panelVisibilityCheckboxI);
 
 				var panelVisibilityPublic = document.createElement("span");
-				panelVisibilityPublic.innerText = self.options.boardPublic;
+				panelVisibilityPublic.textContent = self.options.boardPublic;
 				panelVisibilityPublic.classList.add("qwant-panel__content__visibility__label");
 				panelVisibilityPublic.classList.add("qwant-panel__content__visibility__label--public");
 

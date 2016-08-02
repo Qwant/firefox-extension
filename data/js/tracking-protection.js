@@ -16,7 +16,7 @@ var changeTPIcon = function(state) {
 };
 
 var changeText = function(state) {
-	textElement.innerText = state ? textOK : textKO;
+	textElement.textContent = state ? textOK : textKO;
 };
 
 document.querySelectorAll(".tracking-protection__content__button")[0]
