@@ -53,7 +53,7 @@ document.querySelectorAll(".account__logout")[0]
 
 self.port.on("popup_data", function(user) {
 	avatar.src = PROTOCOLE + user.avatar;
-	username.innerText = user.username;
+	username.textContent = user.username;
 	boardsLink.href = PROTOCOLE + BOARDS_URL + "/user/" + user.username;
 });
 

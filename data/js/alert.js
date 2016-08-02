@@ -23,13 +23,13 @@ icon.classList.add("qwant-alert__content__icon--" + self.options.type);
 
 var message = document.createElement("span");
 message.classList.add("qwant-alert__content__message");
-message.innerText = self.options.message;
+message.textContent = self.options.message;
 
 if (self.options.hasLink) {
 	var link = document.createElement("a");
 	link.href = self.options.url;
 	link.target = "_blank";
-	link.innerText = self.options.linkText;
+	link.textContent = self.options.linkText;
 	message.appendChild(link);
 }
 
@@ -95,7 +95,7 @@ if (self.options.type === "question") {
 	yes.classList.add("qwant-alert__content__button");
 	yes.classList.add("qwant-alert__content__button--yes");
 	yes.href="javascript:;";
-	yes.innerText = self.options.yes;
+	yes.textContent = self.options.yes;
 	yes.addEventListener("click", function() {
 		self.port.emit("reload-tabs");
 		hide();
@@ -106,7 +106,7 @@ if (self.options.type === "question") {
 	no.classList.add("qwant-alert__content__button");
 	no.classList.add("qwant-alert__content__button--no");
 	no.href="javascript:;";
-	no.innerText = self.options.no;
+	no.textContent = self.options.no;
 	no.addEventListener("click", function() {
 		self.port.emit("reload-tabs-no");
 		hide();
