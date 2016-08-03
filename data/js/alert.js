@@ -81,7 +81,11 @@ closeButton.addEventListener("click", hide);
  * Adding content in the webpage
  */
 
-alertContent.appendChild(icon);
+if (self.options.type === "question") {
+	message.style.padding = "0 8px";
+} else {
+	alertContent.appendChild(icon);
+}
 alertContent.appendChild(message);
 alertContent.appendChild(closeButton);
 alert.appendChild(alertContent);
