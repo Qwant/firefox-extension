@@ -86,20 +86,26 @@ body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-al
 	border-radius: 25px;
 }
 
-body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes {
-	background: rgb(34, 139, 234);
-}
-
-body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes:hover {
-	background: rgb(31, 121, 204);
-	transition: background 300ms ease;
-}
-
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes,
 body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no {
-	background: rgb(206, 206, 206);
+	color: rgb(77, 84, 92);
 }
 
-body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes:hover {
-	background: rgb(173, 173, 173);
-	transition: background 300ms ease;
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes .icon,
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no .icon {
+	float: left;
+	margin: 14px 14px 0 0;
+	background: url('../img/spritesheet.png') no-repeat;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes .icon {
+	background-position: -26px -136px;
+	width: 20px;
+	height: 18px;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no .icon {
+	background-position: -2px -136px;
+	width: 20px;
+	height: 18px;
 }

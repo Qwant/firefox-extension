@@ -92,6 +92,7 @@ if (self.options.type === "question") {
 	buttonsContainer.classList.add("qwant-alert__content__buttons");
 
 	var yes = document.createElement("a");
+	var spanYes = document.createElement("span");
 	yes.classList.add("qwant-alert__content__button");
 	yes.classList.add("qwant-alert__content__button--yes");
 	yes.href="javascript:;";
@@ -100,9 +101,13 @@ if (self.options.type === "question") {
 		self.port.emit("reload-tabs");
 		hide();
 	});
+	spanYes.classList.add('icon');
+	spanYes.classList.add('icon__alert-yes');
+	yes.appendChild(spanYes);
 	buttonsContainer.appendChild(yes);
 
 	var no = document.createElement("a");
+	var spanNo = document.createElement("span");
 	no.classList.add("qwant-alert__content__button");
 	no.classList.add("qwant-alert__content__button--no");
 	no.href="javascript:;";
@@ -111,6 +116,10 @@ if (self.options.type === "question") {
 		self.port.emit("reload-tabs-no");
 		hide();
 	});
+	spanNo.classList.add('icon');
+	spanNo.classList.add('icon__alert-no');
+
+	no.appendChild(spanNo);
 	buttonsContainer.appendChild(no);
 
 
