@@ -25,11 +25,6 @@ body .qwant-alert .qwant-alert__content {
 	background: white;
 }
 
-/*body .qwant-alert .qwant-alert__content--question {
-	height: 66px;
-	padding: 8px;
-}*/
-
 body .qwant-alert .qwant-alert__content__icon {
 	display: inline-block;
 	width: 46px;
