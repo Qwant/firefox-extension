@@ -11,7 +11,6 @@ const FIREFOX4QWANT = "extensions.qwant.distribution";
 exports.main = function (options) {
 	// loadReason = install enable startup upgrade downgrade
 	let firstLoad = options.loadReason == 'install' ||
-		options.loadReason == 'upgrade' ||
 		options.loadReason == 'enabled' ;
 
 	let f4q = Preferences.get(FIREFOX4QWANT) || false;
