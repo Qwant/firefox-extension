@@ -1,29 +1,36 @@
 {
-  "title": "My Qwant.com",
-  "name": "myqwant",
-  "id": "myqwant@qwant.com",
-  "version": "1.0.0-rc.3",
-  "description": "QWANT est un moteur de recherche français qui vous montre l'univers d'internet différemment. Zéro filtres, Zéro Cookies de traçage. Cherchez librement tout en protégeant votre vie privée.",
-  "main": "index.js",
-  "author": "Qwant",
-  "engines": {
-    "firefox": ">=39.0",
-    "fennec": ">=39.0"
-  },
-  "license": "MPL-2.0",
-  "keywords": [
-    "qwant", "search engine", "bookmarks", "site annotation"
-  ],
-  "permissions": {
-    "private-browsing": true
-  },
-  "preferences" : [
-    {
-      "name": "bookmarksGroupId",
-      "type": "integer",
-      "title" : "the Qwant group id in bookmarks",
-      "value": 0,
-      "hidden" : true
-    }
-  ]
+	"title": "Qwant for Firefox",
+	"name": "qwant_for_firefox",
+	"id": "qwantcomforfirefox@jetpack",
+	"version": "3.0.14",
+	"description": "Use Qwant as Firefox search engine, block privacy trackers, archive and organize your favorite Web content.",
+	"main": "index.js",
+	"author": "Qwant",
+	"engines": {
+		"firefox": ">=39.0"
+	},
+	"icons": {
+		"96": "icon.png"
+	},
+	"license": "MIT",
+	"keywords": [
+		"qwant",
+		"search engine",
+		"bookmarks",
+		"boards",
+		"tracking protection",
+		"privacy"
+	],
+	"permissions": {
+		"private-browsing": true
+	},
+	"preferences": [
+		{
+			"name": "bookmarksGroupId",
+			"type": "integer",
+			"title": "the Qwant group id in bookmarks",
+			"value": 0,
+			"hidden": true
+		}
+	]
 }

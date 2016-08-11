@@ -1,70 +1,37 @@
 "use strict";
 
-var self = require("sdk/self");
-var buttons = require('sdk/ui/button/action');
-var _ = require("sdk/l10n").get;
-var tabs = require("sdk/tabs");
+var self = require("sdk/self")
+    , _ = require("sdk/l10n").get
+    , tabs = require("sdk/tabs")
+    , searchPlugin = require('./lib/searchplugin')
+    , Preferences = require("sdk/preferences/service");
 
-exports.main = function (options, callbacks) {
+const FIREFOX4QWANT = "extensions.qwant.distribution";
 
-    let isFirstEnabling = options.loadReason == 'install' ||
-                          options.loadReason == 'enable';
-                          // loadReason = install enable startup upgrade downgrade
+exports.main = function (options) {
+    // loadReason = install enable startup upgrade downgrade
+    let firstLoad = options.loadReason == 'install' ||
+        options.loadReason == 'enabled';
 
-    require('./lib/privacy').init(isFirstEnabling);
-    require('./lib/authentication').init();
-    let boardnotes = require('./lib/boardnotes')
-    let bookmarks = require('./lib/bookmarks')
-    boardnotes.init();
-    bookmarks.init();
+    let f4q = Preferences.get(FIREFOX4QWANT) || false;
 
-    require('./lib/mainpanel').init(isFirstEnabling);
+    require('./lib/privacy').main(firstLoad);
+    require('./lib/panel').main(firstLoad);
 
-
-    function checkGoodUrl(tab) {
-        let url = tab.url;
-        if (/^https?:\/\//.test(url)) {
-            boardnotes.activateButton();
-            bookmarks.activateButton();
-            return true;
-        }
-        else {
-            boardnotes.deactivateButton();
-            bookmarks.deactivateButton();
-            return false;
-        }
-    }
-
-    function initOpenedTab(tab) {
-        tab.on("load", function(tab) {
-            if (checkGoodUrl(tab)) {
-                tab.qwantInfo = { description: '' };
-                var worker = tab.attach({
-                    contentScriptFile: './content-tab-info.js'
-                });
-                worker.port.on("tab-meta-info", function(info) {
-                    tab.qwantInfo = info;
-                });
-            }
-        });
-        tab.on("activate", checkGoodUrl);
-    }
-
-    tabs.on('open', initOpenedTab);
-
-    // init for the first tab existing at startup
-    initOpenedTab(tabs.activeTab);
-    checkGoodUrl(tabs.activeTab);
-
-    if (isFirstEnabling) {
-        require('./lib/searchplugin').register();
-        tabs.open('http://www.qwant.com/firefox/extension/first-run');
+    if (firstLoad && f4q === false) {
+        searchPlugin.addQwant(searchPlugin.setAsDefault);
+        tabs.open("https://www.qwant.com/extension/firefox/first-run");
     }
 };
 
 exports.onUnload = function (reason) {
+    let f4q = Preferences.get(FIREFOX4QWANT);
+
     //reason = uninstall disable shutdown upgrade downgrade
     if (reason == 'uninstall' || reason == 'disable') {
+        if (f4q === false) {
+            require('./lib/searchplugin').removeQwant();
+        }
         require('./lib/privacy').reset();
     }
 };
