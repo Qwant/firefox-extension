@@ -1,9 +1,9 @@
 body .qwant-alert {
-	width: 100%;
 	position: fixed;
 	top: -100px;
 	z-index: 10000;
 	transition: top 600ms ease;
+	margin-left: calc(70% - 750px);
 }
 
 body .qwant-alert--visible {
@@ -103,4 +103,10 @@ body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-al
 	background-position: -2px -136px;
 	width: 20px;
 	height: 18px;
+}
+
+@media screen and (max-width: 1080px) {
+	body .qwant-alert {
+		margin-left: 0;
+	}
 }
