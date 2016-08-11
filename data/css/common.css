@@ -1,332 +1,272 @@
-@font-face {
-	font-family: 'source_sans_prolight';
-	src: url('../fonts/sourcesanspro-light-webfont.eot');
-	src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/sourcesanspro-light-webfont.woff') format('woff'),
-		url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
-		url('../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'source_sans_proregular';
-	src: url('../fonts/sourcesanspro-regular-webfont.eot');
-	src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
-		url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
-		url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+/**
+ * Reset
+ */
 
 body {
-	margin:0;
-	border:0;
-	background-repeat:no-repeat;
+    margin: 0;
+    border-radius: 5px;
+    background: white;
+    color: rgb(74, 76, 78);
+    font-family: 'source_sans_proregular', Helvetica, "Droid Sans", Arial, sans-serif;
 }
 
-/* CONTAINERS */
-
-.wrapper {
-	width:100%;
-	border:0;
-	background-position: center top;
-	background-repeat:no-repeat;
-}
-
-.subwrapper {
-	width:968px;
-	margin:0 auto;
-	text-align:center;
-}
-
-.container {
-	width:800px;
-	margin:0 auto;
-	text-align:center;
-}
-
-.smart-search-container {
-	width:392px;
-	height:403px;
-	background-image:url('../img/smartsearch-illustration-bg.png');
-	background-position: left top;
-	background-repeat:no-repeat;
-	float:left;
-}
-
-.smart-search-subcontainer {
-	width:300px;
-	float:right;
-	padding: 1px 14px 0 12px;
-}
-
-
-
-.footer-container {
-	width:100%;
-	border:0;
-	background-color:#2B2B2B;
-	padding-top:18px;
-	height:128px;
-}
-
-/* TEXT AND TITLES */
-
-table {
-	width:100%;
-	margin:0;
-	padding:0;
-	border:0;
-}
-
-tr {
-	text-align:left;
-}
-
-td {
-	vertical-align: top;
-}
-
-h1, h2, h3 {
-	text-align:center;
-	font-family: source_sans_prolight, Arial, Helvetica, sans-serif;
-	font-size: 1.76em;
-	font-stretch: extra-condensed;
-	letter-spacing:-0.03em;
-	line-height: 50px;
-	margin:0;
-
-	font-weight:400;
-}
-
-h2, h3, h4, h5, h6, h7, .options-table-title {
-	color:#3E505E;
-	font-family: source_sans_prolight, Arial, Helvetica, sans-serif;
-	letter-spacing:-0.05em;
-	line-height:normal;
-	text-align:left;
-}
-
-h3 {
-	font-size:1.38em;
-	color: rgb(54, 52, 58);
-	font-weight:400;
-	letter-spacing:-0.025em;
-	line-height:25px;
-	width:90%;
-	margin-top:8px;
-}
-
-h4, h5, h6 {
-	font-family: Lucida Sans Unicode, Arial, Helvetica, sans-serif;
-	font-weight:400;
-	font-size:0.9em;
-	line-height:19px;
-	margin:0;
-	margin-top:10px;
-	color: rgb(84, 82, 95);
-}
-
-.subtext-container {
-	width:640px;
-	margin:0 auto;
-	text-align:left;
-	margin-bottom:18px;
-	margin-top:18px;
-}
-
-.screenshots-large-container {
-	width:550px;
-	height:770px;
-	float:left;
-}
-
-.image-w-border {
-	border: 1px solid rgb(226, 228, 234);
-	border-radius:2px;
-}
-
-.screenshots-mini-container {
-	padding:38px;
-	padding-top:0;
-	padding-bottom:0;
-	width:398px;
-	float:left;
-}
-
-h5 {
-	margin-right:12px;
-}
-
-h7, .options-table-title {
-	font-size:1.4em;
-	margin:0;
-	line-height:34px;
-}
-
-.options-table-title {
-	text-align:left;
-	margin-bottom:10px;
-}
-
-strong {
-	font-family: Segoe UI, Arial, sans-serif;
-	letter-spacing:-0.005em;
-	opacity:1;
-}
-
-h6 {
-	font-family: source_sans_prolight, Arial, Helvetica, sans-serif;
-	font-size:1.4em;
-	color: grey;
-	font-weight:400;
-	margin-right:26px;
-}
-
-p, ul, li {
-	color: #8A8888;
-	font-family: Segoe UI, Arial, Helvetica, sans-serif;
-	font-weight:400;
-	font-size:0.92em;
-	line-height:21px;
-	padding-bottom:8px;
-
-}
-
-ul, li {
-	text-align:left;
-	color:#666;
-	letter-spacing:-0.05em;
-	padding-left:32px;
-}
-
-li {
-	background-image:url('../img/bullet.png');
-	background-position: left top;
-	background-repeat:no-repeat;
-	list-style-type:none;
+a, a:active, a:visited {
+    color: rgb(50, 149, 223);
+    text-decoration: none;
+    outline: none;
 }
 
 p {
-	width:100%;
-	margin:0;
-	padding:0;
-	text-align:left;
+    margin: 0;
 }
 
-.specs, .option_item {
-	font-family: Segoe UI,Arial,Helvetica,sans-serif;
-	font-weight: 400;
-	font-size: 0.91em;
-	line-height: 21px;
-	padding-bottom: 8px;
-	color:#888;
-	vertical-align:middle;
+span {
 }
 
-.option_item {
-	margin:0;
-	padding:0;
-	font-size:0.8em;
-	background:none;
-	background-image:none;
-	list-style:square;
-	vertical-align:top;
-	margin-left:2px;
-	line-height:17px;
-	color:#777;
+.content {
+    padding: 8px 32px;
 }
 
-.options-table {
-	width:640px;
-	margin:0 auto;
-	background-color:#F9F9F9;
-	border-radius:3px;
-	padding:26px;
-	border: 1px solid rgba(0,0,0, 0.05);
+/**
+ * Login/out buttons
+ */
+
+.login__access {
+    margin: 0 0 16px;
+    border-bottom: 1px solid rgb(234, 235, 236);
+    padding: 0 0 16px;
 }
 
-/* FOOTER */
+.login__input__submit {
+    display: block;
+    width: 200px;
+    border: none;
+    border-radius: 18px;
+    margin: 20px auto;
+    color: white;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    background: rgb(34, 139, 234);
 
-.footer-txt {
-	font-family: Tahoma, sans-serif;
-	color: rgba(235,238,229, 0.78);
-	font-size:0.7em;
-	line-height:1.8em;
-	text-align:center;
 }
 
-a.footer-txt, a.footer-txt:link, a.footer-txt:visited  {
-	color: rgba(235,238,229, 0.78);
-	text-decoration: none;
+.login__input__submit:active {
+    color: white;
 }
 
-a.footer-txt:hover  {
-	color: rgba(235,238,229, 0.78);
-	text-decoration:underline;
+.login__input__submit:hover {
+    cursor: pointer;
 }
 
-
-/* MISC */
-
-
-a, a:link, a:visited  {
-	color: #298CF4;
-	text-decoration: none;
+.login__input__lost-password, .login__input__register {
+    font-size: 13px;
+    display: inline-block;
 }
 
-a:hover {
-	color: #292CF2;
-	border:none;
-}
-
-a img {
-	border:0;
-	margin:0;
-	padding:0;
-}
-
+/**
+ * Main buttons
+ */
 .buttons {
-	border:0;
-	margin:0;
-	padding:0;
-	cursor:pointer;
+    margin: 0 0 18px;
 }
 
-img {
-	margin:0;
-	padding:0;
-}
-.spacerXS {
-	height:6px;
-}
-.spacerS {
-	height:12px;
-}
-.spacerM {
-	height:24px;
-}
-.spacerL {
-	height:32px;
-}
-.spacerXL {
-	height:48px;
-}
-.spacerXXL {
-	height:72px;
+.buttons__actions,
+.buttons__links,
+.login__input__lost-password,
+.login__input__register {
+    width: calc(50% - 2px);
+    display: inline-block;
+    vertical-align: top;
 }
 
-.spacerXLarge {
-	height:136px;
+.button__action, .button__action:visited, .button__action:active,
+.button__link, .button__link:visited, .button__link:active {
+    display: block;
+    margin: 8px 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: rgb(77, 84, 92);
 }
 
-.separator {
-	width:100%;
-	height:3px;
-	background-image:url('../img/separator.gif');
+.button__action:hover,
+.button__link:hover {
+    text-decoration: underline;
 }
 
-.separator hr {
-	display: none;
+.buttons .icon {
+    margin-right: 4px;
+}
+
+.icon.icon__board {
+    margin-right: 8px;
+}
+
+.button__action__text, .button__link__text {
+    vertical-align: top;
+}
+
+/**
+ * Tracking Protection
+ */
+
+.tracking-protection {
+    border-top: 1px solid rgb(234, 235, 236);
+    padding-top: 16px;
+}
+
+.tracking-protection__title {
+    font-family: 'source_sans_prosemibold', Helvetica, "Droid Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.tracking-protection__content {
+    display: table;
+    padding-top: 4px;
+}
+
+.tracking-protection__content__element {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tracking-protection__content__icon {
+}
+
+.tracking-protection__content__text {
+    display: block;
+    padding: 0 14px;
+    font-size: 14px;
+}
+
+.tracking-protection__content__button {
+    display: none;
+}
+
+/**
+ * Checkbox
+ */
+
+label {
+    display: inline-block;
+    background: #fff;
+    cursor: pointer;
+}
+
+label > input {
+    display: none;
+}
+
+label i {
+    display: inline-block;
+    float: right;
+    padding: 2px;
+    width: 40px;
+    height: 20px;
+    border-radius: 13px;
+    vertical-align: middle;
+    transition: .25s .09s;
+    position: relative;
+    background: rgb(240, 83, 80);
+    box-sizing: initial;
+}
+
+label i:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -4px;
+    left: -2px;
+    transition: .25s;
+    box-shadow: 2px 2px 5px rgba(16, 20, 28, 0.2);
+}
+
+label > input:checked + i {
+    background: rgb(140, 225, 150);
+}
+
+label > input:checked + i:after {
+    transform: translateX(20px);
+}
+
+label > input:checked + i:after:hover {
+    cursor: pointer;
+}
+
+/**
+ * Footer
+ */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    background: rgb(248, 248, 248);
+    border-top: 1px rgb(234, 235, 236) solid;
+}
+
+.footer__powered {
+    display: inline-block;
+    margin: 18px 0 0 26px;
+}
+
+.footer__informations {
+    float: right;
+    width: 18px;
+    height: 18px;
+    margin: 20px 28px 0 0;
+}
+
+.footer__informations__icon {
+}
+
+/**
+ * Tooltip
+ */
+
+.tooltip__informations {
+    position: absolute;
+    border-radius: 5px;
+    width: 160px;
+    height: 50px;
+    bottom: 50px;
+    right: 8px;
+    background: white;
+    padding: 8px 16px;
+    box-shadow: 2px 2px 7px rgba(16, 20, 28, 0.2);
+}
+
+.tooltip__informations:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 64px;
+    left: 153px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip__informations__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tooltip__informations__list__element {
+    padding: 4px 0;
+}
+
+.tooltip__informations__list__element a, .tooltip__informations__list__element a:active, .tooltip__informations__list__element a:visited {
+    color: rgba(42, 44, 48, 0.48);
+    font-size: 14px;
 }

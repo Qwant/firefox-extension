@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href='../css/font.css'/>
+    <link rel="stylesheet" href='../css/spritesheet.css'/>
+    <link rel="stylesheet" href='../css/common.css'/>
+    <link rel="stylesheet" href='../css/login.css'/>
+</head>
+<body>
+<div class="content">
+    <div class="login">
+        <h1 class="login__title" data-l10n-id="login.title">Connexion to your account</h1>
+        <p class="login__text" data-l10n-id="login.text">You need a Qwant account to be able to use Qwant Boards or
+            Qwant Bookmarks.</p>
+
+        <form>
+            <input class="login__input__login" type="text" name="login" placeholder="Username or Email" autofocus
+                   data-l10n-id="login.input.login" required/>
+            <input class="login__input__password" type="password" name="password" placeholder="Password"
+                   data-l10n-id="login.input.password" required/>
+
+            <img class="login__input__loader" src="../img/loader.gif"/>
+
+            <a class="login__input__submit" href="javascript:;">
+                <span class="login__input__submit__label" data-l10n-id="login.input.submit">Connexion</span>
+            </a>
+        </form>
+
+
+        <a class="login__input__register" href="https://www.qwant.com/register" target="_blank">
+            <span class="login__input__register__icon icon icon__register"></span>
+            <span class="login__input__register__text" data-l10n-id="login.input.register">Register</span>
+        </a>
+        <a class="login__input__lost-password" href="https://www.qwant.com/password_lost" target="_blank">
+            <span class="login__input__lost-password__icon icon icon__lost__password "></span>
+            <span class="login__input__lost-password__text"
+                  data-l10n-id="login.input.lost-password">Lost password?</span>
+        </a>
+    </div>
+
+    <div class="tracking-protection">
+        <h2 class="tracking-protection__title" data-l10n-id="tracking-protection.title">Tracking Protection</h2>
+        <div class="tracking-protection__content">
+            <div class="tracking-protection__content__element">
+                <span class="tracking-protection__content__icon icon icon__tracking-protection--enabled"></span>
+            </div>
+            <div class="tracking-protection__content__element">
+                <a href="https://www.qwant.com/extension/tracking-protection" target="_blank"
+                   class="tracking-protection__content__text">
+                    Enable all the privacy protection settings
+                </a>
+            </div>
+            <div class="tracking-protection__content__element">
+                <label class="tracking-protection__content__button">
+                    <input class="tracking-protection__content__button__checkbox" type="checkbox"/>
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <a class="footer__powered" href="https://www.qwant.com" target="_blank">
+        <span class="icon icon__powered-by-qwant"></span>
+    </a>
+    <a class="footer__informations" href="javascript:;">
+				<span class="footer__informations__icon icon icon__about">
+				</span>
+    </a>
+</div>
+<div class="tooltip__informations" style="display:none;">
+    <ul class="tooltip__informations__list">
+        <li class="tooltip__informations__list__element">
+            <a href="https://www.qwant.com/extension/firefox/about" target="_blank" data-l10n-id="informations.about">About
+                the addon</a>
+        </li>
+        <li class="tooltip__informations__list__element">
+            <a href="https://www.qwant.com/contact" target="_blank" data-l10n-id="informations.contact">Contact us</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
