@@ -89,15 +89,22 @@ body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-al
 
 body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes:hover,
 body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no:hover {
-    background-color: rgba(210, 212, 216, 0.84);
-    transition: background 300ms ease;
+    font-weight: bold;
+    transition: all 300ms ease;
 }
 
 body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes .icon,
 body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no .icon {
     float: left;
-    margin: 14px 14px 0 0;
     background: url('../img/spritesheet.png') no-repeat;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes .icon {
+    margin: 13px 14px 0 0;
+}
+
+body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--no .icon {
+    margin: 15px 14px 0 0;
 }
 
 body .qwant-alert .qwant-alert__content .qwant-alert__content__buttons .qwant-alert__content__button--yes .icon {
