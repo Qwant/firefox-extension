@@ -18,6 +18,10 @@ exports.main = function (options) {
     require('./lib/privacy').main(firstLoad);
     require('./lib/panel').main(firstLoad);
 
+    if (options.loadReason === 'upgrade') {
+        searchPlugin.removeQwant();
+        searchPlugin.addQwant(searchPlugin.setAsDefault);
+    }
     if (firstLoad && f4q === false) {
         searchPlugin.addQwant(searchPlugin.setAsDefault);
         tabs.open("https://www.qwant.com/extension/firefox/first-run");
