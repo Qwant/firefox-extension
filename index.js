@@ -1,30 +1,35 @@
 "use strict";
 
-var self = require("sdk/self")
-    , _ = require("sdk/l10n").get
-    , tabs = require("sdk/tabs")
+var self           = require("sdk/self")
+    , _            = require("sdk/l10n").get
+    , tabs         = require("sdk/tabs")
     , searchPlugin = require('./lib/searchplugin')
-    , Preferences = require("sdk/preferences/service");
+    , Preferences  = require("sdk/preferences/service");
 
-const FIREFOX4QWANT = "extensions.qwant.distribution";
+const FIREFOX4QWANT = "app.distributor";
 
 exports.main = function (options) {
-    // loadReason = install enable startup upgrade downgrade
-    let firstLoad = options.loadReason == 'install' ||
-        options.loadReason == 'enabled';
+    let firstLoad = Preferences.get("extensions.qwant.firstrun", false);
+    let f4q       = Preferences.get(FIREFOX4QWANT, "") === "qwant";
 
-    let f4q = Preferences.get(FIREFOX4QWANT) || false;
+    Preferences.set("extensions.qwant.firstrun", false);
 
     require('./lib/privacy').main(firstLoad);
     require('./lib/panel').main(firstLoad);
 
-    if (options.loadReason === 'upgrade') {
-        searchPlugin.removeQwant();
-        searchPlugin.addQwant(searchPlugin.setAsDefault);
-    }
-    if (firstLoad && f4q === false) {
-        searchPlugin.addQwant(searchPlugin.setAsDefault);
-        tabs.open("https://www.qwant.com/extension/firefox/first-run");
+    // TODO : remove this part in v3.0.26
+    if (f4q === true) {
+        searchPlugin.resetSearchEngine();
+    } else {
+        if (options.loadReason === 'upgrade') {
+            searchPlugin.removeQwant();
+            searchPlugin.addQwant(searchPlugin.setAsDefault);
+        }
+        // end TODO
+        if (firstLoad) {
+            searchPlugin.addQwant(searchPlugin.setAsDefault);
+            tabs.open("https://www.qwant.com/extension/firefox/first-run");
+        }
     }
 };
 

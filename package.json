@@ -1,36 +1,37 @@
 {
-	"title": "Qwant for Firefox",
-	"name": "qwant_for_firefox",
-	"id": "qwantcomforfirefox@jetpack",
-	"version": "3.0.21",
-	"description": "Use Qwant as Firefox search engine, block privacy trackers, archive and organize your favorite Web content.",
-	"main": "index.js",
-	"author": "Qwant",
-	"engines": {
-		"firefox": ">=39.0"
-	},
-	"icons": {
-		"96": "icon.png"
-	},
-	"license": "MIT",
-	"keywords": [
-		"qwant",
-		"search engine",
-		"bookmarks",
-		"boards",
-		"tracking protection",
-		"privacy"
-	],
-	"permissions": {
-		"private-browsing": true
-	},
-	"preferences": [
-		{
-			"name": "bookmarksGroupId",
-			"type": "integer",
-			"title": "the Qwant group id in bookmarks",
-			"value": 0,
-			"hidden": true
-		}
-	]
+    "title": "Qwant for Firefox",
+    "name": "qwant_for_firefox",
+    "id": "qwantcomforfirefox@jetpack",
+    "version": "3.0.25",
+    "description": "Use Qwant as Firefox search engine, block privacy trackers, archive and organize your favorite Web content.",
+    "main": "index.js",
+    "author": "Qwant",
+    "engines": {
+        "firefox": ">=39.0"
+    },
+    "icons": {
+        "96": "icon.png"
+    },
+    "license": "MIT",
+    "keywords": [
+        "qwant",
+        "search engine",
+        "bookmarks",
+        "boards",
+        "tracking protection",
+        "privacy"
+    ],
+    "permissions": {
+        "private-browsing": true,
+        "multiprocess": true
+    },
+    "preferences": [
+        {
+            "name": "bookmarksGroupId",
+            "type": "integer",
+            "title": "the Qwant group id in bookmarks",
+            "value": 0,
+            "hidden": true
+        }
+    ]
 }
