@@ -17,19 +17,9 @@ exports.main = function (options) {
     require('./lib/privacy').main(firstLoad);
     require('./lib/panel').main(firstLoad);
 
-    // TODO : remove this part in v3.0.26
-    if (f4q === true) {
-        searchPlugin.resetSearchEngine();
-    } else {
-        if (options.loadReason === 'upgrade') {
-            searchPlugin.removeQwant();
-            searchPlugin.addQwant(searchPlugin.setAsDefault);
-        }
-        // end TODO
-        if (firstLoad) {
-            searchPlugin.addQwant(searchPlugin.setAsDefault);
-            tabs.open("https://www.qwant.com/extension/firefox/first-run");
-        }
+    if (firstLoad) {
+        searchPlugin.addQwant(searchPlugin.setAsDefault);
+        tabs.open("https://www.qwant.com/extension/firefox/first-run");
     }
 };
 

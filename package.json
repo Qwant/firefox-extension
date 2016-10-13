@@ -2,7 +2,7 @@
     "title": "Qwant for Firefox",
     "name": "qwant_for_firefox",
     "id": "qwantcomforfirefox@jetpack",
-    "version": "3.0.26",
+    "version": "3.0.27",
     "description": "Use Qwant as Firefox search engine, block privacy trackers, archive and organize your favorite Web content.",
     "main": "index.js",
     "author": "Qwant",
