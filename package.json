@@ -22,8 +22,7 @@
         "privacy"
     ],
     "permissions": {
-        "private-browsing": true,
-        "multiprocess": true
+        "private-browsing": true
     },
     "preferences": [
         {

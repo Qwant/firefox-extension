@@ -12,6 +12,10 @@ document.addEventListener("qwant_website_logout", function () {
     self.port.emit("qwant_website_logout");
 });
 
+document.addEventListener("qwant_extension_forced_logout", function () {
+    self.port.emit("qwant_extension_forced_logout");
+});
+
 document.addEventListener("qwant_website_bookmark_created", function () {
     self.port.emit("qwant_website_bookmark_created");
 });

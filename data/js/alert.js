@@ -10,10 +10,11 @@ var SHOW_CLASS = "qwant-alert--visible";
 
 var body = document.body;
 
-var alert = document.createElement("div");
+var alert              = document.createElement("div");
 alert.classList.add("qwant-alert");
 
-var alertContent = document.createElement("div");
+var alertContent                = document.createElement("div");
+
 alertContent.classList.add("qwant-alert__content");
 alertContent.classList.add("qwant-alert__content--" + self.options.type);
 
@@ -26,9 +27,9 @@ message.classList.add("qwant-alert__content__message");
 message.textContent = self.options.message;
 
 if (self.options.hasLink) {
-    var link = document.createElement("a");
-    link.href = self.options.url;
-    link.target = "_blank";
+    var link         = document.createElement("a");
+    link.href        = self.options.url;
+    link.target      = "_blank";
     link.textContent = self.options.linkText;
     message.appendChild(link);
 }
@@ -90,16 +91,15 @@ alertContent.appendChild(message);
 alertContent.appendChild(closeButton);
 alert.appendChild(alertContent);
 
-
 if (self.options.type === "question") {
     var buttonsContainer = document.createElement("div");
     buttonsContainer.classList.add("qwant-alert__content__buttons");
 
-    var yes = document.createElement("a");
+    var yes     = document.createElement("a");
     var spanYes = document.createElement("span");
     yes.classList.add("qwant-alert__content__button");
     yes.classList.add("qwant-alert__content__button--yes");
-    yes.href = "javascript:;";
+    yes.href        = "javascript:;";
     yes.textContent = self.options.yes;
     yes.addEventListener("click", function () {
         self.port.emit("reload-tabs");
@@ -110,11 +110,11 @@ if (self.options.type === "question") {
     yes.appendChild(spanYes);
     buttonsContainer.appendChild(yes);
 
-    var no = document.createElement("a");
+    var no     = document.createElement("a");
     var spanNo = document.createElement("span");
     no.classList.add("qwant-alert__content__button");
     no.classList.add("qwant-alert__content__button--no");
-    no.href = "javascript:;";
+    no.href        = "javascript:;";
     no.textContent = self.options.no;
     no.addEventListener("click", function () {
         self.port.emit("reload-tabs-no");
@@ -126,13 +126,11 @@ if (self.options.type === "question") {
     no.appendChild(spanNo);
     buttonsContainer.appendChild(no);
 
-
     alertContent.appendChild(buttonsContainer);
 }
 
 if (body !== undefined) {
     body.insertBefore(alert, body.firstChild);
 }
-
 
 setTimeout(show, 1);
