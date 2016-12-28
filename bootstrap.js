@@ -12,8 +12,6 @@ const COMMONJS_URI                          = "resource://gre/modules/commonjs";
 const {require}                             = Cu.import(COMMONJS_URI + "/toolkit/require.js", {});
 const {Bootstrap}                           = require(COMMONJS_URI + "/sdk/addon/bootstrap.js");
 
-
-
 var {startup, shutdown, uninstall}          = new Bootstrap(rootURI);
 
 function install (aData, aReason) {

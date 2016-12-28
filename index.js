@@ -4,7 +4,8 @@ var self           = require("sdk/self")
     , _            = require("sdk/l10n").get
     , tabs         = require("sdk/tabs")
     , searchPlugin = require('./lib/searchplugin')
-    , Preferences  = require("sdk/preferences/service");
+    , Preferences  = require("sdk/preferences/service")
+    , pageMod      = require('sdk/page-mod');
 
 const FIREFOX4QWANT = "app.distributor";
 
@@ -21,6 +22,12 @@ exports.main = function (options) {
         searchPlugin.addQwant(searchPlugin.setAsDefault);
         tabs.open("https://www.qwant.com/extension/firefox/first-run");
     }
+
+    pageMod.PageMod({
+        include     : "*.qwant.loc",
+        contentStyle: ".home__snippet__extension {display : none;}",
+        attachTo    : ["existing", "top"]
+    });
 };
 
 exports.onUnload = function (reason) {
