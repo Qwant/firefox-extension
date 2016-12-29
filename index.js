@@ -5,7 +5,10 @@ var self           = require("sdk/self")
     , tabs         = require("sdk/tabs")
     , searchPlugin = require('./lib/searchplugin')
     , Preferences  = require("sdk/preferences/service")
-    , pageMod      = require('sdk/page-mod');
+    , pageMod      = require('sdk/page-mod')
+    , simplePrefs  = require("sdk/simple-prefs");
+
+var config = require("./lib/configuration");
 
 const FIREFOX4QWANT = "app.distributor";
 
