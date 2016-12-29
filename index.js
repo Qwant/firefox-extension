@@ -24,7 +24,7 @@ exports.main = function (options) {
     }
 
     pageMod.PageMod({
-        include     : "*.qwant.loc",
+        include     : "*.qwant.com",
         contentStyle: ".home__snippet__extension {display : none;}",
         attachTo    : ["existing", "top"]
     });
