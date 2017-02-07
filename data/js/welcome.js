@@ -24,13 +24,3 @@ document.querySelectorAll(".button__link--bookmark")[0]
     .addEventListener("click", function () {
         self.port.emit("popup_login");
     });
-
-document.querySelectorAll(".login__input__register")[0]
-    .addEventListener("click", function () {
-        self.port.emit("close-popup");
-    });
-
-document.querySelectorAll(".login__input__lost-password")[0]
-    .addEventListener("click", function () {
-        self.port.emit("close-popup");
-    });
